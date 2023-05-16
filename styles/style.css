@@ -58,17 +58,21 @@
   grid-template-rows: auto;
 }
 
-.card {
-  border: 1px solid transparent;
+.full_carde {
+  border: 1px solid black;
   border-radius: 5px;
   max-width: 300px;
   height: auto;
   margin: 0 auto;
   text-align: center;
   box-sizing: border-box;
+  position: relative;
+  z-index: 2;
 }
 
-.card img {
+
+
+.full_carde img {
   max-width: 100%;
   height: auto;
   padding: 40px 70px;
@@ -81,6 +85,7 @@ input[type="checkbox"]:checked  {
 
 .main--section__productDetailsGrid {
   display: grid;
+  position: relative;
   grid-template-columns: auto 1fr;
   grid-template-rows: auto auto;
 }
