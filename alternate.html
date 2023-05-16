@@ -1,0 +1,121 @@
+<svg viewBox="0 0 24 24" class="header__icon">
+  <g class="">
+    <path
+      fill="#4285F4"
+      d="M23.49 12.27c0-.79-.07-1.54-.19-2.27H12v4.51h6.47c-.29 1.48-1.14 2.73-2.4 3.58v3h3.86c2.26-2.09 3.56-5.17 3.56-8.82z"
+    ></path>
+    <path
+      fill="#34A853"
+      d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.86-3c-1.08.72-2.45 1.16-4.07 1.16-3.13 0-5.78-2.11-6.73-4.96H1.29v3.09C3.26 21.3 7.31 24 12 24z"
+    ></path>
+    <path
+      fill="#FBBC05"
+      d="M5.27 14.29c-.25-.72-.38-1.49-.38-2.29s.14-1.57.38-2.29V6.62H1.29C.47 8.24 0 10.06 0 12s.47 3.76 1.29 5.38l3.98-3.09z"
+    ></path>
+    <path
+      fill="#EA4335"
+      d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.26 2.7 1.29 6.62l3.98 3.09c.95-2.85 3.6-4.96 6.73-4.96z"
+    ></path>
+  </g>
+</svg>
+
+<!-- <script>
+ 
+      var cardLists = document.getElementsByClassName("card");
+      var priceAndRatingSection = document.getElementsByClassName(
+        "main--section__productPriceAndRating"
+      );
+      var pricePara = document.getElementsByClassName(
+        "main--para__productPrice"
+      );
+      var ratingPara = document.getElementsByClassName(
+        "main--para__productRating"
+      );
+      var buyNowSection = document.getElementsByClassName(
+        "main--section__productBuyNow"
+      );
+      var featureSection = document.getElementsByClassName(
+        "main--para__productFeature"
+      );
+      var viewProductButton = document.getElementsByClassName(
+        "main--Button__productViewProduct"
+      );
+      var originalFeatures = featureSection.innerHTML;
+
+      for (var i = 0; i < cardLists.length; i++) {
+        (function (index) {
+          cardLists[index].addEventListener("mouseenter", function () {
+            hoverFunction(index);
+          });
+          cardLists[index].addEventListener("mouseleave", function () {
+            hoverRemoveFunction(index);
+          });
+        })(i);
+      }
+
+      function hoverFunction(i) {
+        featureSection[i].classList.add("hidden");
+        viewProductButton[i].classList.add("hovered");
+        buyNowSection[i].classList.add("hovered");
+        priceAndRatingSection[i].classList.add("hidden");
+        featureSection[i].innerHTML = "<button>Replace</button>";
+      }
+
+      function hoverRemoveFunction(i) {
+        featureSection[i].classList.remove("hidden");
+        viewProductButton[i].classList.remove("hovered");
+        buyNowSection[i].classList.remove("hovered");
+        priceAndRatingSection[i].classList.remove("hidden");
+        featureSection[i].innerHTML = originalFeatures;
+      }
+
+</script> -->
+
+<!-- 
+<script>
+  var cardLists = document.getElementsByClassName("card");
+
+for (var i = 0; i < cardLists.length; i++) {
+  (function (index) {
+    var featureSection = cardLists[index].getElementsByClassName(
+      "main--para__productFeature"
+    )[0];
+    var viewProductButton = cardLists[index].getElementsByClassName(
+      "main--Button__productViewProduct"
+    )[0];
+    var buyNowSection = cardLists[index].getElementsByClassName(
+      "main--section__productBuyNow"
+    )[0];
+    var priceAndRatingSection = cardLists[index].getElementsByClassName(
+      "main--section__productPriceAndRating"
+    )[0];
+    var originalFeatures = featureSection.innerHTML;
+    var productsGrid = cardLists[index].getElementsByClassName(
+    "main--section__productDetailsGrid"
+    )[0];
+    cardLists[index].addEventListener("mouseenter", function () {
+      hoverFunction(index);
+    });
+    cardLists[index].addEventListener("mouseleave", function () {
+      hoverRemoveFunction(index);
+    });
+
+    function hoverFunction(i) {
+      featureSection.classList.add("hidden");
+      viewProductButton.classList.add("hovered");
+      buyNowSection.classList.add("hovered");
+      priceAndRatingSection.classList.add("hidden");
+      productsGrid.replaceChild(viewProductButton, featureSection);
+    }
+
+    function hoverRemoveFunction(i) {
+      featureSection.classList.remove("hidden");
+      viewProductButton.classList.remove("hovered");
+      buyNowSection.classList.remove("hovered");
+      priceAndRatingSection.classList.remove("hidden");
+      productsGrid.replaceChild(featureSection, viewProductButton);
+    }
+  })(i);
+}
+
+</script> -->
