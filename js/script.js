@@ -95,6 +95,7 @@ var jsonData = {
 var cardLists = document.getElementsByClassName("card");
 for (let i = 0; i < cardLists.length; i++) {
   (function (index) {
+    console.log("hello world");
     cardLists[index].addEventListener("mouseenter", function () {
       hoverFunction(index);
     });
@@ -129,6 +130,7 @@ function hoverFunction(i) {
   productsGrid.removeChild(priceAndRatingSection);
   productsGrid.appendChild(buyNowSection);
 }
+
 function hoverRemoveFunction(i) {
   var featureSection = cardLists[i].querySelector(
     ".main--para__productFeature"

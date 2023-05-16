@@ -58,6 +58,27 @@
   grid-template-rows: auto;
 }
 
+.card {
+  border: 1px solid transparent;
+  border-radius: 5px;
+  max-width: 300px;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  padding: 40px 70px;
+  background-color: antiquewhite;
+}
+
+input[type="checkbox"]:checked  {
+  accent-color: #219ebc;/* Set your desired background color */
+}
+
 .main--section__productDetailsGrid {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -73,7 +94,6 @@
 .main--section__productPriceAndRating.hidden {
   opacity: 0;
   visibility: hidden;
-  animation-timing-function: linear;
 }
 
 .main--section__productBuyNow {
@@ -115,22 +135,6 @@
   color:#219ebc;
 }
 
-.card {
-  border: 1px solid transparent;
-  border-radius: 5px;
-  max-width: 300px;
-  height: auto;
-  margin: 0 auto;
-  text-align: center;
-  box-sizing: border-box;
-}
-
-.card img {
-  max-width: 100%;
-  height: auto;
-  padding: 40px 70px;
-  background-color: antiquewhite;
-}
 
 .createAccount--section {
   display: grid;
@@ -163,6 +167,3 @@
   /* object-position: 0% ; */
 }
 
-input[type="checkbox"]:checked  {
-  accent-color: #219ebc;/* Set your desired background color */
-}
