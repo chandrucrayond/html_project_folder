@@ -1,5 +1,5 @@
 var jsonData = {
-    "pixel_5" :{
+  pixel_5: {
     id: "pixel_5",
     image: "pixel_5.jpeg",
     name: "Pixel 5",
@@ -29,7 +29,7 @@ var jsonData = {
     memory: "6 GB LPDDR5 RAM",
     storage: "128 GB storage UFS 3.1 storage",
   },
-  "pixel_6" :{
+  pixel_6: {
     id: "pixel_6",
     image: "pixel_6.jpg",
     name: "Pixel 6",
@@ -61,7 +61,7 @@ var jsonData = {
     processor: "Google Tensor Titan M2 security coprocessor",
   },
 
-  "pixel_6_pro":{
+  pixel_6_pro: {
     id: "pixel_6_pro",
     image: "pixel_6pro.jpg",
     name: "Pixel 6 Pro",
@@ -91,26 +91,10 @@ var jsonData = {
     memory: "6 GB LPDDR5 RAM",
     storage: "128 GB storage UFS 3.1 storage",
   },
-}
+};
 var cardLists = document.getElementsByClassName("card");
-for (var i = 0; i < cardLists.length; i++) {
+for (let i = 0; i < cardLists.length; i++) {
   (function (index) {
-    // var featureSection = cardLists[index].querySelector(
-    //   ".main--para__productFeature"
-    // );
-    // var viewProductButton = cardLists[index].querySelector(
-    //   ".main--Button__productViewProduct"
-    // );
-    // var buyNowSection = cardLists[index].querySelector(
-    //   ".main--section__productBuyNow"
-    // );
-    // var priceAndRatingSection = cardLists[index].querySelector(
-    //   ".main--section__productPriceAndRating"
-    // );
-    // var originalFeatures = featureSection.innerHTML;
-    // var productsGrid = cardLists[index].querySelector(
-    //   ".main--section__productDetailsGrid"
-    // );
     cardLists[index].addEventListener("mouseenter", function () {
       hoverFunction(index);
     });
@@ -170,18 +154,17 @@ function hoverRemoveFunction(i) {
   productsGrid.appendChild(priceAndRatingSection);
 }
 // Access the card elements var cardLists = document.getElementsByClassName("card");
-for (var i = 0; i < cardLists.length; i++) {
-  var card = cardLists[i];
-  // Access the product details within the card element
-  var productTitle = card.querySelector(".main--para__productTitle");
-  var productFeature = card.querySelector(".main--para__productFeature");
-  var productPrice = card.querySelector(".main--para__productPrice");
-  var productRating = card.querySelector(".main--para__productRating");
-  // Update the product details using the jsonData
-  var product = jsonData;
-  productTitle.textContent = product.pixel_5.name;
-  productFeature.textContent =  product.pixel_5.feature;
-  productPrice.textContent =  product.pixel_5.price;
-  productRating.textContent =  product.pixel_5.rating;
-}
- 
+// for (var i = 0; i < cardLists.length; i++) {
+//   var card = cardLists[i];
+//   // Access the product details within the card element
+//   var productTitle = card.querySelector(".main--para__productTitle");
+//   var productFeature = card.querySelector(".main--para__productFeature");
+//   var productPrice = card.querySelector(".main--para__productPrice");
+//   var productRating = card.querySelector(".main--para__productRating");
+//   // Update the product details using the jsonData
+//   var product = jsonData;
+//   productTitle.textContent = product.pixel_5.name;
+//   productFeature.textContent =  product.pixel_5.feature;
+//   productPrice.textContent =  product.pixel_5.price;
+//   productRating.textContent =  product.pixel_5.rating;
+// }
