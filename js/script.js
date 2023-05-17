@@ -213,7 +213,7 @@ for (var i = 0; i < cardLists.length; i++) {
       productsGrid.removeChild(priceAndRatingSection);
       productsGrid.appendChild(buyNowSection);
     }
-
+    
     function hoverRemoveFunction(i) {
       viewProductButton.classList.remove("hovered");
       featureSection.innerHTML = originalFeatures;
@@ -222,5 +222,8 @@ for (var i = 0; i < cardLists.length; i++) {
       productsGrid.removeChild(buyNowSection);
       productsGrid.appendChild(priceAndRatingSection);
     }
+    
   })(i);
 }
+
+
