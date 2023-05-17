@@ -4,7 +4,7 @@ var jsonData = {
     image: "pixel_5.jpeg",
     name: "Pixel 5",
     price: "$ 499",
-    feature: "Smart, Powerful, Helpful, hey jollly",
+    feature: "Smart, Powerful, Helpful",
     rating: "1.2k",
     color: ["Black", "White", "Blue"],
     display: [

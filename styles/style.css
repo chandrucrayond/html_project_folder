@@ -33,12 +33,12 @@
   /* cursor: pointer; */
 }
 
-.header--section__productItem{
+.header--section__productItem {
   font-weight: 600;
 }
 .header--section__productItem::before {
   position: relative;
-  top:3px;
+  top: 3px;
   content: "\2022";
   color: #219ebc;
   font-size: 2em; /* Adjust the font size as desired */
@@ -90,7 +90,7 @@ input[type="checkbox"]:checked {
   margin-bottom: 10px;
 }
 
-#main--checkbox__phone{
+#main--checkbox__phone {
   opacity: 0.6;
 }
 
@@ -105,7 +105,7 @@ input[type="checkbox"]:checked {
   padding-bottom: 7px;
 }
 
-input[type="checkbox"]:checked+.main--checkbox__selected {
+input[type="checkbox"]:checked + .main--checkbox__selected {
   font-weight: 600;
 }
 
@@ -127,7 +127,6 @@ input[type="checkbox"]:checked+.main--checkbox__selected {
 .main--section__subSection1 {
   position: sticky;
 }
-
 
 .main--section__subSection2 {
   display: grid;
@@ -163,6 +162,26 @@ input[type="checkbox"]:checked+.main--checkbox__selected {
   grid-template-rows: auto auto;
 }
 
+.main--para__productTitle {
+  font: normal normal 600 18px/22px Montserrat;
+  letter-spacing: 0px;
+  color: #023047;
+  opacity: 1;
+}
+
+.main--para__productPrice {
+  font: normal normal 500 18px/22px Montserrat;
+  letter-spacing: 0px;
+  color: #023047;
+  opacity: 1;
+}
+
+.main--para__productRating {
+  font: normal normal normal 12px/15px Montserrat;
+  letter-spacing: 0px;
+  color: #b3c1c8;
+  opacity: 1;
+}
 .main--section__productPriceAndRating {
   opacity: 1;
   visibility: visible;
@@ -187,6 +206,9 @@ input[type="checkbox"]:checked+.main--checkbox__selected {
 }
 
 .main--para__productFeature {
+  font: normal normal normal 12px/15px Montserrat;
+  letter-spacing: 0px;
+  color: #b3c1c8;
   opacity: 1;
   visibility: visible;
   transition: all 0.5s linear;
