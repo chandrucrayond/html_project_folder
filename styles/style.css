@@ -8,23 +8,66 @@
 }
 
 .header__icon {
-  width: 24px;
-  height: 24px;
+  position: relative;
+  left: -50px;
+  width: 30px;
+  height: 30px;
 }
 
 .header--section {
   display: flex;
   flex-direction: row;
   gap: 30px;
+  position: relative;
+  left: 50px;
+}
+
+.header--section__items {
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0px;
+  color: #4e6e7e;
+  opacity: 1;
+  /* cursor: pointer; */
+}
+
+.header--section__productItem{
+  font-weight: 600;
+}
+.header--section__productItem::before {
+  position: relative;
+  top:3px;
+  content: "\2022";
+  color: #219ebc;
+  font-size: 2em; /* Adjust the font size as desired */
+  line-height: 0.5; /*Adjust the line height as desired */
+  margin-right: 3px;
 }
 
 .header--line {
   text-align: center;
+  width: 95%;
+  color: #9aacb5;
 }
 
 .header--btn__accountCreate {
+  position: relative;
+  left: 70px;
+  display: table-cell;
   color: #219ebc;
-  border-color: #219ebc;
+  border: 1px solid #219ebc;
+  opacity: 1;
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0px;
+  width: 130px;
+  height: 38px;
+  border-radius: 4px;
+  padding: auto;
 }
 .header--btn__accountCreate:hover {
   color: white;
@@ -32,6 +75,49 @@
   border-color: #219ebc;
 }
 
+input[type="checkbox"]:checked {
+  accent-color: #219ebc; /* Set your desired background color */
+}
+
+#main--checkbox__filter {
+  color: #b3c1c8;
+  opacity: 1;
+  font-size: 12px;
+  line-height: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0px;
+  margin-bottom: 10px;
+}
+
+#main--checkbox__phone{
+  opacity: 0.6;
+}
+
+.main--checkbox__selected {
+  color: #9aacb5;
+  opacity: 1;
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0px;
+  padding-left: 7px;
+  padding-bottom: 7px;
+}
+
+input[type="checkbox"]:checked+.main--checkbox__selected {
+  font-weight: 600;
+}
+
+.main--checkbox__disabled {
+  color: #9aacb5;
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0px;
+  padding-left: 7px;
+  padding-bottom: 7px;
+}
 .main--section {
   display: grid;
   grid-template-columns: 25vw 3fr;
@@ -42,13 +128,6 @@
   position: sticky;
 }
 
-.header--section__productItem::before{
-  content: "\2022";
-  color: #219ebc;
-  font-size: 1.5em; /* Adjust the font size as desired */
-  line-height: 0.5; /*Adjust the line height as desired */
-  margin-right: 5px;
-}
 
 .main--section__subSection2 {
   display: grid;
@@ -70,17 +149,11 @@
   z-index: 2;
 }
 
-
-
 .full_carde img {
   max-width: 100%;
   height: auto;
   padding: 40px 70px;
   background-color: antiquewhite;
-}
-
-input[type="checkbox"]:checked  {
-  accent-color: #219ebc;/* Set your desired background color */
 }
 
 .main--section__productDetailsGrid {
@@ -135,11 +208,9 @@ input[type="checkbox"]:checked  {
   opacity: 1;
 }
 
-
-#main--checkbox__phone:checked + #main--checkbox__selected{
-  color:#219ebc;
+#main--checkbox__phone:checked + #main--checkbox__selected {
+  color: #219ebc;
 }
-
 
 .createAccount--section {
   display: grid;
@@ -171,4 +242,3 @@ input[type="checkbox"]:checked  {
   object-position: 20% -50%;
   /* object-position: 0% ; */
 }
-

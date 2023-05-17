@@ -4,7 +4,7 @@ var jsonData = {
     image: "pixel_5.jpeg",
     name: "Pixel 5",
     price: "$ 499",
-    feature: "Smart, Powerful, Helpful",
+    feature: "Smart, Powerful, Helpful, hey jollly",
     rating: "1.2k",
     color: ["Black", "White", "Blue"],
     display: [
@@ -203,19 +203,39 @@ for (var i = 0; i < cardLists.length; i++) {
       hoverRemoveFunction(index);
     });
 
+    // Extracting the desired key-value pair
+    const pixel5 = jsonData.pixel_5;
+    const pixel5Name = pixel5.name;
+    const pixel5Price = pixel5.price;
+    const pixel5Feature = pixel5.feature;
+    const pixel5Rating = pixel5.rating;
+
+    // Manipulating the DOM
+    const title = document.getElementsByClassName("main--para__productTitle")[0];
+    title.textContent = pixel5Name;
+
+    const price = document.getElementsByClassName("main--para__productPrice")[0];
+    price.textContent = pixel5Price;
+
+    const rating = document.getElementsByClassName("main--para__productRating")[0];
+    rating.textContent = pixel5Rating;
+
+    const feature = document.getElementsByClassName("main--para__productFeature")[0];
+    feature.textContent = pixel5Feature;
+
     function hoverFunction(i) {
       for (let key in jsonData) {
         if (jsonData.hasOwnProperty(key)) {
           const currentObject = jsonData[key];
           console.log(`Object: ${key}`);
-          
+
           for (let prop in currentObject) {
             if (currentObject.hasOwnProperty(prop)) {
               const value = currentObject[prop];
-              
+
               if (Array.isArray(value)) {
                 console.log(`  ${prop}:`);
-                value.forEach(item => {
+                value.forEach((item) => {
                   console.log(`    - ${item}`);
                 });
               } else {
@@ -225,7 +245,7 @@ for (var i = 0; i < cardLists.length; i++) {
           }
         }
       }
-      
+
       featureSection.classList.add("hidden");
       viewProductButton.classList.add("hovered");
       featureSection.innerHTML = viewProductButton.outerHTML;
@@ -235,7 +255,7 @@ for (var i = 0; i < cardLists.length; i++) {
       productsGrid.removeChild(priceAndRatingSection);
       productsGrid.appendChild(buyNowSection);
     }
-    
+
     function hoverRemoveFunction(i) {
       viewProductButton.classList.remove("hovered");
       featureSection.innerHTML = originalFeatures;
@@ -244,102 +264,5 @@ for (var i = 0; i < cardLists.length; i++) {
       productsGrid.removeChild(buyNowSection);
       productsGrid.appendChild(priceAndRatingSection);
     }
-    
   })(i);
 }
-
-
-// {
-  //   pixel_5: {
-  //     id: "pixel_5",
-  //     image: "pixel_5.jpeg",
-  //     name: "Pixel 5",
-  //     price: "$ 499",
-  //     feature: "Smart, Powerful, Helpful",
-  //     rating: "1.2k",
-  //     color: ["Black", "White", "Blue"],
-  //     display: [
-  //       "Full-screen 6.1-inch (156 mm)1 display, up to 60 Hz",
-  //       "20:9 aspect ratio",
-  //       "FHD+ (1080 x 2400) OLED at 429 ppi",
-  //       "Corning® Gorilla® Glass 3™ cover glass",
-  //       "Always-on display with At a Glance and Now Playing",
-  //     ],
-  //     dimension: [
-  //       "6. heightt x 2.8 width x 0.35 depth (in)",
-  //       "152.2 height x 71.8 width x 8.9 depth (mm)",
-  //       "6.3 oz",
-  //       "178 g",
-  //     ],
-  //     battery: [
-  //       "Over 24-hour battery life3",
-  //       "Up to 72-our battery life with Extreme Battery-Saver",
-  //       "Typical 4410 mAh",
-  //       "Fast Charging",
-  //     ],
-  //     memory: "6 GB LPDDR5 RAM",
-  //     storage: "128 GB storage UFS 3.1 storage",
-  //   },
-  //   pixel_6: {
-  //     id: "pixel_6",
-  //     image: "pixel_6.jpg",
-  //     name: "Pixel 6",
-  //     price: "$ 699",
-  //     feature: "Smart",
-  //     rating: "1.2k",
-  //     color: ["Black", "White", "Blue"],
-  //     display: [
-  //       "Full-screen 6.1-inch (156 mm)1 display, up to 60 Hz",
-  //       "20:9 aspect ratio",
-  //       "FHD+ (1080 x 2400) OLED at 429 ppi",
-  //       "Corning® Gorilla® Glass 3™ cover glass",
-  //       "Always-on display with At a Glance and Now Playing",
-  //     ],
-  //     dimension: [
-  //       "6. heightt x 2.8 width x 0.35 depth (in)",
-  //       "152.2 height x 71.8 width x 8.9 depth (mm)",
-  //       "6.3 oz",
-  //       "178 g",
-  //     ],
-  //     battery: [
-  //       "Over 24-hour battery life3",
-  //       "Up to 72-our battery life with Extreme Battery-Saver",
-  //       "Typical 4410 mAh",
-  //       "Fast Charging",
-  //     ],
-  //     memory: "6 GB LPDDR5 RAM",
-  //     storage: "128 GB storage UFS 3.1 storage",
-  //     processor: "Google Tensor Titan M2 security coprocessor",
-  //   },
-  
-  //   pixel_6_pro: {
-  //     id: "pixel_6_pro",
-  //     image: "pixel_6pro.jpg",
-  //     name: "Pixel 6 Pro",
-  //     price: "$ 799",
-  //     feature: "Powerful, Helpful",
-  //     rating: "1.2k",
-  //     color: ["Black", "White", "Blue"],
-  //     display: [
-  //       "Full-screen 6.1-inch (156 mm)1 display, up to 60 Hz",
-  //       "20:9 aspect ratio",
-  //       "FHD+ (1080 x 2400) OLED at 429 ppi",
-  //       "Corning® Gorilla® Glass 3™ cover glass",
-  //       "Always-on display with At a Glance and Now Playing",
-  //     ],
-  //     dimension: [
-  //       "6. heightt x 2.8 width x 0.35 depth (in)",
-  //       "152.2 height x 71.8 width x 8.9 depth (mm)",
-  //       "6.3 oz",
-  //       "178 g",
-  //     ],
-  //     battery: [
-  //       "Over 24-hour battery life3",
-  //       "Up to 72-our battery life with Extreme Battery-Saver",
-  //       "Typical 4410 mAh",
-  //       "Fast Charging",
-  //     ],
-  //     memory: "6 GB LPDDR5 RAM",
-  //     storage: "128 GB storage UFS 3.1 storage",
-  //   },
-  // };
