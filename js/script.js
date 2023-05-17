@@ -218,7 +218,7 @@ for (var i = 0; i < cardLists.length; i++) {
     price.textContent = pixel5Price;
 
     const rating = document.getElementsByClassName("main--para__productRating")[0];
-    rating.textContent = pixel5Rating;
+    rating.textContent = '⭐⭐⭐⭐('+pixel5Rating+')';
 
     const feature = document.getElementsByClassName("main--para__productFeature")[0];
     feature.textContent = pixel5Feature;

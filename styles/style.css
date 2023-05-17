@@ -52,6 +52,10 @@
   color: #9aacb5;
 }
 
+.footer--line {
+  width: 85%;
+}
+
 .header--btn__accountCreate {
   position: relative;
   left: 70px;
@@ -82,7 +86,7 @@ input[type="checkbox"]:checked {
 #main--checkbox__filter {
   color: #b3c1c8;
   opacity: 1;
-  font-size: 12px;
+  font-size: 11px;
   line-height: 15px;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
@@ -137,7 +141,7 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
 }
 
 .full_carde {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   border-radius: 5px;
   max-width: 300px;
   height: auto;
@@ -159,6 +163,7 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
   display: grid;
   position: relative;
   grid-template-columns: auto 1fr;
+  row-gap: 5px;
   grid-template-rows: auto auto;
 }
 
@@ -167,6 +172,7 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
   letter-spacing: 0px;
   color: #023047;
   opacity: 1;
+  margin-bottom: 10px;
 }
 
 .main--para__productPrice {
@@ -174,10 +180,11 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
   letter-spacing: 0px;
   color: #023047;
   opacity: 1;
+  margin-bottom: 10px;
 }
 
 .main--para__productRating {
-  font: normal normal normal 12px/15px Montserrat;
+  font: normal normal normal 11px/15px Montserrat;
   letter-spacing: 0px;
   color: #b3c1c8;
   opacity: 1;
@@ -205,8 +212,25 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
   visibility: visible;
 }
 
+.main--Button__buyNow {
+  background-color: #219ebc;
+  border-radius: 4px;
+  opacity: 1;
+  font: normal normal 600 13px/18px Montserrat;
+  letter-spacing: 0px;
+  color: #ffffff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.main--Button__buyNow:hover,
+.main--Button__buyNow:active,
+.main--Button__buyNow:focus {
+  background-color: #219ebc !important;
+  color: #ffffff !important;
+}
 .main--para__productFeature {
-  font: normal normal normal 12px/15px Montserrat;
+  font: normal normal normal 11px/15px Montserrat;
   letter-spacing: 0px;
   color: #b3c1c8;
   opacity: 1;
@@ -222,6 +246,10 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
 .main--Button__productViewProduct {
   visibility: hidden;
   opacity: 0;
+  font: normal normal medium 12px/15px Montserrat;
+  letter-spacing: 0px;
+  color: #219ebc;
+  opacity: 1;
   transition: all 0.5s linear;
 }
 
@@ -232,6 +260,35 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
 
 #main--checkbox__phone:checked + #main--checkbox__selected {
   color: #219ebc;
+}
+
+.footer--para__endOfProduct {
+  font: normal normal 500 14px/18px Montserrat;
+  letter-spacing: 0px;
+  color: #ccd6da;
+}
+
+.footer--section {
+  display: flex;
+  flex-wrap: wrap;
+  font: normal normal 400 11px/15px Montserrat;
+  letter-spacing: 0px;
+  color: #b3c1c8;
+  text-transform: capitalize;
+  justify-content: space-between;
+  opacity: 1;
+}
+
+.footer--para__left {
+  /* text-align: left; */
+  justify-self: left;
+
+}
+
+.footer--para__right {
+  display: inline;
+  justify-self: right;
+  /* text-align: right; */
 }
 
 .createAccount--section {
