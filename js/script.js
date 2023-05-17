@@ -1,7 +1,7 @@
 var jsonData = {
   pixel_5: {
     id: "pixel_5",
-    image: "pixel_5.jpeg",
+    image: "assets/pixel_5.jpeg",
     name: "Pixel 5",
     price: "$ 499",
     feature: "Smart, Powerful, Helpful",
@@ -31,7 +31,7 @@ var jsonData = {
   },
   pixel_6: {
     id: "pixel_6",
-    image: "pixel_6.jpg",
+    image: "../assets/pixel_6.jpg",
     name: "Pixel 6",
     price: "$ 699",
     feature: "Smart",
@@ -63,7 +63,7 @@ var jsonData = {
 
   pixel_6_pro: {
     id: "pixel_6_pro",
-    image: "pixel_6pro.jpg",
+    image: "assets/pixel_6pro.jpg",
     name: "Pixel 6 Pro",
     price: "$ 799",
     feature: "Powerful, Helpful",
@@ -168,48 +168,41 @@ cardSection.appendChild(footer);
 
 var cardLists = document.getElementsByClassName("full_carde");
 
-    // Extracting the desired key-value pair
-    // For pixel 5
-    const pixel5 = jsonData.pixel_5;
-    const pixel5Name = pixel5.name;
-    const pixel5Price = pixel5.price;
-    const pixel5Feature = pixel5.feature;
-    const pixel5Rating = pixel5.rating;
+// Extracting the desired key-value pair
+// For pixel 5
+for (i = 0; i < 9; i++) {
+  var pixel = 0;
+  if (i === 0 || i === 5 || i === 6) pixel = jsonData.pixel_5;
+  else if (i === 1 || i === 4 || i === 7) pixel = jsonData.pixel_6;
+  else if (i === 2 || i === 3 || i === 8) pixel = jsonData.pixel_6_pro;
+  const Name = pixel.name;
+  const Price = pixel.price;
+  const Feature = pixel.feature;
+  const Rating = pixel.rating;
+  const ImageUrl = pixel.image;
 
-    // For pixel 6
-    const pixel6 = jsonData.pixel_6;
-    const pixel6Name = pixel6.name;
-    const pixel6Price = pixel6.price;
-    const pixel6Feature = pixel6.feature;
-    const pixel6Rating = pixel6.rating;
+  // Manipulating the DOM
+  const image = document.getElementsByClassName("main--section__productImages")[
+    i
+  ];
+  image.source = ImageUrl;
 
-    // For pixel 6 pro
-    const pixel6pro = jsonData.pixel_6_pro;
-    const pixel6pName = pixel6pro.name;
-    const pixel6pPrice = pixel6pro.price;
-    const pixel6pFeature = pixel6pro.feature;
-    const pixel6pRating = pixel6pro.rating;
+  const title = document.getElementsByClassName("main--para__productTitle")[i];
+  title.textContent = Name;
 
-    // Manipulating the DOM
-    const title = document.getElementsByClassName(
-      "main--para__productTitle"
-    )[0];
-    title.textContent = pixel5Name;
+  const price = document.getElementsByClassName("main--para__productPrice")[i];
+  price.textContent = Price;
 
-    const price = document.getElementsByClassName(
-      "main--para__productPrice"
-    )[0];
-    price.textContent = pixel5Price;
+  const rating = document.getElementsByClassName("main--para__productRating")[
+    i
+  ];
+  rating.textContent = "⭐⭐⭐⭐(" + Rating + ")";
 
-    const rating = document.getElementsByClassName(
-      "main--para__productRating"
-    )[0];
-    rating.textContent = "⭐⭐⭐⭐(" + pixel5Rating + ")";
-
-    const feature = document.getElementsByClassName(
-      "main--para__productFeature"
-    )[0];
-    feature.textContent = pixel5Feature;
+  const feature = document.getElementsByClassName("main--para__productFeature")[
+    i
+  ];
+  feature.textContent = Feature;
+}
 
 for (var i = 0; i < cardLists.length; i++) {
   (function (index) {
