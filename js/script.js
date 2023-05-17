@@ -1,97 +1,97 @@
-// var jsonData = {
-//   pixel_5: {
-//     id: "pixel_5",
-//     image: "pixel_5.jpeg",
-//     name: "Pixel 5",
-//     price: "$ 499",
-//     feature: "Smart, Powerful, Helpful",
-//     rating: "1.2k",
-//     color: ["Black", "White", "Blue"],
-//     display: [
-//       "Full-screen 6.1-inch (156 mm)1 display, up to 60 Hz",
-//       "20:9 aspect ratio",
-//       "FHD+ (1080 x 2400) OLED at 429 ppi",
-//       "Corning® Gorilla® Glass 3™ cover glass",
-//       "Always-on display with At a Glance and Now Playing",
-//     ],
-//     dimension: [
-//       "6. heightt x 2.8 width x 0.35 depth (in)",
-//       "152.2 height x 71.8 width x 8.9 depth (mm)",
-//       "6.3 oz",
-//       "178 g",
-//     ],
-//     battery: [
-//       "Over 24-hour battery life3",
-//       "Up to 72-our battery life with Extreme Battery-Saver",
-//       "Typical 4410 mAh",
-//       "Fast Charging",
-//     ],
-//     memory: "6 GB LPDDR5 RAM",
-//     storage: "128 GB storage UFS 3.1 storage",
-//   },
-//   pixel_6: {
-//     id: "pixel_6",
-//     image: "pixel_6.jpg",
-//     name: "Pixel 6",
-//     price: "$ 699",
-//     feature: "Smart",
-//     rating: "1.2k",
-//     color: ["Black", "White", "Blue"],
-//     display: [
-//       "Full-screen 6.1-inch (156 mm)1 display, up to 60 Hz",
-//       "20:9 aspect ratio",
-//       "FHD+ (1080 x 2400) OLED at 429 ppi",
-//       "Corning® Gorilla® Glass 3™ cover glass",
-//       "Always-on display with At a Glance and Now Playing",
-//     ],
-//     dimension: [
-//       "6. heightt x 2.8 width x 0.35 depth (in)",
-//       "152.2 height x 71.8 width x 8.9 depth (mm)",
-//       "6.3 oz",
-//       "178 g",
-//     ],
-//     battery: [
-//       "Over 24-hour battery life3",
-//       "Up to 72-our battery life with Extreme Battery-Saver",
-//       "Typical 4410 mAh",
-//       "Fast Charging",
-//     ],
-//     memory: "6 GB LPDDR5 RAM",
-//     storage: "128 GB storage UFS 3.1 storage",
-//     processor: "Google Tensor Titan M2 security coprocessor",
-//   },
+var jsonData = {
+  pixel_5: {
+    id: "pixel_5",
+    image: "pixel_5.jpeg",
+    name: "Pixel 5",
+    price: "$ 499",
+    feature: "Smart, Powerful, Helpful",
+    rating: "1.2k",
+    color: ["Black", "White", "Blue"],
+    display: [
+      "Full-screen 6.1-inch (156 mm)1 display, up to 60 Hz",
+      "20:9 aspect ratio",
+      "FHD+ (1080 x 2400) OLED at 429 ppi",
+      "Corning® Gorilla® Glass 3™ cover glass",
+      "Always-on display with At a Glance and Now Playing",
+    ],
+    dimension: [
+      "6. heightt x 2.8 width x 0.35 depth (in)",
+      "152.2 height x 71.8 width x 8.9 depth (mm)",
+      "6.3 oz",
+      "178 g",
+    ],
+    battery: [
+      "Over 24-hour battery life3",
+      "Up to 72-our battery life with Extreme Battery-Saver",
+      "Typical 4410 mAh",
+      "Fast Charging",
+    ],
+    memory: "6 GB LPDDR5 RAM",
+    storage: "128 GB storage UFS 3.1 storage",
+  },
+  pixel_6: {
+    id: "pixel_6",
+    image: "pixel_6.jpg",
+    name: "Pixel 6",
+    price: "$ 699",
+    feature: "Smart",
+    rating: "1.2k",
+    color: ["Black", "White", "Blue"],
+    display: [
+      "Full-screen 6.1-inch (156 mm)1 display, up to 60 Hz",
+      "20:9 aspect ratio",
+      "FHD+ (1080 x 2400) OLED at 429 ppi",
+      "Corning® Gorilla® Glass 3™ cover glass",
+      "Always-on display with At a Glance and Now Playing",
+    ],
+    dimension: [
+      "6. heightt x 2.8 width x 0.35 depth (in)",
+      "152.2 height x 71.8 width x 8.9 depth (mm)",
+      "6.3 oz",
+      "178 g",
+    ],
+    battery: [
+      "Over 24-hour battery life3",
+      "Up to 72-our battery life with Extreme Battery-Saver",
+      "Typical 4410 mAh",
+      "Fast Charging",
+    ],
+    memory: "6 GB LPDDR5 RAM",
+    storage: "128 GB storage UFS 3.1 storage",
+    processor: "Google Tensor Titan M2 security coprocessor",
+  },
 
-//   pixel_6_pro: {
-//     id: "pixel_6_pro",
-//     image: "pixel_6pro.jpg",
-//     name: "Pixel 6 Pro",
-//     price: "$ 799",
-//     feature: "Powerful, Helpful",
-//     rating: "1.2k",
-//     color: ["Black", "White", "Blue"],
-//     display: [
-//       "Full-screen 6.1-inch (156 mm)1 display, up to 60 Hz",
-//       "20:9 aspect ratio",
-//       "FHD+ (1080 x 2400) OLED at 429 ppi",
-//       "Corning® Gorilla® Glass 3™ cover glass",
-//       "Always-on display with At a Glance and Now Playing",
-//     ],
-//     dimension: [
-//       "6. heightt x 2.8 width x 0.35 depth (in)",
-//       "152.2 height x 71.8 width x 8.9 depth (mm)",
-//       "6.3 oz",
-//       "178 g",
-//     ],
-//     battery: [
-//       "Over 24-hour battery life3",
-//       "Up to 72-our battery life with Extreme Battery-Saver",
-//       "Typical 4410 mAh",
-//       "Fast Charging",
-//     ],
-//     memory: "6 GB LPDDR5 RAM",
-//     storage: "128 GB storage UFS 3.1 storage",
-//   },
-// };
+  pixel_6_pro: {
+    id: "pixel_6_pro",
+    image: "pixel_6pro.jpg",
+    name: "Pixel 6 Pro",
+    price: "$ 799",
+    feature: "Powerful, Helpful",
+    rating: "1.2k",
+    color: ["Black", "White", "Blue"],
+    display: [
+      "Full-screen 6.1-inch (156 mm)1 display, up to 60 Hz",
+      "20:9 aspect ratio",
+      "FHD+ (1080 x 2400) OLED at 429 ppi",
+      "Corning® Gorilla® Glass 3™ cover glass",
+      "Always-on display with At a Glance and Now Playing",
+    ],
+    dimension: [
+      "6. heightt x 2.8 width x 0.35 depth (in)",
+      "152.2 height x 71.8 width x 8.9 depth (mm)",
+      "6.3 oz",
+      "178 g",
+    ],
+    battery: [
+      "Over 24-hour battery life3",
+      "Up to 72-our battery life with Extreme Battery-Saver",
+      "Typical 4410 mAh",
+      "Fast Charging",
+    ],
+    memory: "6 GB LPDDR5 RAM",
+    storage: "128 GB storage UFS 3.1 storage",
+  },
+};
 // var cardLists = document.getElementsByClassName("full_carde");
 
 // for (i = 0; i < cardLists.length; i++) {
@@ -204,6 +204,28 @@ for (var i = 0; i < cardLists.length; i++) {
     });
 
     function hoverFunction(i) {
+      for (let key in jsonData) {
+        if (jsonData.hasOwnProperty(key)) {
+          const currentObject = jsonData[key];
+          console.log(`Object: ${key}`);
+          
+          for (let prop in currentObject) {
+            if (currentObject.hasOwnProperty(prop)) {
+              const value = currentObject[prop];
+              
+              if (Array.isArray(value)) {
+                console.log(`  ${prop}:`);
+                value.forEach(item => {
+                  console.log(`    - ${item}`);
+                });
+              } else {
+                console.log(`  ${prop}: ${value}`);
+              }
+            }
+          }
+        }
+      }
+      
       featureSection.classList.add("hidden");
       viewProductButton.classList.add("hovered");
       featureSection.innerHTML = viewProductButton.outerHTML;
@@ -227,3 +249,97 @@ for (var i = 0; i < cardLists.length; i++) {
 }
 
 
+// {
+  //   pixel_5: {
+  //     id: "pixel_5",
+  //     image: "pixel_5.jpeg",
+  //     name: "Pixel 5",
+  //     price: "$ 499",
+  //     feature: "Smart, Powerful, Helpful",
+  //     rating: "1.2k",
+  //     color: ["Black", "White", "Blue"],
+  //     display: [
+  //       "Full-screen 6.1-inch (156 mm)1 display, up to 60 Hz",
+  //       "20:9 aspect ratio",
+  //       "FHD+ (1080 x 2400) OLED at 429 ppi",
+  //       "Corning® Gorilla® Glass 3™ cover glass",
+  //       "Always-on display with At a Glance and Now Playing",
+  //     ],
+  //     dimension: [
+  //       "6. heightt x 2.8 width x 0.35 depth (in)",
+  //       "152.2 height x 71.8 width x 8.9 depth (mm)",
+  //       "6.3 oz",
+  //       "178 g",
+  //     ],
+  //     battery: [
+  //       "Over 24-hour battery life3",
+  //       "Up to 72-our battery life with Extreme Battery-Saver",
+  //       "Typical 4410 mAh",
+  //       "Fast Charging",
+  //     ],
+  //     memory: "6 GB LPDDR5 RAM",
+  //     storage: "128 GB storage UFS 3.1 storage",
+  //   },
+  //   pixel_6: {
+  //     id: "pixel_6",
+  //     image: "pixel_6.jpg",
+  //     name: "Pixel 6",
+  //     price: "$ 699",
+  //     feature: "Smart",
+  //     rating: "1.2k",
+  //     color: ["Black", "White", "Blue"],
+  //     display: [
+  //       "Full-screen 6.1-inch (156 mm)1 display, up to 60 Hz",
+  //       "20:9 aspect ratio",
+  //       "FHD+ (1080 x 2400) OLED at 429 ppi",
+  //       "Corning® Gorilla® Glass 3™ cover glass",
+  //       "Always-on display with At a Glance and Now Playing",
+  //     ],
+  //     dimension: [
+  //       "6. heightt x 2.8 width x 0.35 depth (in)",
+  //       "152.2 height x 71.8 width x 8.9 depth (mm)",
+  //       "6.3 oz",
+  //       "178 g",
+  //     ],
+  //     battery: [
+  //       "Over 24-hour battery life3",
+  //       "Up to 72-our battery life with Extreme Battery-Saver",
+  //       "Typical 4410 mAh",
+  //       "Fast Charging",
+  //     ],
+  //     memory: "6 GB LPDDR5 RAM",
+  //     storage: "128 GB storage UFS 3.1 storage",
+  //     processor: "Google Tensor Titan M2 security coprocessor",
+  //   },
+  
+  //   pixel_6_pro: {
+  //     id: "pixel_6_pro",
+  //     image: "pixel_6pro.jpg",
+  //     name: "Pixel 6 Pro",
+  //     price: "$ 799",
+  //     feature: "Powerful, Helpful",
+  //     rating: "1.2k",
+  //     color: ["Black", "White", "Blue"],
+  //     display: [
+  //       "Full-screen 6.1-inch (156 mm)1 display, up to 60 Hz",
+  //       "20:9 aspect ratio",
+  //       "FHD+ (1080 x 2400) OLED at 429 ppi",
+  //       "Corning® Gorilla® Glass 3™ cover glass",
+  //       "Always-on display with At a Glance and Now Playing",
+  //     ],
+  //     dimension: [
+  //       "6. heightt x 2.8 width x 0.35 depth (in)",
+  //       "152.2 height x 71.8 width x 8.9 depth (mm)",
+  //       "6.3 oz",
+  //       "178 g",
+  //     ],
+  //     battery: [
+  //       "Over 24-hour battery life3",
+  //       "Up to 72-our battery life with Extreme Battery-Saver",
+  //       "Typical 4410 mAh",
+  //       "Fast Charging",
+  //     ],
+  //     memory: "6 GB LPDDR5 RAM",
+  //     storage: "128 GB storage UFS 3.1 storage",
+  //   },
+  // };
