@@ -7,6 +7,7 @@ var jsonData = {
     feature: "Smart, Powerful, Helpful",
     rating: "1.2k",
     color: ["Black", "White", "Blue"],
+    backgroundColor: "#E3F7F4",
     display: [
       "Full-screen 6.1-inch (156 mm)1 display, up to 60 Hz",
       "20:9 aspect ratio",
@@ -31,12 +32,13 @@ var jsonData = {
   },
   pixel_6: {
     id: "pixel_6",
-    image: "../assets/pixel_6.jpg",
+    image: "assets/pixel_6.jpg",
     name: "Pixel 6",
     price: "$ 699",
     feature: "Smart",
     rating: "1.2k",
     color: ["Black", "White", "Blue"],
+    backgroundColor: "#EBF5F3",
     display: [
       "Full-screen 6.1-inch (156 mm)1 display, up to 60 Hz",
       "20:9 aspect ratio",
@@ -69,6 +71,7 @@ var jsonData = {
     feature: "Powerful, Helpful",
     rating: "1.2k",
     color: ["Black", "White", "Blue"],
+    backgroundColor: "#F7F7ED",
     display: [
       "Full-screen 6.1-inch (156 mm)1 display, up to 60 Hz",
       "20:9 aspect ratio",
@@ -172,20 +175,26 @@ var cardLists = document.getElementsByClassName("full_carde");
 // For pixel 5
 for (i = 0; i < 9; i++) {
   var pixel = 0;
-  if (i === 0 || i === 5 || i === 6) pixel = jsonData.pixel_5;
-  else if (i === 1 || i === 4 || i === 7) pixel = jsonData.pixel_6;
-  else if (i === 2 || i === 3 || i === 8) pixel = jsonData.pixel_6_pro;
+  if (i === 0 || i === 5 || i === 6) {
+    pixel = jsonData.pixel_5;
+  } else if (i === 1 || i === 4 || i === 7) {
+    pixel = jsonData.pixel_6;
+  } else if (i === 2 || i === 3 || i === 8) {
+    pixel = jsonData.pixel_6_pro;
+  }
   const Name = pixel.name;
   const Price = pixel.price;
   const Feature = pixel.feature;
   const Rating = pixel.rating;
   const ImageUrl = pixel.image;
+  const backgroundColor = pixel.backgroundColor;
 
   // Manipulating the DOM
   const image = document.getElementsByClassName("main--section__productImages")[
     i
   ];
-  image.source = ImageUrl;
+  image.setAttribute("src", ImageUrl);
+  image.style.backgroundColor = backgroundColor;
 
   const title = document.getElementsByClassName("main--para__productTitle")[i];
   title.textContent = Name;
