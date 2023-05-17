@@ -110,7 +110,7 @@ for (let i = 0; i < 9; i++) {
         src="assets/pixel_5.jpeg"
         alt="pixel-5--img"
       />
-      <div class="main--section__productDetails">
+      <div class="main--section__productDetails mt-3">
         <div class="main--section__productDetailsGrid">
           <div>
             <p class="main--para__productTitle" style="text-align: left">
@@ -135,7 +135,7 @@ for (let i = 0; i < 9; i++) {
               1.2 rating / 5
             </p>
           </div>
-          <div class="main--section__productBuyNow mt-3">
+          <div class="main--section__productBuyNow">
             <button
               class="btn btn-info main--Button__buyNow"
               style="text-align: right"
@@ -167,32 +167,6 @@ footer.innerHTML = `
 cardSection.appendChild(footer);
 
 var cardLists = document.getElementsByClassName("full_carde");
-
-for (var i = 0; i < cardLists.length; i++) {
-  (function (index) {
-    var featureSection = cardLists[index].getElementsByClassName(
-      "main--para__productFeature"
-    )[0];
-    var viewProductButton = cardLists[index].getElementsByClassName(
-      "main--Button__productViewProduct"
-    )[0];
-    var buyNowSection = cardLists[index].getElementsByClassName(
-      "main--section__productBuyNow"
-    )[0];
-    var priceAndRatingSection = cardLists[index].getElementsByClassName(
-      "main--section__productPriceAndRating"
-    )[0];
-    var originalFeatures = featureSection.innerHTML;
-    var productsGrid = cardLists[index].getElementsByClassName(
-      "main--section__productDetailsGrid"
-    )[0];
-
-    cardLists[index].addEventListener("mouseenter", function () {
-      hoverFunction(index);
-    });
-    cardLists[index].addEventListener("mouseleave", function () {
-      hoverRemoveFunction(index);
-    });
 
     // Extracting the desired key-value pair
     // For pixel 5
@@ -236,6 +210,32 @@ for (var i = 0; i < cardLists.length; i++) {
       "main--para__productFeature"
     )[0];
     feature.textContent = pixel5Feature;
+
+for (var i = 0; i < cardLists.length; i++) {
+  (function (index) {
+    var featureSection = cardLists[index].getElementsByClassName(
+      "main--para__productFeature"
+    )[0];
+    var viewProductButton = cardLists[index].getElementsByClassName(
+      "main--Button__productViewProduct"
+    )[0];
+    var buyNowSection = cardLists[index].getElementsByClassName(
+      "main--section__productBuyNow"
+    )[0];
+    var priceAndRatingSection = cardLists[index].getElementsByClassName(
+      "main--section__productPriceAndRating"
+    )[0];
+    var originalFeatures = featureSection.innerHTML;
+    var productsGrid = cardLists[index].getElementsByClassName(
+      "main--section__productDetailsGrid"
+    )[0];
+
+    cardLists[index].addEventListener("mouseenter", function () {
+      hoverFunction(index);
+    });
+    cardLists[index].addEventListener("mouseleave", function () {
+      hoverRemoveFunction(index);
+    });
 
     function hoverFunction(i) {
       featureSection.classList.add("hidden");
