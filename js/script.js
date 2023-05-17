@@ -92,88 +92,79 @@ var jsonData = {
     storage: "128 GB storage UFS 3.1 storage",
   },
 };
-// var cardLists = document.getElementsByClassName("full_carde");
 
-// for (i = 0; i < cardLists.length; i++) {
-//   console.log(i);
-//   cardLists[i].addEventListener("mouseenter", function () {
-//     hoverFunction(i);
-//   });
-//   cardLists[i].addEventListener("mouseleave", function () {
-//     hoverRemoveFunction(i);
-//   });
-// }
+const container = document.getElementById("main--section__subSection2");
 
-// function hoverFunction(i) {
-//   var cardLists = document.getElementsByClassName("full_carde");
+// Loop to repeat the section nine times
+for (let i = 0; i < 9; i++) {
+  // Create a new section element
+  const section = document.createElement("section");
+  section.className = "main--section__subSection2";
 
-//   var featureSection = cardLists[i].querySelector(
-//     ".main--para__productFeature"
-//   );
-//   var viewProductButton = cardLists[i].querySelector(
-//     ".main--Button__productViewProduct"
-//   );
-//   var buyNowSection = cardLists[i].querySelector(
-//     ".main--section__productBuyNow"
-//   );
-//   var priceAndRatingSection = cardLists[i].querySelector(
-//     ".main--section__productPriceAndRating"
-//   );
-//   var originalFeatures = featureSection.innerHTML;
-//   var productsGrid = cardLists[i].querySelector(
-//     ".main--section__productDetailsGrid"
-//   );
+  // Set the HTML content of the section
+  section.innerHTML = `
+    <!--Individual product section of each mobile models-->
+    <div class="full_carde">
+      <img
+        class="main--section__productImages"
+        src="assets/pixel_5.jpeg"
+        alt="pixel-5--img"
+      />
+      <div class="main--section__productDetails">
+        <div class="main--section__productDetailsGrid">
+          <div>
+            <p class="main--para__productTitle" style="text-align: left">
+              Pixel 5
+            </p>
+            <p class="main--para__productFeature" style="text-align: left">
+              Smart, Powerful, Helpful
+            </p>
+            <a
+              href="#"
+              class="main--Button__productViewProduct"
+              style="text-align: left"
+            >
+              View Product
+            </a>
+          </div>
+          <div class="main--section__productPriceAndRating">
+            <p class="main--para__productPrice" style="text-align: right">
+              $ 499
+            </p>
+            <p class="main--para__productRating" style="text-align: right">
+              1.2 rating / 5
+            </p>
+          </div>
+          <div class="main--section__productBuyNow mt-3">
+            <button
+              class="btn btn-info main--Button__buyNow"
+              style="text-align: right"
+            >
+              Buy Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of individual products -->
+  `;
 
-//   featureSection.classList.add("hidden");
-//   viewProductButton.classList.add("hovered");
-//   featureSection.innerHTML = viewProductButton.outerHTML;
-//   viewProductButton.classList.remove("hovered");
-//   buyNowSection.classList.add("hovered");
-//   featureSection.classList.remove("hidden");
-//   productsGrid.removeChild(priceAndRatingSection);
-//   productsGrid.appendChild(buyNowSection);
-// }
-
-// function hoverRemoveFunction(i) {
-//   var cardLists = document.getElementsByClassName("full_carde");
-//   var featureSection = cardLists[i].querySelector(
-//     ".main--para__productFeature"
-//   );
-//   var viewProductButton = cardLists[i].querySelector(
-//     ".main--Button__productViewProduct"
-//   );
-//   var buyNowSection = cardLists[i].querySelector(
-//     ".main--section__productBuyNow"
-//   );
-//   var priceAndRatingSection = cardLists[i].querySelector(
-//     ".main--section__productPriceAndRating"
-//   );
-//   var originalFeatures = featureSection.innerHTML;
-//   var productsGrid = cardLists[i].querySelector(
-//     ".main--section__productDetailsGrid"
-//   );
-//   viewProductButton.classList.remove("hovered");
-//   featureSection.innerHTML = originalFeatures;
-//   buyNowSection.classList.remove("hovered");
-//   priceAndRatingSection.classList.remove("hidden");
-//   productsGrid.removeChild(buyNowSection);
-//   productsGrid.appendChild(priceAndRatingSection);
-// }
-// Access the card elements var cardLists = document.getElementsByClassName("card");
-// for (var i = 0; i < cardLists.length; i++) {
-//   var card = cardLists[i];
-//   // Access the product details within the card element
-//   var productTitle = card.querySelector(".main--para__productTitle");
-//   var productFeature = card.querySelector(".main--para__productFeature");
-//   var productPrice = card.querySelector(".main--para__productPrice");
-//   var productRating = card.querySelector(".main--para__productRating");
-//   // Update the product details using the jsonData
-//   var product = jsonData;
-//   productTitle.textContent = product.pixel_5.name;
-//   productFeature.textContent =  product.pixel_5.feature;
-//   productPrice.textContent =  product.pixel_5.price;
-//   productRating.textContent =  product.pixel_5.rating;
-// }
+  // Append the section to the container
+  container.appendChild(section);
+}
+const cardSection = document.getElementById("main--section__withFooter");
+const footer = document.createElement("footer");
+footer.className = "footer--section__endOfProduct mt-3 text-center";
+footer.innerHTML = `
+<div>
+  <img src="assets/icons8-multiple-stars1.png" alt="star image 1" />
+  <p style="color: #b3c1c8; display: inline" class="footer--para__endOfProduct mx-1">
+    Product end here
+  </p>
+  <img src="assets/icons8-multiple-stars2.png" alt="star image 2" />
+</div>
+`;
+cardSection.appendChild(footer);
 
 var cardLists = document.getElementsByClassName("full_carde");
 
@@ -204,48 +195,49 @@ for (var i = 0; i < cardLists.length; i++) {
     });
 
     // Extracting the desired key-value pair
+    // For pixel 5
     const pixel5 = jsonData.pixel_5;
     const pixel5Name = pixel5.name;
     const pixel5Price = pixel5.price;
     const pixel5Feature = pixel5.feature;
     const pixel5Rating = pixel5.rating;
 
+    // For pixel 6
+    const pixel6 = jsonData.pixel_6;
+    const pixel6Name = pixel6.name;
+    const pixel6Price = pixel6.price;
+    const pixel6Feature = pixel6.feature;
+    const pixel6Rating = pixel6.rating;
+
+    // For pixel 6 pro
+    const pixel6pro = jsonData.pixel_6_pro;
+    const pixel6pName = pixel6pro.name;
+    const pixel6pPrice = pixel6pro.price;
+    const pixel6pFeature = pixel6pro.feature;
+    const pixel6pRating = pixel6pro.rating;
+
     // Manipulating the DOM
-    const title = document.getElementsByClassName("main--para__productTitle")[0];
+    const title = document.getElementsByClassName(
+      "main--para__productTitle"
+    )[0];
     title.textContent = pixel5Name;
 
-    const price = document.getElementsByClassName("main--para__productPrice")[0];
+    const price = document.getElementsByClassName(
+      "main--para__productPrice"
+    )[0];
     price.textContent = pixel5Price;
 
-    const rating = document.getElementsByClassName("main--para__productRating")[0];
-    rating.textContent = '⭐⭐⭐⭐('+pixel5Rating+')';
+    const rating = document.getElementsByClassName(
+      "main--para__productRating"
+    )[0];
+    rating.textContent = "⭐⭐⭐⭐(" + pixel5Rating + ")";
 
-    const feature = document.getElementsByClassName("main--para__productFeature")[0];
+    const feature = document.getElementsByClassName(
+      "main--para__productFeature"
+    )[0];
     feature.textContent = pixel5Feature;
 
     function hoverFunction(i) {
-      for (let key in jsonData) {
-        if (jsonData.hasOwnProperty(key)) {
-          const currentObject = jsonData[key];
-          console.log(`Object: ${key}`);
-
-          for (let prop in currentObject) {
-            if (currentObject.hasOwnProperty(prop)) {
-              const value = currentObject[prop];
-
-              if (Array.isArray(value)) {
-                console.log(`  ${prop}:`);
-                value.forEach((item) => {
-                  console.log(`    - ${item}`);
-                });
-              } else {
-                console.log(`  ${prop}: ${value}`);
-              }
-            }
-          }
-        }
-      }
-
       featureSection.classList.add("hidden");
       viewProductButton.classList.add("hovered");
       featureSection.innerHTML = viewProductButton.outerHTML;
