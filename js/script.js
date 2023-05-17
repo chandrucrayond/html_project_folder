@@ -92,89 +92,73 @@
 //     storage: "128 GB storage UFS 3.1 storage",
 //   },
 // };
-var cardLists = document.getElementsByClassName("full_carde");
+// var cardLists = document.getElementsByClassName("full_carde");
 
-for (i = 0; i < cardLists.length; i++) {
-  console.log(i);
-  cardLists[i].addEventListener("mouseenter", function () {
-    hoverFunction(i);
-  });
-  cardLists[i].addEventListener("mouseleave", function () {
-    hoverRemoveFunction(i);
-  });
-}
-
-// var elements = document.getElementsByClassName("full_carde");
-// console.log(document.getElementsByClassName("full_carde").length);
-// for (var i = 0; i < elements.length; i++) {
-//   var element = elements[i];
-//   console.log("hello2");
-//   element.addEventListener("mouseenter", function () {
-//     // Hovering code
-//     console.log("Mouse entered:", this);
+// for (i = 0; i < cardLists.length; i++) {
+//   console.log(i);
+//   cardLists[i].addEventListener("mouseenter", function () {
+//     hoverFunction(i);
 //   });
-
-//   element.addEventListener("mouseleave", function () {
-//     // Not hovering code
-//     console.log("Mouse left:", this);
+//   cardLists[i].addEventListener("mouseleave", function () {
+//     hoverRemoveFunction(i);
 //   });
 // }
 
-function hoverFunction(i) {
-  var cardLists = document.getElementsByClassName("full_carde");
+// function hoverFunction(i) {
+//   var cardLists = document.getElementsByClassName("full_carde");
 
-  var featureSection = cardLists[i].querySelector(
-    ".main--para__productFeature"
-  );
-  var viewProductButton = cardLists[i].querySelector(
-    ".main--Button__productViewProduct"
-  );
-  var buyNowSection = cardLists[i].querySelector(
-    ".main--section__productBuyNow"
-  );
-  var priceAndRatingSection = cardLists[i].querySelector(
-    ".main--section__productPriceAndRating"
-  );
-  var originalFeatures = featureSection.innerHTML;
-  var productsGrid = cardLists[i].querySelector(
-    ".main--section__productDetailsGrid"
-  );
+//   var featureSection = cardLists[i].querySelector(
+//     ".main--para__productFeature"
+//   );
+//   var viewProductButton = cardLists[i].querySelector(
+//     ".main--Button__productViewProduct"
+//   );
+//   var buyNowSection = cardLists[i].querySelector(
+//     ".main--section__productBuyNow"
+//   );
+//   var priceAndRatingSection = cardLists[i].querySelector(
+//     ".main--section__productPriceAndRating"
+//   );
+//   var originalFeatures = featureSection.innerHTML;
+//   var productsGrid = cardLists[i].querySelector(
+//     ".main--section__productDetailsGrid"
+//   );
 
-  featureSection.classList.add("hidden");
-  viewProductButton.classList.add("hovered");
-  featureSection.innerHTML = viewProductButton.outerHTML;
-  viewProductButton.classList.remove("hovered");
-  buyNowSection.classList.add("hovered");
-  featureSection.classList.remove("hidden");
-  productsGrid.removeChild(priceAndRatingSection);
-  productsGrid.appendChild(buyNowSection);
-}
+//   featureSection.classList.add("hidden");
+//   viewProductButton.classList.add("hovered");
+//   featureSection.innerHTML = viewProductButton.outerHTML;
+//   viewProductButton.classList.remove("hovered");
+//   buyNowSection.classList.add("hovered");
+//   featureSection.classList.remove("hidden");
+//   productsGrid.removeChild(priceAndRatingSection);
+//   productsGrid.appendChild(buyNowSection);
+// }
 
-function hoverRemoveFunction(i) {
-  var cardLists = document.getElementsByClassName("full_carde");
-  var featureSection = cardLists[i].querySelector(
-    ".main--para__productFeature"
-  );
-  var viewProductButton = cardLists[i].querySelector(
-    ".main--Button__productViewProduct"
-  );
-  var buyNowSection = cardLists[i].querySelector(
-    ".main--section__productBuyNow"
-  );
-  var priceAndRatingSection = cardLists[i].querySelector(
-    ".main--section__productPriceAndRating"
-  );
-  var originalFeatures = featureSection.innerHTML;
-  var productsGrid = cardLists[i].querySelector(
-    ".main--section__productDetailsGrid"
-  );
-  viewProductButton.classList.remove("hovered");
-  featureSection.innerHTML = originalFeatures;
-  buyNowSection.classList.remove("hovered");
-  priceAndRatingSection.classList.remove("hidden");
-  productsGrid.removeChild(buyNowSection);
-  productsGrid.appendChild(priceAndRatingSection);
-}
+// function hoverRemoveFunction(i) {
+//   var cardLists = document.getElementsByClassName("full_carde");
+//   var featureSection = cardLists[i].querySelector(
+//     ".main--para__productFeature"
+//   );
+//   var viewProductButton = cardLists[i].querySelector(
+//     ".main--Button__productViewProduct"
+//   );
+//   var buyNowSection = cardLists[i].querySelector(
+//     ".main--section__productBuyNow"
+//   );
+//   var priceAndRatingSection = cardLists[i].querySelector(
+//     ".main--section__productPriceAndRating"
+//   );
+//   var originalFeatures = featureSection.innerHTML;
+//   var productsGrid = cardLists[i].querySelector(
+//     ".main--section__productDetailsGrid"
+//   );
+//   viewProductButton.classList.remove("hovered");
+//   featureSection.innerHTML = originalFeatures;
+//   buyNowSection.classList.remove("hovered");
+//   priceAndRatingSection.classList.remove("hidden");
+//   productsGrid.removeChild(buyNowSection);
+//   productsGrid.appendChild(priceAndRatingSection);
+// }
 // Access the card elements var cardLists = document.getElementsByClassName("card");
 // for (var i = 0; i < cardLists.length; i++) {
 //   var card = cardLists[i];
@@ -190,3 +174,53 @@ function hoverRemoveFunction(i) {
 //   productPrice.textContent =  product.pixel_5.price;
 //   productRating.textContent =  product.pixel_5.rating;
 // }
+
+var cardLists = document.getElementsByClassName("full_carde");
+
+for (var i = 0; i < cardLists.length; i++) {
+  (function (index) {
+    var featureSection = cardLists[index].getElementsByClassName(
+      "main--para__productFeature"
+    )[0];
+    var viewProductButton = cardLists[index].getElementsByClassName(
+      "main--Button__productViewProduct"
+    )[0];
+    var buyNowSection = cardLists[index].getElementsByClassName(
+      "main--section__productBuyNow"
+    )[0];
+    var priceAndRatingSection = cardLists[index].getElementsByClassName(
+      "main--section__productPriceAndRating"
+    )[0];
+    var originalFeatures = featureSection.innerHTML;
+    var productsGrid = cardLists[index].getElementsByClassName(
+      "main--section__productDetailsGrid"
+    )[0];
+
+    cardLists[index].addEventListener("mouseenter", function () {
+      hoverFunction(index);
+    });
+    cardLists[index].addEventListener("mouseleave", function () {
+      hoverRemoveFunction(index);
+    });
+
+    function hoverFunction(i) {
+      featureSection.classList.add("hidden");
+      viewProductButton.classList.add("hovered");
+      featureSection.innerHTML = viewProductButton.outerHTML;
+      viewProductButton.classList.remove("hovered");
+      buyNowSection.classList.add("hovered");
+      featureSection.classList.remove("hidden");
+      productsGrid.removeChild(priceAndRatingSection);
+      productsGrid.appendChild(buyNowSection);
+    }
+
+    function hoverRemoveFunction(i) {
+      viewProductButton.classList.remove("hovered");
+      featureSection.innerHTML = originalFeatures;
+      buyNowSection.classList.remove("hovered");
+      priceAndRatingSection.classList.remove("hidden");
+      productsGrid.removeChild(buyNowSection);
+      productsGrid.appendChild(priceAndRatingSection);
+    }
+  })(i);
+}
