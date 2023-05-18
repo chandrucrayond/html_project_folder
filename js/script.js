@@ -67,7 +67,7 @@ var jsonData = {
     id: "pixel_6_pro",
     image: "assets/pixel_6pro.jpg",
     name: "Pixel 6 Pro",
-    price: "$ 799",
+    price: "$ 699",
     feature: "Powerful, Helpful",
     rating: "1.2k",
     color: ["Black", "White", "Blue"],
