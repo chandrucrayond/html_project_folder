@@ -103,9 +103,141 @@
       </section>
 
       <section id="main--section__withFooter">
-        <section id="main--section__subSection2" class="grid-container">
-         
-        </section>
+        <section
+          id="main--section__subSection2"
+          class="grid-container"
+        ></section>
+        <!-- Modal by bootstrap -->
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          Launch demo modal
+        </button>
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                  Buy Pixel 5
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-8">
+                      <div class="row border">
+                        <div class="col">pixel 5</div>
+                        <div class="col">Black | 128GB</div>
+                        <div class="col">1 Qty</div>
+                        <div class="col">$499.00(dum)</div>
+                      </div>
+                      <div class="row border mt-2">
+                        <div class="row">
+                          <div class="col-3">ADD ADDRESS</div>
+                          <div class="col-6"></div>
+                          <div class="col-3 btn btn-outline-none">
+                            SAVE ADDRESS
+                          </div>
+                        </div>
+                        <div class="row">
+                          <!-- <div class="col-6">Name</div> -->
+                          <div class="form-group col-6">
+                            <label for="name">Name</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="name"
+                              placeholder="Amy Jackson"
+                            />
+                          </div>
+                          <!-- <div class="col-6">Contact Number</div> -->
+                          <div class="form-group col-6">
+                            <label for="phone">Phone Number</label>
+                            <input
+                              type="tel"
+                              class="form-control"
+                              id="phone"
+                              placeholder="9999 999 999"
+                              pattern="[0-9]{10}"
+                              value="+91"
+                            />
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="form-group col">
+                            <label for="address">Address</label>
+                            <input type="text" class="form-control" id="address" placeholder="Dubai main road, Dubai cross street">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="form-group col-6">
+                            <label for="city">City</label>
+                            <select class="form-control" id="city">
+                              <option value="Chennai">Chennai</option>
+                              <option value="Madurai">Madurai</option>
+                              <option value="Kancheepuram">Kancheepuram</option>
+                              <option value="Chennai">Chennai</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-6">
+                            <label for="country">Country</label>
+                            <select class="form-control" id="country">
+                              <option value="">Select a country</option>
+                              <option value="usa">USA</option>
+                              <option value="canada">Canada</option>
+                              <option value="uk">UK</option>
+                              <option value="france">France</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4 border">
+                      <div class="row">
+                        <div class="col-6">INVOICE SUMMARY</div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6">Actual amount</div>
+                        <div class="col-6">$ 499</div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6">Discount</div>
+                        <div class="col-6">$ 60</div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6">Billing amount</div>
+                        <div class="col-6">$ 499</div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6">Total amount</div>
+                        <div class="col-6">$ 499</div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 btn btn-info">Pay $ 499.00</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End of modal -->
       </section>
     </section>
 

@@ -157,9 +157,10 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
 
 .full_carde img {
   max-width: 100%;
-  height: auto;
+  height: 220px;
   padding: 40px 70px;
   background-color: antiquewhite;
+  border-radius: 4px;
 }
 
 .main--section__productDetailsGrid {
@@ -329,4 +330,8 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
   /* object-fit:cover; */
   object-position: 20% -50%;
   /* object-position: 0% ; */
+}
+
+#modalButton{
+  /* display: none; */
 }
