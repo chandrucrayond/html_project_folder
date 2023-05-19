@@ -133,8 +133,8 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
 }
 
 #main--section__subSection2 {
- padding-left: 20px;
- padding-right: 60px;
+  padding-left: 20px;
+  padding-right: 60px;
 }
 
 .grid-container {
@@ -292,7 +292,6 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
 .footer--para__left {
   /* text-align: left; */
   justify-self: left;
-
 }
 
 .footer--para__right {
@@ -332,6 +331,194 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
   /* object-position: 0% ; */
 }
 
-#modalButton{
-  /* display: none; */
+.modalCenterAligned > div {
+  align-items: center;
 }
+
+.modalCenterAligned > div > div > div {
+  align-items: center;
+}
+
+.modal--button__dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #e9ecef !important;
+}
+
+.modal--button__dropdown:link,
+.modal--button__dropdown:hover,
+.modal--button__dropdown:focus-visible,
+.modal--button__dropdown:active,
+.modal--button__dropdown:focus {
+  background-color: #fff !important;
+  border: 1px solid #e9ecef !important;
+  color: green;
+}
+
+.modal--heading {
+  font: normal normal 700 18px/24px Montserrat;
+  letter-spacing: 0px;
+  color: #023047;
+  opacity: 1;
+}
+
+.modal--image {
+  width: 31px;
+  height: 38px;
+}
+
+.modal--para__title {
+  font: normal normal 700 16px/19px Montserrat;
+  letter-spacing: 0px;
+  color: #023047;
+}
+
+.modal--para__serialNo {
+  font: normal normal 400 12px/15px Montserrat;
+  letter-spacing: 0px;
+  color: #b3c1c8;
+  opacity: 1;
+}
+
+.modal--para__specification,
+.modal--para__quantity {
+  font: normal normal 500 12px/15px Montserrat;
+  letter-spacing: 0px;
+  color: #b3c1c8;
+}
+
+.modal--para__price {
+  font: normal normal 700 12px/15px Montserrat;
+  letter-spacing: 0px;
+  color: #023047;
+}
+
+.modal--para__addAddress {
+  font: normal normal 600 12px/15px Montserrat;
+  letter-spacing: 0px;
+  color: #b3c1c8;
+}
+.modal--para__saveAddress {
+  font: normal normal bold 12px/15px Montserrat;
+  letter-spacing: 0px;
+  color: #219ebc !important;
+}
+
+.modal--label__name {
+  font: normal normal 400 12px/15px Montserrat;
+  letter-spacing: 0px;
+  color: #4e6e7e;
+}
+
+.modal--label__contactNumber {
+  font: normal normal 400 12px/15px Montserrat;
+  letter-spacing: 0px;
+  color: #4e6e7e;
+}
+
+.modal--label__address {
+  font: normal normal 400 12px/15px Montserrat;
+  letter-spacing: 0px;
+  color: #4e6e7e;
+}
+
+.modal--label__city {
+  font: normal normal 400 12px/15px Montserrat;
+  letter-spacing: 0px;
+  color: #4e6e7e;
+}
+
+.modal--label__country {
+  font: normal normal 400 12px/15px Montserrat;
+  letter-spacing: 0px;
+  color: #4e6e7e;
+}
+
+.modal--input__name {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  font: normal normal 600 12px/15px Montserrat;
+  letter-spacing: 0px;
+  color: #023047;
+}
+
+.modal--input__name::placeholder {
+  font: normal normal normal 12px/15px Montserrat;
+  letter-spacing: 0px;
+  color: #b3c1c8 !important;
+}
+
+.modal--input__address {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  font: normal normal 600 12px/15px Montserrat;
+  letter-spacing: 0px;
+  color: #023047;
+}
+
+.modal--input__address::placeholder {
+  font: normal normal normal 12px/15px Montserrat;
+  letter-spacing: 0px;
+  color: #b3c1c8 !important;
+}
+
+.modal--input__phone {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #e9ecef;
+  border-radius: 4px !important;
+  font: normal normal 600 12px/15px Montserrat;
+  letter-spacing: 0px;
+  padding-left: 100px;
+  color: #023047;
+}
+
+.modal--input__phone::placeholder {
+  font: normal normal normal 12px/15px Montserrat;
+  letter-spacing: 0px;
+  color: #b3c1c8 !important;
+}
+
+.modal--input__city {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  font: normal normal 400 12px/15px Montserrat;
+  letter-spacing: 0px;
+  color: #b3c1c8 !important;
+}
+
+.modal--input__country {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  font: normal normal normal 12px/15px Montserrat;
+  letter-spacing: 0px;
+  color: #b3c1c8 !important;
+}
+
+.dropdown-item {
+  font: normal normal 500 12px/15px Montserrat;
+  letter-spacing: 0px;
+  color: #4e6e7e;
+}
+
+.input-group-text {
+  font: normal normal normal 12px/15px Montserrat;
+  letter-spacing: 0px;
+  color: #4e6e7e;
+  opacity: 1;
+  background-color: transparent;
+  height: fit-content;
+  background: transparent 0% 0% no-repeat padding-box;
+  /* border: 1px solid #e9ecef;
+  border-right: none;
+  border-radius: 4px; */
+  border:none;
+  position: absolute;
+  z-index: 100;
+  left:10px;
+}
+

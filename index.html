@@ -125,8 +125,11 @@
         >
           <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">
+              <div class="modal-header border-0">
+                <h1
+                  class="modal-title fs-5 modal--heading"
+                  id="exampleModalLabel"
+                >
                   Buy Pixel 5
                 </h1>
                 <button
@@ -140,95 +143,226 @@
                 <div class="container-fluid">
                   <div class="row">
                     <div class="col-8">
-                      <div class="row border">
-                        <div class="col">pixel 5</div>
-                        <div class="col">Black | 128GB</div>
-                        <div class="col">1 Qty</div>
-                        <div class="col">$499.00(dum)</div>
+                      <div class="row modalCenterAligned border">
+                        <div class="col-4">
+                          <div class="row">
+                            <div class="col-4 d-flex pe-0">
+                              <img
+                                class="modal--image"
+                                src="assets/pixel_5.jpeg"
+                                alt="pixel 5 image"
+                              />
+                            </div>
+                            <div class="col-6 d-inline p-0">
+                              <p class="modal--para__title mb-0 pt-3 pb-1">
+                                Pixel 5
+                              </p>
+                              <p class="modal--para__serialNo mb-0 pb-3">
+                                SKU12345-12
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div
+                          class="col-3 d-flex modal--para__specification justify-content-center"
+                        >
+                          Black | 128GB
+                        </div>
+                        <div
+                          class="col-2 d-flex modal--para__quantity justify-content-center"
+                        >
+                          1 Qty
+                        </div>
+                        <div
+                          class="col-3 d-flex modal--para__price justify-content-center"
+                        >
+                          $499.00
+                        </div>
                       </div>
-                      <div class="row border mt-2">
-                        <div class="row">
-                          <div class="col-3">ADD ADDRESS</div>
-                          <div class="col-6"></div>
-                          <div class="col-3 btn btn-outline-none">
+                      <div class="row border mt-3">
+                        <div class="row mt-2">
+                          <div class="col-4 modal--para__addAddress">
+                            ADD ADDRESS
+                          </div>
+                          <div class="col-4"></div>
+                          <div
+                            class="col-4 d-flex btn text-info btn-outline-none border-0 p-0 justify-content-end modal--para__saveAddress"
+                          >
                             SAVE ADDRESS
                           </div>
                         </div>
-                        <div class="row">
+                        <div class="row mt-3">
                           <!-- <div class="col-6">Name</div> -->
                           <div class="form-group col-6">
-                            <label for="name">Name</label>
+                            <label for="name" class="modal--label__name"
+                              >Name</label
+                            >
                             <input
                               type="text"
-                              class="form-control"
+                              class="form-control modal--input__name mt-1 p-2"
                               id="name"
                               placeholder="Amy Jackson"
                             />
                           </div>
-                          <!-- <div class="col-6">Contact Number</div> -->
                           <div class="form-group col-6">
-                            <label for="phone">Phone Number</label>
+                            <label
+                              for="phone"
+                              class="modal--label__contactNumber"
+                              >Contact Number</label
+                            >
+                            <div class="input-group flex-nowrap mt-1 align-middle">
+                              <span class="input-group-text p-2" id="addon-wrapping"
+                                >+91</span
+                              >
+                              <input
+                                type="text"
+                                class="form-control modal--input__phone p-2 ps-5"
+                                id="phone"
+                                placeholder="9999 999 999"
+                                pattern="[0-9]{10}"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row mt-3">
+                          <div class="form-group col">
+                            <label for="address" class="modal--label__address"
+                              >Address</label
+                            >
                             <input
-                              type="tel"
-                              class="form-control"
-                              id="phone"
-                              placeholder="9999 999 999"
-                              pattern="[0-9]{10}"
-                              value="+91"
+                              type="text"
+                              class="form-control mt-1 modal--input__address p-2"
+                              id="address"
+                              placeholder="Dubai main road, Dubai cross street"
                             />
                           </div>
                         </div>
-                        <div class="row">
-                          <div class="form-group col">
-                            <label for="address">Address</label>
-                            <input type="text" class="form-control" id="address" placeholder="Dubai main road, Dubai cross street">
+                        <div class="row mt-3 mb-3">
+                          <div class="col-6">
+                            <label for="city" class="modal--label__city"
+                              >City</label
+                            >
+                            <div class="form-group dropdown mt-1 ">
+                              <a
+                                class="btn dropdown-toggle dropdown-menu-bottom modal--button__dropdown modal--input__city p-2"
+                                href="#"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                                id="selectedCity"
+                              >
+                                Select City
+                              </a>
+
+                              <ul class="dropdown-menu">
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    onclick="updateSelectedCity('Chennai')"
+                                    >Chennai</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    onclick="updateSelectedCity('Madurai')"
+                                    >Madurai</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    onclick="updateSelectedCity('Kancheepuram')"
+                                    >Kancheepuram</a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
                           </div>
-                        </div>
-                        <div class="row">
-                          <div class="form-group col-6">
-                            <label for="city">City</label>
-                            <select class="form-control" id="city">
-                              <option value="Chennai">Chennai</option>
-                              <option value="Madurai">Madurai</option>
-                              <option value="Kancheepuram">Kancheepuram</option>
-                              <option value="Chennai">Chennai</option>
-                            </select>
-                          </div>
-                          <div class="form-group col-6">
-                            <label for="country">Country</label>
-                            <select class="form-control" id="country">
-                              <option value="">Select a country</option>
-                              <option value="usa">USA</option>
-                              <option value="canada">Canada</option>
-                              <option value="uk">UK</option>
-                              <option value="france">France</option>
-                            </select>
+
+                          <div class="col-6">
+                            <label for="Country" class="modal--label__country"
+                              >Country</label
+                            >
+                            <div class="form-group d-grid dropdown mt-1">
+                              <a
+                                class="btn dropdown-toggle dropdown-menu-bottom  modal--button__dropdown modal--input__country p-2"
+                                href="#"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                                id="selectedCountry"
+                              >
+                                Select Country
+                              </a>
+
+                              <ul class="dropdown-menu">
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    onclick="updateSelectedCountry('Kailasha')"
+                                    >Kailasha</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    onclick="updateSelectedCountry('India')"
+                                    >India</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    onclick="updateSelectedCountry('China')"
+                                    >China</a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="col-4 border">
-                      <div class="row">
-                        <div class="col-6">INVOICE SUMMARY</div>
-                      </div>
-                      <div class="row">
-                        <div class="col-6">Actual amount</div>
-                        <div class="col-6">$ 499</div>
-                      </div>
-                      <div class="row">
-                        <div class="col-6">Discount</div>
-                        <div class="col-6">$ 60</div>
-                      </div>
-                      <div class="row">
-                        <div class="col-6">Billing amount</div>
-                        <div class="col-6">$ 499</div>
-                      </div>
-                      <div class="row">
-                        <div class="col-6">Total amount</div>
-                        <div class="col-6">$ 499</div>
-                      </div>
-                      <div class="row">
-                        <div class="col-12 btn btn-info">Pay $ 499.00</div>
+                    <div class="col-4">
+                      <div class="border px-2">
+                        <div class="row">
+                          <div class="col">INVOICE SUMMARY</div>
+                        </div>
+                        <div class="row">
+                          <div class="col-8">Actual amount</div>
+                          <div class="col-4 d-flex justify-content-end">
+                            $ 499.00
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-8">Discount</div>
+                          <div class="col-4 d-flex justify-content-end">
+                            $ 60.00
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-8">Billing amount</div>
+                          <div class="col-4 d-flex justify-content-end">
+                            $ 499.00
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-8">Total amount</div>
+                          <div class="col-4 d-flex justify-content-end">
+                            $ 499.00
+                          </div>
+                        </div>
+                        <div class="row p-2">
+                          <div class="col-12 btn btn-info">Pay $ 499.00</div>
+                        </div>
                       </div>
                     </div>
                   </div>
