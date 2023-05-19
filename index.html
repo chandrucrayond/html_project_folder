@@ -108,14 +108,14 @@
           class="grid-container"
         ></section>
         <!-- Modal by bootstrap -->
-        <button
+        <!-- <button
           type="button"
           class="btn btn-primary"
           data-bs-toggle="modal"
           data-bs-target="#exampleModal"
         >
           Launch demo modal
-        </button>
+        </button> -->
         <div
           class="modal fade"
           id="exampleModal"
@@ -143,7 +143,9 @@
                 <div class="container-fluid">
                   <div class="row">
                     <div class="col-8">
-                      <div class="row modalCenterAligned border">
+                      <div
+                        class="row modalCenterAligned modal--section__outline"
+                      >
                         <div class="col-4">
                           <div class="row">
                             <div class="col-4 d-flex pe-0">
@@ -180,7 +182,25 @@
                           $499.00
                         </div>
                       </div>
-                      <div class="row border mt-3">
+                      <div
+                        class="row modal--section__outline modal--section__customerNotEditable mt-3"
+                      >
+                        <div class="row text-wrap p-3 ">
+                          <div class="col-4 modal--section__showNameAndPhone ps-3">
+                            <div class="row modal--para__showName" id="nameShow">Shivaji</div>
+                            <div class="row modal--para__showPhone" id="phoneShow">
+                              38843843q
+                            </div>
+                          </div>
+                          <div class="col-6 modal--para__showAddress" id="addressShow">
+                            Address of the customer is shown here
+                          </div>
+                          <div class="col-2 modal--button__edit">Edit</div>
+                        </div>
+                      </div>
+                      <div
+                        class="row modal--section__outline modal--section__customerEditable mt-3"
+                      >
                         <div class="row mt-2">
                           <div class="col-4 modal--para__addAddress">
                             ADD ADDRESS
@@ -211,8 +231,12 @@
                               class="modal--label__contactNumber"
                               >Contact Number</label
                             >
-                            <div class="input-group flex-nowrap mt-1 align-middle">
-                              <span class="input-group-text p-2" id="addon-wrapping"
+                            <div
+                              class="input-group flex-nowrap mt-1 align-middle"
+                            >
+                              <span
+                                class="input-group-text p-2"
+                                id="addon-wrapping"
                                 >+91</span
                               >
                               <input
@@ -243,7 +267,7 @@
                             <label for="city" class="modal--label__city"
                               >City</label
                             >
-                            <div class="form-group dropdown mt-1 ">
+                            <div class="form-group dropdown mt-1">
                               <a
                                 class="btn dropdown-toggle dropdown-menu-bottom modal--button__dropdown modal--input__city p-2"
                                 href="#"
@@ -290,7 +314,7 @@
                             >
                             <div class="form-group d-grid dropdown mt-1">
                               <a
-                                class="btn dropdown-toggle dropdown-menu-bottom  modal--button__dropdown modal--input__country p-2"
+                                class="btn dropdown-toggle dropdown-menu-bottom modal--button__dropdown modal--input__country p-2"
                                 href="#"
                                 role="button"
                                 data-bs-toggle="dropdown"
@@ -332,36 +356,56 @@
                       </div>
                     </div>
                     <div class="col-4">
-                      <div class="border px-2">
-                        <div class="row">
-                          <div class="col">INVOICE SUMMARY</div>
+                      <div class="modal--section__outline p-2">
+                        <div class="row py-2">
+                          <div class="col modal--para__summary">
+                            INVOICE SUMMARY
+                          </div>
                         </div>
-                        <div class="row">
-                          <div class="col-8">Actual amount</div>
-                          <div class="col-4 d-flex justify-content-end">
+                        <div class="row py-2">
+                          <div class="col-8 modal__summaryItems">
+                            Actual amount
+                          </div>
+                          <div
+                            class="col-4 d-flex justify-content-end modal__summaryItemsValue"
+                          >
                             $ 499.00
                           </div>
                         </div>
-                        <div class="row">
-                          <div class="col-8">Discount</div>
-                          <div class="col-4 d-flex justify-content-end">
+                        <div class="row py-2">
+                          <div class="col-8 modal__summaryItems">Discount</div>
+                          <div
+                            class="col-4 d-flex justify-content-end modal__summaryItemsValue"
+                          >
                             $ 60.00
                           </div>
                         </div>
-                        <div class="row">
-                          <div class="col-8">Billing amount</div>
-                          <div class="col-4 d-flex justify-content-end">
+                        <div class="row py-2">
+                          <div class="col-8 modal__summaryItems">
+                            Billing amount
+                          </div>
+                          <div
+                            class="col-4 d-flex justify-content-end modal__summaryItemsValue"
+                          >
                             $ 499.00
                           </div>
                         </div>
-                        <div class="row">
-                          <div class="col-8">Total amount</div>
-                          <div class="col-4 d-flex justify-content-end">
+                        <div class="row py-2">
+                          <div class="col-8 modal__summaryTotal">
+                            Total amount
+                          </div>
+                          <div
+                            class="col-4 d-flex justify-content-end modal__summaryTotalValue"
+                          >
                             $ 499.00
                           </div>
                         </div>
-                        <div class="row p-2">
-                          <div class="col-12 btn btn-info">Pay $ 499.00</div>
+                        <div class="row p-2 py-2">
+                          <div
+                            class="col-12 btn btn-info modal--button__payNow py-2"
+                          >
+                            Pay $ 499.00
+                          </div>
                         </div>
                       </div>
                     </div>

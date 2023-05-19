@@ -516,9 +516,131 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
   /* border: 1px solid #e9ecef;
   border-right: none;
   border-radius: 4px; */
-  border:none;
+  border: none;
   position: absolute;
   z-index: 100;
-  left:10px;
+  left: 10px;
 }
 
+#selectedCity.custom-style {
+  color: #4e6e7e !important;
+  font-weight: 500 !important;
+}
+
+#selectedCountry.custom-style {
+  color: #4e6e7e !important;
+  font-weight: 500 !important;
+}
+
+.modal--para__summary {
+  font: normal normal 600 12px/15px Montserrat;
+  letter-spacing: 0px;
+  color: #b3c1c8;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+.modal__summaryItems {
+  font: normal normal 500 12px/15px Montserrat;
+  letter-spacing: 0px;
+  color: #b3c1c8;
+}
+
+.modal__summaryTotal {
+  font: normal normal 600 12px/15px Montserrat;
+  letter-spacing: 0px;
+  color: #023047;
+}
+
+.modal__summaryItemsValue {
+  font: normal normal 500 12px/15px Montserrat;
+  letter-spacing: 0px;
+  color: #023047;
+}
+
+.modal__summaryTotalValue {
+  font: normal normal 600 12px/15px Montserrat;
+  letter-spacing: 0px;
+  color: #023047;
+}
+
+.modal--button__payNow {
+  font: normal normal 600 14px/18px Montserrat;
+  letter-spacing: 0px;
+  color: #ffffff;
+  background: #219ebc 0% 0% no-repeat padding-box;
+  border-radius: 4px;
+}
+
+.modal--button__payNow:hover,
+.modal--button__payNow:active,
+.modal--button__payNow:focus,
+.modal--button__payNow:focus-visible,
+.modal--button__payNow:link {
+  font: normal normal 600 14px/18px Montserrat;
+  letter-spacing: 0px;
+  color: #ffffff !important;
+  background: #219ebc 0% 0% no-repeat padding-box !important;
+  border-radius: 4px;
+}
+
+.modal--section__outline {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+}
+
+/* .modal--section__customer{
+  
+} */
+
+.modal--section__customerNotEditable {
+  display: none;
+}
+
+/* .modal--para__showName,
+.modal--para__showPhone, */
+.modal--button__edit,
+.modal--section__showNameAndPhone,
+.modal--para__showAddress {
+  flex: 0 0 auto;
+  overflow-wrap: break-word;
+}
+
+.modal--para__showName{
+font: normal normal 700 16px/19px Montserrat;
+letter-spacing: 0px;
+color: #023047;
+text-transform: capitalize;
+}
+
+.modal--para__showPhone {
+font: normal normal normal 12px/15px Montserrat;
+letter-spacing: 0px;
+color: #B3C1C8;
+}
+
+.modal--para__showName,
+.modal--para__showPhone {
+  justify-content: left;
+  padding-left: 10px;
+}
+
+.modal--section__showNameAndPhone {
+  align-self: center;
+}
+
+.modal--para__showAddress {
+  font: normal normal 500 12px/15px Montserrat;
+  letter-spacing: 0px;
+  color: #b3c1c8;
+}
+.modal--button__edit {
+  align-self: center;
+  display: flex;
+  justify-content: space-around;
+  font: normal normal 700 12px/15px Montserrat;
+  letter-spacing: 0px;
+  color: #fb8500;
+  cursor: pointer;
+}

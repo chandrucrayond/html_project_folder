@@ -141,6 +141,8 @@ for (let i = 0; i < 9; i++) {
           <div class="main--section__productBuyNow">
             <button
               class="btn btn-info main--Button__buyNow"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
               style="text-align: right"
             >
               Buy Now
@@ -281,18 +283,76 @@ if (exampleModal) {
 }
 
 function updateSelectedCity(city) {
-  document.getElementById("selectedCity").textContent = city;
+  var selectedCityElement = document.getElementById("selectedCity");
+  selectedCityElement.value = city;
+  selectedCityElement.textContent = city;
+  selectedCityElement.classList.add("custom-style");
 }
-
 function updateSelectedCountry(country) {
-  document.getElementById("selectedCountry").textContent = country;
+  var selectedCountryElement = document.getElementById("selectedCountry");
+  selectedCountryElement.value = country;
+  selectedCountryElement.textContent = country;
+  selectedCountryElement.classList.add("custom-style");
 }
 
+const saveAddress = document.getElementsByClassName(
+  "modal--para__saveAddress"
+)[0];
+if (saveAddress) {
+  saveAddress.addEventListener("click", (event) => {
+    // Button that triggered the modal
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const address = document.getElementById("address").value;
+    const city = document.getElementById("selectedCity").value;
+    const country = document.getElementById("selectedCountry").value;
+    console.log(name + phone + address + city + country);
 
-document.getElementById("selectedCity").textContent.addEventListener("change", () => {
-  var selectedCity = document.getElementById("selectedCity");
-  if (selectedCity.textContent !== "Select City") {
-    selectedCity.style.color = "red";
-    selectedCity.style.fontWeight = "500";
-  }
-});
+    document.getElementById("nameShow").value = name;
+    document.getElementById("phoneShow").value = phone;
+    document.getElementById("addressShow").value =
+      address + ", " + city + ", " + country;
+    document.getElementById("nameShow").textContent = name;
+    document.getElementById("phoneShow").textContent = phone;
+    document.getElementById("addressShow").textContent =
+      address + ", " + city + ", " + country;
+
+    const customerSectionEditable = document.getElementsByClassName(
+      "modal--section__customerEditable"
+    )[0];
+    customerSectionEditable.style.display = "none";
+
+    const customerSectionNotEditable = document.getElementsByClassName(
+      "modal--section__customerNotEditable"
+    )[0];
+    customerSectionNotEditable.style.display = "block";
+  });
+}
+
+const editAddress = document.getElementsByClassName("modal--button__edit")[0];
+if (editAddress) {
+  editAddress.addEventListener("click", (event) => {
+    // Button that triggered the modal
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const address = document.getElementById("address").value;
+    const city = document.getElementById("selectedCity").value;
+    const country = document.getElementById("selectedCountry").value;
+    console.log(name + phone + address + city + country);
+
+    const nameShowing = document.getElementById("nameShow").value;
+    const phoneShowing = document.getElementById("phoneShow").value;
+    const addressShowing = document.getElementById("addressShow").value;
+    console.log(nameShowing + phoneShowing + addressShowing);
+
+    const customerSectionEditable = document.getElementsByClassName(
+      "modal--section__customerEditable"
+    )[0];
+    customerSectionEditable.style.display = "block";
+
+    const customerSectionNotEditable = document.getElementsByClassName(
+      "modal--section__customerNotEditable"
+    )[0];
+    customerSectionNotEditable.style.display = "none";
+  });
+}
