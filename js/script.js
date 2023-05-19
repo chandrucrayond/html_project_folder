@@ -2,7 +2,9 @@ var jsonData = {
   pixel_5: {
     id: "pixel_5",
     image: "assets/pixel_5.jpeg",
+    model: "5",
     name: "Pixel 5",
+    serialNo: "SKU12345-12",
     price: "$ 499",
     feature: "Smart, Powerful, Helpful",
     rating: "1.2k",
@@ -32,8 +34,10 @@ var jsonData = {
   },
   pixel_6: {
     id: "pixel_6",
+    model: "6",
     image: "assets/pixel_6.jpg",
     name: "Pixel 6",
+    serialNo: "RKM45678-45",
     price: "$ 699",
     feature: "Smart",
     rating: "1.2k",
@@ -65,8 +69,10 @@ var jsonData = {
 
   pixel_6_pro: {
     id: "pixel_6_pro",
+    model: "6 pro",
     image: "assets/pixel_6pro.jpg",
     name: "Pixel 6 Pro",
+    serialNo: "PIX78912-78",
     price: "$ 699",
     feature: "Powerful, Helpful",
     rating: "1.2k",
@@ -308,14 +314,16 @@ if (saveAddress) {
     const country = document.getElementById("selectedCountry").value;
     console.log(name + phone + address + city + country);
 
+    var addressToShow = "";
+    if (city !== undefined) addressToShow += ", " + city;
+    if (country !== undefined) addressToShow += ", " + country;
     document.getElementById("nameShow").value = name;
     document.getElementById("phoneShow").value = phone;
-    document.getElementById("addressShow").value =
-      address + ", " + city + ", " + country;
+    document.getElementById("addressShow").value = address + addressToShow;
     document.getElementById("nameShow").textContent = name;
     document.getElementById("phoneShow").textContent = phone;
     document.getElementById("addressShow").textContent =
-      address + ", " + city + ", " + country;
+      address + addressToShow;
 
     const customerSectionEditable = document.getElementsByClassName(
       "modal--section__customerEditable"
@@ -333,17 +341,17 @@ const editAddress = document.getElementsByClassName("modal--button__edit")[0];
 if (editAddress) {
   editAddress.addEventListener("click", (event) => {
     // Button that triggered the modal
-    const name = document.getElementById("name").value;
-    const phone = document.getElementById("phone").value;
-    const address = document.getElementById("address").value;
-    const city = document.getElementById("selectedCity").value;
-    const country = document.getElementById("selectedCountry").value;
-    console.log(name + phone + address + city + country);
+    // const name = document.getElementById("name").value;
+    // const phone = document.getElementById("phone").value;
+    // const address = document.getElementById("address").value;
+    // const city = document.getElementById("selectedCity").value;
+    // const country = document.getElementById("selectedCountry").value;
+    // console.log(name + phone + address + city + country);
 
-    const nameShowing = document.getElementById("nameShow").value;
-    const phoneShowing = document.getElementById("phoneShow").value;
-    const addressShowing = document.getElementById("addressShow").value;
-    console.log(nameShowing + phoneShowing + addressShowing);
+    // const nameShowing = document.getElementById("nameShow").value;
+    // const phoneShowing = document.getElementById("phoneShow").value;
+    // const addressShowing = document.getElementById("addressShow").value;
+    // console.log(nameShowing + phoneShowing + addressShowing);
 
     const customerSectionEditable = document.getElementsByClassName(
       "modal--section__customerEditable"
