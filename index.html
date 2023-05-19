@@ -438,7 +438,11 @@
               <div class="modal-header border-0 d-block">
                 <!-- Title and Close Button -->
                 <div class="d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title modal--heading">Modal Title</h5>
+                  <h5
+                    class="modal-title modal--heading viewProduct--modal__title"
+                  >
+                    Pixel 5(dum)
+                  </h5>
                   <button
                     type="button"
                     class="btn-close"
@@ -451,25 +455,26 @@
                 <div
                   id="carouselExample"
                   class="carousel slide mt-3 mx-auto viewProductCarousel justify-content-center"
-                  data-bs-ride="carousel"
                 >
-                  <div class="carousel-inner carouselProductItem  justify-content-center mx-auto">
+                  <div
+                    class="carousel-inner carouselProductItem justify-content-center mx-auto"
+                  >
                     <!-- Carousel Items -->
                     <div class="carousel-item active">
                       <img
                         src="assets/pixel_5.jpeg"
-                        class="d-flex w-100 "
+                        class="d-flex w-100"
                         alt="Image 1"
                       />
                     </div>
-                    <div class="carousel-item ">
+                    <div class="carousel-item">
                       <img
                         src="assets/pixel_6.jpg"
                         class="d-block w-100"
                         alt="Image 2"
                       />
                     </div>
-                    <div class="carousel-item ">
+                    <div class="carousel-item">
                       <img
                         src="assets/pixel_6pro.jpg"
                         class="d-block w-100"
@@ -477,13 +482,29 @@
                       />
                     </div>
                   </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselExample"
+                    data-bs-slide="prev"
+                  >
+                    <img
+                      src="assets/Group 3741.png"
+                      alt="Carousel_Previous_Image"
+                    />
+                    <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span> -->
                   </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselExample"
+                    data-bs-slide="next"
+                  >
+                    <img
+                      src="assets/Group 3740.png"
+                      alt="Carousel_Next_Image"
+                    />
                   </button>
                 </div>
                 <!-- Ending of carousel -->
@@ -493,99 +514,129 @@
                 <div class="container-fluid">
                   <div class="row">
                     <div class="col-12">
-                      <div class="row p-2 pe-2">
-                        <div class="col-4">Color</div>
-                        <div class="col-8">Black White Blue</div>
+                      <div class="row p-2 viewProduct--section__color">
+                        <div class="col-4 viewProduct--label__items">Color</div>
+                        <div class="col-2 viewProduct--para__items d-flex pe-0">
+                          <div class="black__dot align-middle"></div>
+                          <div class="ps-2">Black</div>
+                        </div>
+                        <div class="col-3 viewProduct--para__items d-flex ps-0 pe-0 justify-content-center">
+                          <div class="white__dot align-middle"></div>
+                          <div class="ps-2">White</div>
+                        </div>
+                        <div class="col-3 viewProduct--para__items d-flex ps-0 pe-0">
+                          <div class="blue__dot align-middle "></div>
+                          <div class="ps-2">Blue</div>
+                        </div>
+                        <!-- <div class="col-1"></div> -->
                       </div>
-                      <div class="row p-2 pe-2">
-                        <div class="col-4">Display</div>
-                        <div class="col-8">
+                      <div class="row p-2 py-2">
+                        <div class="col-4 viewProduct--label__items py-2">
+                          Display
+                        </div>
+                        <div class="col-8 viewProduct--para__items">
                           <div class="row">
-                            <div class="col">
+                            <div class="col py-2">
                               Full-screen 6.1-inch (156 mm)1 display, up to 60
                               Hz
                             </div>
                           </div>
                           <div class="row">
-                            <div class="col">20:9 aspect ratio</div>
+                            <div class="col py-2">20:9 aspect ratio</div>
                           </div>
                           <div class="row">
-                            <div class="col">
+                            <div class="col py-2">
                               FHD+ (1080 x 2400) OLED at 429 ppi
                             </div>
                           </div>
                           <div class="row">
-                            <div class="col">
+                            <div class="col py-2">
                               Corning® Gorilla® Glass 3™ cover glass
                             </div>
                           </div>
                           <div class="row">
-                            <div class="col">
+                            <div class="col py-2">
                               Always-on display with At a Glance and Now Playing
                             </div>
                           </div>
                         </div>
                       </div>
                       <div class="row p-2 pe-2">
-                        <div class="col-4">Dimension & Weight</div>
-                        <div class="col-8">
+                        <div class="col-4 viewProduct--label__items py-2">
+                          Dimension & Weight
+                        </div>
+                        <div class="col-8 viewProduct--para__items">
                           <div class="row">
-                            <div class="col">
-                              6.0 heightt x 2.8 width x 0.35 depth (in)
+                            <div class="col py-2">
+                              6.0 height x 2.8 width x 0.35 depth (in)
                             </div>
                           </div>
                           <div class="row">
-                            <div class="col">
+                            <div class="col py-2">
                               152.2 height x 71.8 width x 8.9 depth (mm)
                             </div>
                           </div>
-                          <div class="row"><div class="col">6.3 oz</div></div>
-                          <div class="row"><div class="col">178 g</div></div>
+                          <div class="row">
+                            <div class="col py-2">6.3 oz</div>
+                          </div>
+                          <div class="row">
+                            <div class="col py-2">178 g</div>
+                          </div>
                         </div>
                       </div>
                       <div class="row p-2 pe-2">
-                        <div class="col-4">Battery & Charging</div>
-                        <div class="col-8">
+                        <div class="col-4 viewProduct--label__items py-2">
+                          Battery & Charging
+                        </div>
+                        <div class="col-8 viewProduct--para__items">
                           <div class="row">
-                            <div class="col">Over 24-hour battery life3</div>
+                            <div class="col py-2">
+                              Over 24-hour battery life3
+                            </div>
                           </div>
                           <div class="row">
-                            <div class="col">
+                            <div class="col py-2">
                               Up to 72-our battery life with Extreme
                               Battery-Saver
                             </div>
                           </div>
                           <div class="row">
-                            <div class="col">Typical 4410 mAh</div>
+                            <div class="col py-2">Typical 4410 mAh</div>
                           </div>
                           <div class="row">
-                            <div class="col">Fast Charging</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row p-2 pe-2">
-                        <div class="col-4">Memory</div>
-                        <div class="col-8">
-                          <div class="row">
-                            <div class="col">6 GB LPDDR5 RAM</div>
+                            <div class="col py-2">Fast Charging</div>
                           </div>
                         </div>
                       </div>
                       <div class="row p-2 pe-2">
-                        <div class="col-4">Storage</div>
-                        <div class="col-8">
+                        <div class="col-4 viewProduct--label__items py-2">
+                          Memory
+                        </div>
+                        <div class="col-8 viewProduct--para__items">
                           <div class="row">
-                            <div class="col">
+                            <div class="col py-2">6 GB LPDDR5 RAM</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row p-2 pe-2">
+                        <div class="col-4 viewProduct--label__items py-2">
+                          Storage
+                        </div>
+                        <div class="col-8 viewProduct--para__items">
+                          <div class="row">
+                            <div class="col py-2">
                               128 GB storage UFS 3.1 storage
                             </div>
                           </div>
                         </div>
                       </div>
                       <div class="row p-2 pe-2">
-                        <div class="col-4">Processor</div>
-                        <div class="col-8">
+                        <div class="col-4 viewProduct--label__items py-2">
+                          Processor
+                        </div>
+                        <div class="col-8 viewProduct--para__items">
                           <div class="row">
-                            <div class="col">
+                            <div class="col py-2">
                               Google Tensor Titan M2 security coprocessor
                             </div>
                           </div>
@@ -604,8 +655,8 @@
                 >
                   Close
                 </button>
-                <button type="button" class="btn btn-primary">
-                  Save changes
+                <button type="button" class="btn viewProduct--button__buyNow main--button__buyNow">
+                  Buy Now
                 </button>
               </div>
             </div>

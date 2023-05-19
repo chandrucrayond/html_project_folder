@@ -607,17 +607,17 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
   overflow-wrap: break-word;
 }
 
-.modal--para__showName{
-font: normal normal 700 16px/19px Montserrat;
-letter-spacing: 0px;
-color: #023047;
-text-transform: capitalize;
+.modal--para__showName {
+  font: normal normal 700 16px/19px Montserrat;
+  letter-spacing: 0px;
+  color: #023047;
+  text-transform: capitalize;
 }
 
 .modal--para__showPhone {
-font: normal normal normal 12px/15px Montserrat;
-letter-spacing: 0px;
-color: #B3C1C8;
+  font: normal normal normal 12px/15px Montserrat;
+  letter-spacing: 0px;
+  color: #b3c1c8;
 }
 
 .modal--para__showName,
@@ -645,12 +645,88 @@ color: #B3C1C8;
   cursor: pointer;
 }
 
-.viewProductCarousel{
+.viewProductCarousel {
   width: 100% !important;
   height: 150px !important;
 }
 
-.carouselProductItem{
-  width : 120px !important;
-  height : 150px !important;
+.carouselProductItem {
+  width: 120px !important;
+  height: 150px !important;
+}
+
+.viewProduct--modal__title {
+  font: normal normal 700 20px/24px Montserrat;
+  letter-spacing: 0px;
+  color: #023047;
+}
+
+.viewProduct--label__items {
+  font: normal normal 600 14px/18px Montserrat;
+  letter-spacing: 0px;
+  color: #023047;
+}
+
+.viewProduct--para__items {
+  font: normal normal 400 12px/15px Montserrat;
+  letter-spacing: 0px;
+  color: #4e6e7e;
+  align-self: center;
+}
+
+.black__dot {
+  background-color: #2d3735;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+
+.white__dot {
+  border: 1px solid #e9ecef;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+
+.blue__dot {
+  background-color: #219ebc;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+
+.modal-body::-webkit-scrollbar {
+  width: 0.5em;
+  background-color: transparent;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+/* Set a custom style for the modal-body */
+.modal-body {
+  overflow-y: auto;
+  max-height: 300px; /* Adjust the maximum height as needed */
+}
+
+.viewProduct--button__buyNow {
+  background-color: #219ebc;
+  font: normal normal 600 14px/18px Montserrat;
+  letter-spacing: 0px;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 20px auto !important;
+}
+
+.viewProduct--button__buyNow:hover,
+.viewProduct--button__buyNow:active,
+.viewProduct--button__buyNow:focus,
+.viewProduct--button__buyNow:focus-visible,
+.viewProduct--button__buyNow:link {
+  background-color: #219ebc !important;
+  border-radius: 4px !important;
+  font: normal normal 600 14px/18px Montserrat !important;
+  letter-spacing: 0px;
+  color: #ffffff !important;
 }
