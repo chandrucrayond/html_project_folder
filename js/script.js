@@ -6,6 +6,7 @@ var jsonData = {
     name: "Pixel 5",
     serialNo: "SKU12345-12",
     price: "$ 499",
+    priceInNumber: 499,
     feature: "Smart, Powerful, Helpful",
     rating: "1.2k",
     color: ["Black", "White", "Blue"],
@@ -39,6 +40,7 @@ var jsonData = {
     name: "Pixel 6",
     serialNo: "RKM45678-45",
     price: "$ 699",
+    priceInNumber: 699,
     feature: "Smart",
     rating: "1.2k",
     color: ["Black", "White", "Blue"],
@@ -73,7 +75,8 @@ var jsonData = {
     image: "assets/pixel_6pro.jpg",
     name: "Pixel 6 Pro",
     serialNo: "PIX78912-78",
-    price: "$ 699",
+    price: "$ 799",
+    priceInNumber: 799,
     feature: "Powerful, Helpful",
     rating: "1.2k",
     color: ["Black", "White", "Blue"],
@@ -219,6 +222,10 @@ for (i = 0; i < 9; i++) {
     i
   ];
   feature.textContent = Feature;
+
+  const button = document.getElementsByClassName("main--Button__buyNow")[i];
+  const jsonString = JSON.stringify(pixel);
+  button.setAttribute("data-bs-model",jsonString);
 }
 
 for (var i = 0; i < cardLists.length; i++) {
@@ -275,16 +282,38 @@ if (exampleModal) {
     // Button that triggered the modal
     const button = event.relatedTarget;
     // Extract info from data-bs-* attributes
-    const recipient = button.getAttribute("data-bs-whatever");
+    const recipient = button.getAttribute("data-bs-model");
     // If necessary, you could initiate an Ajax request here
     // and then do the updating in a callback.
-
+    const parsedObject = JSON.parse(recipient);
+    console.log(parsedObject);
     // Update the modal's content.
     const modalTitle = exampleModal.querySelector(".modal-title");
-    const modalBodyInput = exampleModal.querySelector(".modal-body input");
+    modalTitle.textContent = `Buy ${parsedObject.name}`;
 
-    modalTitle.textContent = `Buy Pixel ${recipient}`;
-    modalBodyInput.value = recipient;
+    const modalImage = exampleModal.querySelector(".modal--image");
+    modalImage.setAttribute("src",parsedObject.image)
+   
+    const modalProductName = exampleModal.querySelector(".modal--para__title");
+    modalProductName.textContent =  parsedObject.name;
+
+    const modalProductSerialNo = exampleModal.querySelector(".modal--para__serialNo");
+    modalProductSerialNo.textContent = parsedObject.serialNo;
+
+    const modalProductPrice = exampleModal.querySelector(".modal--para__price");
+    modalProductPrice.textContent = parsedObject.price + ".00";
+
+    const modalSummaryActual = exampleModal.querySelector(".modal__summaryItemsActual");
+    modalSummaryActual.textContent = "$ "+ (parseInt(parsedObject.priceInNumber) + 60);
+
+    const modalSummaryBilling = exampleModal.querySelector(".modal__summaryItemsBilling");
+    modalSummaryBilling.textContent = parsedObject.price + ".00";
+
+    const modalSummaryTotal = exampleModal.querySelector(".modal__summaryTotalValue");
+    modalSummaryTotal.textContent = parsedObject.price + ".00";
+
+    const modalSummaryPayNow = exampleModal.querySelector(".modal--button__payNow");
+    modalSummaryPayNow.textContent = parsedObject.price + ".00";
   });
 }
 
@@ -340,18 +369,6 @@ if (saveAddress) {
 const editAddress = document.getElementsByClassName("modal--button__edit")[0];
 if (editAddress) {
   editAddress.addEventListener("click", (event) => {
-    // Button that triggered the modal
-    // const name = document.getElementById("name").value;
-    // const phone = document.getElementById("phone").value;
-    // const address = document.getElementById("address").value;
-    // const city = document.getElementById("selectedCity").value;
-    // const country = document.getElementById("selectedCountry").value;
-    // console.log(name + phone + address + city + country);
-
-    // const nameShowing = document.getElementById("nameShow").value;
-    // const phoneShowing = document.getElementById("phoneShow").value;
-    // const addressShowing = document.getElementById("addressShow").value;
-    // console.log(nameShowing + phoneShowing + addressShowing);
 
     const customerSectionEditable = document.getElementsByClassName(
       "modal--section__customerEditable"
