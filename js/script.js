@@ -19,7 +19,7 @@ var jsonData = {
       "Always-on display with At a Glance and Now Playing",
     ],
     dimension: [
-      "6. heightt x 2.8 width x 0.35 depth (in)",
+      "6.0 heightt x 2.8 width x 0.35 depth (in)",
       "152.2 height x 71.8 width x 8.9 depth (mm)",
       "6.3 oz",
       "178 g",
@@ -134,6 +134,8 @@ for (let i = 0; i < 9; i++) {
             <a
               href="#"
               class="main--Button__productViewProduct"
+              data-bs-toggle="modal"
+              data-bs-target="#viewProductModal"
               style="text-align: left"
             >
               View Product
@@ -226,6 +228,10 @@ for (i = 0; i < 9; i++) {
   const button = document.getElementsByClassName("main--Button__buyNow")[i];
   const jsonString = JSON.stringify(pixel);
   button.setAttribute("data-bs-model",jsonString);
+
+  const viewProduct = document.getElementsByClassName("main--Button__productViewProduct")[i];
+  const jsonStringForViewing = JSON.stringify(pixel);
+  viewProduct.setAttribute("data-bs-model",jsonStringForViewing);
 }
 
 for (var i = 0; i < cardLists.length; i++) {
@@ -314,6 +320,22 @@ if (exampleModal) {
 
     const modalSummaryPayNow = exampleModal.querySelector(".modal--button__payNow");
     modalSummaryPayNow.textContent = parsedObject.price + ".00";
+  });
+}
+
+const viewProductModal = document.getElementById("viewProductModal");
+if (viewProductModal) {
+  viewProductModal.addEventListener("show.bs.modal", (event) => {
+    // Button that triggered the modal
+    const button = event.relatedTarget;
+    // Extract info from data-bs-* attributes
+    const recipient = button.getAttribute("data-bs-model");
+    // If necessary, you could initiate an Ajax request here
+    // and then do the updating in a callback.
+    const parsedObject = JSON.parse(recipient);
+    console.log(parsedObject);
+    // Update the modal's content.
+
   });
 }
 
