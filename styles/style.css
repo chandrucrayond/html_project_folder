@@ -697,19 +697,19 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
   border-radius: 50%;
 }
 
-.modal-body::-webkit-scrollbar {
+.viewProduct--modal__body::-webkit-scrollbar {
   width: 0.5em;
   background-color: transparent;
 }
 
-.modal-body::-webkit-scrollbar-thumb {
+.viewProduct--modal__body::-webkit-scrollbar-thumb {
   background-color: transparent;
 }
 
 /* Set a custom style for the modal-body */
-.modal-body {
+.viewProduct--modal__body {
   overflow-y: auto;
-  max-height: 300px; /* Adjust the maximum height as needed */
+  max-height: 300px;
 }
 
 .viewProduct--button__buyNow {
@@ -839,16 +839,17 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
 }
 
 .success--para__onTheWay {
-  font: normal normal 700 15px/18px Montserrat !important;
+  font: normal normal 600 13px/15px Montserrat !important;
   letter-spacing: 0px;
-  /* color: #ffffff !important; */
+  color: #b3c1c8;
+  opacity: 1;
   display: flex;
   justify-content: center;
   align-self: center;
 }
 
-.payment--image__successful{
-  margin:auto;
+.payment--image__successful {
+  margin: auto;
   width: 100px;
   height: auto;
   display: flex;
