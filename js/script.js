@@ -2,6 +2,7 @@ var jsonData = {
   pixel_5: {
     id: "pixel_5",
     image: "assets/pixel_5.jpeg",
+    otherColor: "assets/pixel5_othercolor1.jpg",
     model: "5",
     name: "Pixel 5",
     serialNo: "SKU12345-12",
@@ -37,6 +38,7 @@ var jsonData = {
     id: "pixel_6",
     model: "6",
     image: "assets/pixel_6.jpg",
+    otherColor: "assets/pixel6_othercolor1.jpg",
     name: "Pixel 6",
     serialNo: "RKM45678-45",
     price: "$ 699",
@@ -73,6 +75,7 @@ var jsonData = {
     id: "pixel_6_pro",
     model: "6 pro",
     image: "assets/pixel_6pro.jpg",
+    otherColor: "assets/pixel6pro_othercolor1.jpg",
     name: "Pixel 6 Pro",
     serialNo: "PIX78912-78",
     price: "$ 799",
@@ -227,11 +230,13 @@ for (i = 0; i < 9; i++) {
 
   const button = document.getElementsByClassName("main--Button__buyNow")[i];
   const jsonString = JSON.stringify(pixel);
-  button.setAttribute("data-bs-model",jsonString);
+  button.setAttribute("data-bs-model", jsonString);
 
-  const viewProduct = document.getElementsByClassName("main--Button__productViewProduct")[i];
+  const viewProduct = document.getElementsByClassName(
+    "main--Button__productViewProduct"
+  )[i];
   const jsonStringForViewing = JSON.stringify(pixel);
-  viewProduct.setAttribute("data-bs-model",jsonStringForViewing);
+  viewProduct.setAttribute("data-bs-model", jsonStringForViewing);
 }
 
 for (var i = 0; i < cardLists.length; i++) {
@@ -298,27 +303,38 @@ if (exampleModal) {
     modalTitle.textContent = `Buy ${parsedObject.name}`;
 
     const modalImage = exampleModal.querySelector(".modal--image");
-    modalImage.setAttribute("src",parsedObject.image)
-   
-    const modalProductName = exampleModal.querySelector(".modal--para__title");
-    modalProductName.textContent =  parsedObject.name;
+    modalImage.setAttribute("src", parsedObject.image);
 
-    const modalProductSerialNo = exampleModal.querySelector(".modal--para__serialNo");
+    const modalProductName = exampleModal.querySelector(".modal--para__title");
+    modalProductName.textContent = parsedObject.name;
+
+    const modalProductSerialNo = exampleModal.querySelector(
+      ".modal--para__serialNo"
+    );
     modalProductSerialNo.textContent = parsedObject.serialNo;
 
     const modalProductPrice = exampleModal.querySelector(".modal--para__price");
     modalProductPrice.textContent = parsedObject.price + ".00";
 
-    const modalSummaryActual = exampleModal.querySelector(".modal__summaryItemsActual");
-    modalSummaryActual.textContent = "$ "+ (parseInt(parsedObject.priceInNumber) + 60);
+    const modalSummaryActual = exampleModal.querySelector(
+      ".modal__summaryItemsActual"
+    );
+    modalSummaryActual.textContent =
+      "$ " + (parseInt(parsedObject.priceInNumber) + 60);
 
-    const modalSummaryBilling = exampleModal.querySelector(".modal__summaryItemsBilling");
+    const modalSummaryBilling = exampleModal.querySelector(
+      ".modal__summaryItemsBilling"
+    );
     modalSummaryBilling.textContent = parsedObject.price + ".00";
 
-    const modalSummaryTotal = exampleModal.querySelector(".modal__summaryTotalValue");
+    const modalSummaryTotal = exampleModal.querySelector(
+      ".modal__summaryTotalValue"
+    );
     modalSummaryTotal.textContent = parsedObject.price + ".00";
 
-    const modalSummaryPayNow = exampleModal.querySelector(".modal--button__payNow");
+    const modalSummaryPayNow = exampleModal.querySelector(
+      ".modal--button__payNow"
+    );
     modalSummaryPayNow.textContent = parsedObject.price + ".00";
   });
 }
@@ -326,19 +342,33 @@ if (exampleModal) {
 const viewProductModal = document.getElementById("viewProductModal");
 if (viewProductModal) {
   viewProductModal.addEventListener("show.bs.modal", (event) => {
-    // Button that triggered the modal
     const button = event.relatedTarget;
-    // Extract info from data-bs-* attributes
     const recipient = button.getAttribute("data-bs-model");
-    // If necessary, you could initiate an Ajax request here
-    // and then do the updating in a callback.
     const parsedObject = JSON.parse(recipient);
     console.log(parsedObject);
-    // Update the modal's content.
 
+    const modalTitle = viewProductModal.querySelector(
+      ".viewProduct--modal__title"
+    );
+    modalTitle.textContent = parsedObject.name;
+
+    const carouselImage = viewProductModal.querySelector(".carousel--image");
+    carouselImage.setAttribute("src", parsedObject.image);
+
+    const carouselImage2 = viewProductModal.querySelector(".carousel--image2");
+    carouselImage2.setAttribute("src", parsedObject.otherColor);
+
+    const modalPrice = viewProductModal.querySelector(
+      ".viewProduct--footer__price"
+    );
+    modalPrice.textContent = parsedObject.price;
+
+    const carouselBuyNow = viewProductModal.querySelector(".viewProduct--button__buyNow");
+    carouselBuyNow.setAttribute("data-bs-model",recipient);
   });
 }
 
+// modal--button__payNow
 function updateSelectedCity(city) {
   var selectedCityElement = document.getElementById("selectedCity");
   selectedCityElement.value = city;
@@ -391,7 +421,6 @@ if (saveAddress) {
 const editAddress = document.getElementsByClassName("modal--button__edit")[0];
 if (editAddress) {
   editAddress.addEventListener("click", (event) => {
-
     const customerSectionEditable = document.getElementsByClassName(
       "modal--section__customerEditable"
     )[0];

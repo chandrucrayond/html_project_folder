@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles/style.css" />
@@ -409,6 +409,8 @@
                         <div class="row p-2 py-2">
                           <div
                             class="col-12 btn btn-info modal--button__payNow py-2"
+                            data-bs-toggle="modal"
+                            data-bs-target="#purchasedSuccessful"
                           >
                             Pay $ 499.00
                           </div>
@@ -463,22 +465,15 @@
                     <div class="carousel-item active">
                       <img
                         src="assets/pixel_5.jpeg"
-                        class="d-flex w-100"
+                        class="d-flex w-100 carousel--image"
                         alt="Image 1"
                       />
                     </div>
                     <div class="carousel-item">
                       <img
-                        src="assets/pixel_6.jpg"
-                        class="d-block w-100"
+                        src="assets/pixel5_othercolor1.jpg"
+                        class="d-block w-100 carousel--image2"
                         alt="Image 2"
-                      />
-                    </div>
-                    <div class="carousel-item">
-                      <img
-                        src="assets/pixel_6pro.jpg"
-                        class="d-block w-100"
-                        alt="Image 3"
                       />
                     </div>
                   </div>
@@ -520,12 +515,16 @@
                           <div class="black__dot align-middle"></div>
                           <div class="ps-2">Black</div>
                         </div>
-                        <div class="col-3 viewProduct--para__items d-flex ps-0 pe-0 justify-content-center">
+                        <div
+                          class="col-3 viewProduct--para__items d-flex ps-0 pe-0 justify-content-center"
+                        >
                           <div class="white__dot align-middle"></div>
                           <div class="ps-2">White</div>
                         </div>
-                        <div class="col-3 viewProduct--para__items d-flex ps-0 pe-0">
-                          <div class="blue__dot align-middle "></div>
+                        <div
+                          class="col-3 viewProduct--para__items d-flex ps-0 pe-0"
+                        >
+                          <div class="blue__dot align-middle"></div>
                           <div class="ps-2">Blue</div>
                         </div>
                         <!-- <div class="col-1"></div> -->
@@ -648,14 +647,27 @@
               </div>
 
               <div class="modal-footer border-0">
+                <div>
+                  <div class="row">
+                    <div class="col">
+                      <div class="viewProduct--footer__price">$ 699</div>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <div class="viewProduct--footer__rating">
+                          ⭐⭐⭐⭐(1.2k)
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
                 <button
                   type="button"
-                  class="btn btn-secondary"
-                  data-bs-dismiss="modal"
+                  class="btn viewProduct--button__buyNow main--button__buyNow"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
                 >
-                  Close
-                </button>
-                <button type="button" class="btn viewProduct--button__buyNow main--button__buyNow">
                   Buy Now
                 </button>
               </div>
@@ -663,6 +675,41 @@
           </div>
         </div>
         <!-- End of view product modal -->
+
+        <!-- Start of buy now modal -->
+        <div
+          class="modal fade"
+          id="purchasedSuccessful"
+          tabindex="-1"
+          aria-labelledby="purchasedSuccessfulModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+              <div class="modal-header border-0">
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div class="container-fluid">
+                  <div class="row py-5">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                       <div class="row py-3"><div class="col"><div class="success--para__thanks">Thanks for the order</div></div></div>
+                       <div class="row py-3"><div class="col"><img src="assets/payment_successful.gif" alt="payment_successful" class="payment--image__successful"></div></div>
+                       <div class="row py-3"><div class="col"><div class="success--para__onTheWay">Your product is on the way</div></div></div>
+                    </div>
+                    <div class="col-2"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </section>
 

@@ -30,7 +30,7 @@
   letter-spacing: 0px;
   color: #4e6e7e;
   opacity: 1;
-  /* cursor: pointer; */
+  cursor: context-menu;
 }
 
 .header--section__productItem {
@@ -73,10 +73,12 @@
   border-radius: 4px;
   padding: auto;
 }
-.header--btn__accountCreate:hover {
-  color: white;
-  background-color: #219ebc;
-  border-color: #219ebc;
+.header--btn__accountCreate:hover,
+.header--btn__accountCreate:focus,
+.header--btn__accountCreate:active {
+  color: white !important;
+  background-color: #219ebc !important;
+  border-color: #219ebc !important;
 }
 
 input[type="checkbox"]:checked {
@@ -156,9 +158,9 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
 }
 
 .full_carde img {
-  max-width: 100%;
+  width: 100%;
   height: 220px;
-  padding: 40px 70px;
+  padding: 45px 80px;
   background-color: antiquewhite;
   border-radius: 4px;
 }
@@ -712,7 +714,7 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
 
 .viewProduct--button__buyNow {
   background-color: #219ebc;
-  font: normal normal 600 14px/18px Montserrat;
+  font: normal normal 600 12px/18px Montserrat;
   letter-spacing: 0px;
   color: #ffffff;
   border-radius: 4px;
@@ -726,7 +728,130 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
 .viewProduct--button__buyNow:link {
   background-color: #219ebc !important;
   border-radius: 4px !important;
-  font: normal normal 600 14px/18px Montserrat !important;
+  font: normal normal 600 12px/18px Montserrat !important;
   letter-spacing: 0px;
   color: #ffffff !important;
+}
+
+.viewProduct--footer__price {
+  font: normal normal 500 16px/22px Montserrat;
+  letter-spacing: 0px;
+  color: #023047;
+  opacity: 1;
+}
+
+.viewProduct--footer__rating {
+  font: normal normal normal 10px/15px Montserrat;
+  letter-spacing: 0px;
+  color: #b3c1c8;
+}
+
+.modal-footer {
+  justify-content: space-between;
+}
+
+.createAccount--heading__welcome {
+  font: normal normal 800 24px/29px Montserrat !important;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.14px;
+  color: #091b29;
+}
+
+.createAccount--heading__register {
+  font: normal normal 500 18px/22px Montserrat;
+  letter-spacing: 0.11px;
+  color: #bbbbbb;
+}
+
+.createAccount--label {
+  font: normal normal 400 12px/15px Montserrat;
+  letter-spacing: 0px;
+  color: #98a0ac;
+}
+
+.createAccount--input__username,
+.createAccount--input__email {
+  font: normal normal 600 14px/18px Montserrat;
+  letter-spacing: 0px;
+  color: #091b29;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #e4e8ee;
+  border-radius: 4px;
+}
+
+.createAccount--input__password {
+  font: normal normal 800 14px/18px Montserrat;
+  letter-spacing: 0px;
+  color: #091b29;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #e4e8ee;
+  border-radius: 4px;
+}
+
+.createAccount--button,
+.createAccount--button:link,
+.createAccount--button:active,
+.createAccount--button:focus,
+.createAccount--button:hover {
+  font: normal normal 700 14px/18px Montserrat !important;
+  letter-spacing: 0px;
+  color: #ffffff !important;
+  background: #219ebc 0% 0% no-repeat padding-box !important;
+  box-shadow: 0px 6px 10px #00000014 !important;
+  border-radius: 4px !important;
+}
+
+.createAccount--input__username:active,
+.createAccount--input__username:focus,
+.createAccount--input__email:active,
+.createAccount--input__email:focus,
+.createAccount--input__password:active,
+.createAccount--input__password:focus,
+.modal--input__name:focus,
+.modal--input__phone:focus,
+.modal--input__address:focus,
+.modal--input__name:active,
+.modal--input__phone:active,
+.modal--input__address:active {
+  border: 1px solid #219ebc !important;
+  box-shadow: none !important;
+  caret-color: #219ebc;
+  cursor: text !important;
+}
+
+.createAccount--input__username:hover,
+.createAccount--input__email:hover,
+.createAccount--input__password:hover,
+.modal--input__name:hover,
+.modal--input__phone:hover,
+.modal--input__address:hover {
+  background-color: #219ebc1a !important;
+  cursor: pointer;
+}
+
+.success--para__thanks {
+  font: normal normal 700 25px/18px Montserrat !important;
+  letter-spacing: 0px;
+  /* color: #ffffff !important; */
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.success--para__onTheWay {
+  font: normal normal 700 15px/18px Montserrat !important;
+  letter-spacing: 0px;
+  /* color: #ffffff !important; */
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.payment--image__successful{
+  margin:auto;
+  width: 100px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-self: center;
 }
