@@ -30,12 +30,27 @@
   letter-spacing: 0px;
   color: #4e6e7e;
   opacity: 1;
-  cursor: context-menu;
+  cursor: pointer;
 }
 
-.header--section__productItem {
+.header--section__items.clicked::before {
+  position: relative;
+  top: 3px;
+  content: "\2022";
+  color: #219ebc;
+  font-size: 2em; 
+  line-height: 0.5;
+  margin-right: 3px;
+  color: #219ebc;
   font-weight: 600;
 }
+
+.header--section__items.clicked{
+  color: #219ebc;
+  font-weight: 600;
+}
+
+
 .header--section__productItem::before {
   position: relative;
   top: 3px;
@@ -83,6 +98,7 @@
 
 input[type="checkbox"]:checked {
   accent-color: #219ebc; /* Set your desired background color */
+  opacity: 0.6;
 }
 
 #main--checkbox__filter {
@@ -94,10 +110,6 @@ input[type="checkbox"]:checked {
   font-weight: 600;
   letter-spacing: 0px;
   margin-bottom: 10px;
-}
-
-#main--checkbox__phone {
-  opacity: 0.6;
 }
 
 .main--checkbox__selected {
@@ -113,17 +125,9 @@ input[type="checkbox"]:checked {
 
 input[type="checkbox"]:checked + .main--checkbox__selected {
   font-weight: 600;
+  color: #219ebc;
 }
 
-.main--checkbox__disabled {
-  color: #9aacb5;
-  font-size: 13px;
-  line-height: 18px;
-  font-family: "Montserrat", sans-serif;
-  letter-spacing: 0px;
-  padding-left: 7px;
-  padding-bottom: 7px;
-}
 .main--section {
   display: grid;
   grid-template-columns: 25vw 3fr;
@@ -274,6 +278,14 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
   color: #219ebc;
 }
 
+#main--checkbox__accessories:checked + .main--checkbox__selected {
+  color: #219ebc;
+}
+
+#main--checkbox__headphones:checked + .main--checkbox__selected {
+  color: #219ebc;
+}
+
 .footer--para__endOfProduct {
   font: normal normal 500 14px/18px Montserrat;
   letter-spacing: 0px;
@@ -320,6 +332,8 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
   position: absolute;
   top: 20px;
   left: 50px;
+  width: 30px;
+  height: 30px;
 }
 
 .createAccount--image__teamImage {
@@ -855,4 +869,16 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
   display: flex;
   justify-content: center;
   align-self: center;
+}
+
+/* .viewProduct--modal__footer{
+  box-shadow: 0px -4px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.viewProduct--modal__header{
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+} */
+
+.viewProduct--modal__body{
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.2);
 }

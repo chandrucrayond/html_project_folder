@@ -149,8 +149,8 @@ for (let i = 0; i < 9; i++) {
               $ 499
             </p>
             <p class="main--para__productRating" style="text-align: right">
-              1.2 rating / 5
-            </p>
+             1.2 rating / 5
+             </p>
           </div>
           <div class="main--section__productBuyNow">
             <button
@@ -363,8 +363,10 @@ if (viewProductModal) {
     );
     modalPrice.textContent = parsedObject.price;
 
-    const carouselBuyNow = viewProductModal.querySelector(".viewProduct--button__buyNow");
-    carouselBuyNow.setAttribute("data-bs-model",recipient);
+    const carouselBuyNow = viewProductModal.querySelector(
+      ".viewProduct--button__buyNow"
+    );
+    carouselBuyNow.setAttribute("data-bs-model", recipient);
   });
 }
 
@@ -430,5 +432,21 @@ if (editAddress) {
       "modal--section__customerNotEditable"
     )[0];
     customerSectionNotEditable.style.display = "none";
+  });
+}
+
+const headerSectionItems = document.getElementsByClassName(
+  "header--section__items"
+);
+Array.from(headerSectionItems).forEach(function (item) {
+  item.addEventListener("click", function () {
+    removeHeaderSectionItems();
+    this.classList.add("clicked");
+  });
+});
+
+function removeHeaderSectionItems() {
+  Array.from(headerSectionItems).forEach(function (item) {
+    item.classList.remove("clicked");
   });
 }
