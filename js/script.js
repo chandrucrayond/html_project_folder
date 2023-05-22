@@ -10,6 +10,7 @@ var jsonData = {
     priceInNumber: 499,
     feature: "Smart, Powerful, Helpful",
     rating: "1.2k",
+    ratingInNo: 3.5,
     color: ["Black", "White", "Blue"],
     backgroundColor: "#E3F7F4",
     display: [
@@ -45,6 +46,7 @@ var jsonData = {
     priceInNumber: 699,
     feature: "Smart",
     rating: "1.2k",
+    ratingInNo: 4,
     color: ["Black", "White", "Blue"],
     backgroundColor: "#EBF5F3",
     display: [
@@ -82,6 +84,7 @@ var jsonData = {
     priceInNumber: 799,
     feature: "Powerful, Helpful",
     rating: "1.2k",
+    ratingInNo: 4.5,
     color: ["Black", "White", "Blue"],
     backgroundColor: "#F7F7ED",
     display: [
@@ -148,9 +151,9 @@ for (let i = 0; i < 9; i++) {
             <p class="main--para__productPrice" style="text-align: right">
               $ 499
             </p>
-            <p class="main--para__productRating" style="text-align: right">
+            <div class="main--para__productRating">
              1.2 rating / 5
-             </p>
+             </div>
           </div>
           <div class="main--section__productBuyNow">
             <button
@@ -204,6 +207,7 @@ for (i = 0; i < 9; i++) {
   const Rating = pixel.rating;
   const ImageUrl = pixel.image;
   const backgroundColor = pixel.backgroundColor;
+  const RatingInNo = pixel.ratingInNo;
 
   // Manipulating the DOM
   const image = document.getElementsByClassName("main--section__productImages")[
@@ -221,7 +225,24 @@ for (i = 0; i < 9; i++) {
   const rating = document.getElementsByClassName("main--para__productRating")[
     i
   ];
-  rating.textContent = "⭐⭐⭐⭐(" + Rating + ")";
+  // Calculate the number of full stars and half stars
+  const fullStars = Math.floor(RatingInNo);
+  const hasHalfStar = RatingInNo % 1 !== 0;
+
+  // Create HTML for full stars
+  let starsHTML = "";
+  for (let i = 0; i < fullStars; i++) {
+    starsHTML +=
+      '<img src="assets/full star.png" alt="Full Star" class="rating-image">';
+  }
+
+  // Add half star if applicable
+  if (hasHalfStar) {
+    starsHTML +=
+      '<img src="assets/half star.png" alt="Half Star" class="half-rating-image">';
+  }
+  starsHTML += '<p class="rating--para__noOfReviews"> (1.2k) </p>';
+  rating.innerHTML = starsHTML;
 
   const feature = document.getElementsByClassName("main--para__productFeature")[
     i
@@ -367,6 +388,23 @@ if (viewProductModal) {
       ".viewProduct--button__buyNow"
     );
     carouselBuyNow.setAttribute("data-bs-model", recipient);
+
+    const rating = viewProductModal.querySelector(".viewProduct--footer__rating");
+    const RatingInNo = parsedObject.ratingInNo;
+    const fullStars = Math.floor(RatingInNo);
+    const hasHalfStar = RatingInNo % 1 !== 0;
+    let starsHTML = "";
+    for (let i = 0; i < fullStars; i++) {
+      starsHTML +=
+        '<img src="assets/full star.png" alt="Full Star" class="rating-image">';
+    }
+    // Add half star if applicable
+    if (hasHalfStar) {
+      starsHTML +=
+        '<img src="assets/half star.png" alt="Half Star" class="half-rating-image">';
+    }
+    starsHTML += '<p class="rating--para__noOfReviews"> (1.2k) </p>';
+    rating.innerHTML = starsHTML;
   });
 }
 

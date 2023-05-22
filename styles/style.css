@@ -38,18 +38,17 @@
   top: 3px;
   content: "\2022";
   color: #219ebc;
-  font-size: 2em; 
+  font-size: 2em;
   line-height: 0.5;
   margin-right: 3px;
   color: #219ebc;
   font-weight: 600;
 }
 
-.header--section__items.clicked{
+.header--section__items.clicked {
   color: #219ebc;
   font-weight: 600;
 }
-
 
 .header--section__productItem::before {
   position: relative;
@@ -153,7 +152,7 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
   /* border: 1px solid black; */
   border-radius: 5px;
   width: 270px;
-  height: auto;
+  height: 300px;
   margin: 0 auto;
   text-align: center;
   box-sizing: border-box;
@@ -194,10 +193,43 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
 }
 
 .main--para__productRating {
+  display: flex !important;
+  justify-content: end !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background-color: transparent !important;
+  /* width: 100px !important; */
+  height: 20px !important;
+  object-fit: contain;
+  align-self: start;
+}
+
+.rating--para__noOfReviews {
   font: normal normal normal 11px/15px Montserrat;
   letter-spacing: 0px;
   color: #b3c1c8;
   opacity: 1;
+  padding-left: 5px;
+}
+
+.rating-image {
+  width: 15px !important;
+  height: 15px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: inline !important;
+  background-color: transparent !important;
+  align-self: flex-start !important;
+}
+
+.half-rating-image {
+  width: 7.5px !important;
+  height: 15px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: inline !important;
+  background-color: transparent !important;
+  align-self: flex-start !important;
 }
 .main--section__productPriceAndRating {
   display: block;
@@ -606,9 +638,9 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
   border-radius: 4px;
 }
 
-/* .modal--section__customer{
-  
-} */
+.modal--section__customerEditable{
+  padding: 10px;
+}
 
 .modal--section__customerNotEditable {
   display: none;
@@ -755,6 +787,7 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
 }
 
 .viewProduct--footer__rating {
+  display: flex;
   font: normal normal normal 10px/15px Montserrat;
   letter-spacing: 0px;
   color: #b3c1c8;
@@ -879,6 +912,6 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
   box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
 } */
 
-.viewProduct--modal__body{
+.viewProduct--modal__body {
   box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.2);
 }
