@@ -488,3 +488,4 @@ function removeHeaderSectionItems() {
     item.classList.remove("clicked");
   });
 }
+

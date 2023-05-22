@@ -761,20 +761,6 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
   /* border-radius: 10px; */
 }
 
-/* Handle on hover */
-/* .viewProduct--modal__body::-webkit-scrollbar-thumb:hover {
-  background: #b30000; 
-} */
-.viewProduct--modal__body::-webkit-scrollbar {
-  /* width: 0.5em; */
-  /* background-color: transparent; */
-  /* width: 200px; */
-}
-
-.viewProduct--modal__body::-webkit-scrollbar-thumb {
-  /* background-color: transparent; */
-}
-
 /* Set a custom style for the modal-body */
 .viewProduct--modal__body {
   overflow-y: auto;
@@ -849,6 +835,19 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
   border-radius: 4px;
 }
 
+.createAccount--container__password{
+  position: relative;
+}
+.input--image__visibility{
+  position: absolute;
+  width: 20px;
+  height: auto;
+  cursor: pointer;
+  bottom: 10px;
+  right: 10px;
+  /* right: 10px; */
+  /* transform: translateY(-50%); */
+}
 .createAccount--input__password {
   font: normal normal 800 14px/18px Montserrat;
   letter-spacing: 0px;
@@ -937,4 +936,17 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
 
 .viewProduct--modal__body {
   box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.2);
+}
+
+.helper-text {
+  color: #888;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+  display: none;
 }
