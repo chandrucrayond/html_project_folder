@@ -57,6 +57,7 @@ export function getNameInputValue() {
     const value = element.value;
     if (value !== null) return value;
   }
+  return null;
 }
 
 export function getEmailInputValue() {
@@ -65,6 +66,7 @@ export function getEmailInputValue() {
     const value = element.value;
     if (value !== null) return value;
   }
+  return null;
 }
 
 export function getPasswordInputValue() {
@@ -73,6 +75,7 @@ export function getPasswordInputValue() {
     const value = element.value;
     if (value !== null) return value;
   }
+  return null;
 }
 
 export function getConfirmPasswordInputValue() {
@@ -81,6 +84,7 @@ export function getConfirmPasswordInputValue() {
     const value = element.value;
     if (value !== null) return value;
   }
+  return null;
 }
 
 if (nameInput) {
