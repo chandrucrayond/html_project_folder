@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <!-- Head section -->
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>html_project_folder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Create Account</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -18,761 +17,121 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/createAccountstyle.css" />
   </head>
-  <!-- End of head section-->
-
-  <!-- Body section -->
   <body>
-    <!-- Header section -->
-    <header class="header mt-3">
-      <section>
-        <a href="#">
+    <section class="createAccount--section">
+      <section class="createAccount--section__subSection1">
+        <a href="index.html">
           <img
-            class="header__icon"
+            class="createAccount--image__iconImage"
             src="assets/Mask Group 1@2x.png"
             alt="Back to product page button"
           />
         </a>
-      </section>
-      <section class="header--section">
-        <div class="header--section__items">Home</div>
-        <div class="header--section__items clicked">Products</div>
-        <div class="header--section__items">Services</div>
-        <div class="header--section__items">About us</div>
+        <img
+          class="createAccount--image__teamImage"
+          src="assets/Group 3833.png"
+          alt="Google team members in animation images"
+        />
       </section>
       <section>
-        <div class="avatar-container">
-          <a
-            id="avatar-button"
-            class="btn btn-outline-info header--btn__accountCreate text-center align-middle"
-            >C</a
-          >
-          <div class="popover" id="popover">
-            <ul>
-              <li><a href="createAccount.html">Logout</a></li>
-            </ul>
-          </div> 
-        </div>
-      </section>
-    </header>
-    <hr class="header--line mx-auto" />
-    <!-- End of header section -->
-
-    <section class="main--section pt-3">
-      <section class="main--section__subSection1 pe-5 mx-auto">
-        <p id="main--checkbox__filter">Filters</p>
-        <form action="/action_page.php">
-          <input
-            type="checkbox"
-            id="main--checkbox__phone"
-            value="Phones"
-            style="background-color: #219ebc; cursor: pointer"
-            checked
-          />
-          <label
-            for="main--checkbox__phone"
-            id="main--checkbox__selected"
-            class="main--checkbox__selected"
-            style="cursor: pointer"
-            >Phones</label
-          ><br />
-          <input
-            type="checkbox"
-            id="main--checkbox__headphones"
-            style="background-color: #219ebc; cursor: pointer"
-            value="Headphones"
-          />
-          <label
-            for="main--checkbox__headphones"
-            class="main--checkbox__selected"
-            style="cursor: pointer"
-            >Headphones</label
-          ><br />
-          <input
-            type="checkbox"
-            id="main--checkbox__accessories"
-            value="Accessories"
-            style="background-color: #219ebc; cursor: pointer"
-          />
-          <label
-            for="main--checkbox__accessories"
-            class="main--checkbox__selected"
-            style="cursor: pointer"
-            >Accessories</label
-          >
-          <br /><br />
-        </form>
-      </section>
-
-      <section id="main--section__withFooter">
-        <section
-          id="main--section__subSection2"
-          class="grid-container"
-        ></section>
-
-        <!-- Start of buy now modal -->
-        <div
-          class="modal fade"
-          id="exampleModal"
-          tabindex="-1"
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-              <div class="modal-header border-0">
-                <h1
-                  class="modal-title fs-5 modal--heading"
-                  id="exampleModalLabel"
-                >
-                  Buy Pixel 5
-                </h1>
-                <img
-                  src="assets/Group 3739.png"
-                  type="button"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                  alt="modal--button__close"
-                />
-              </div>
-              <div class="modal-body">
-                <div class="container-fluid">
-                  <div class="row">
-                    <div class="col-8">
-                      <div
-                        class="row modalCenterAligned modal--section__outline"
-                      >
-                        <div class="col-4">
-                          <div class="row">
-                            <div class="col-4 d-flex pe-0">
-                              <img
-                                class="modal--image"
-                                src="assets/pixel_5.jpeg"
-                                alt="pixel 5 image"
-                              />
-                            </div>
-                            <div class="col-6 d-inline p-0">
-                              <div class="modal--para__title mb-0 pt-3 pb-1">
-                                Pixel 5
-                              </div>
-                              <div class="modal--para__serialNo mb-0 pb-3">
-                                SKU12345-12
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div
-                          class="col-3 d-flex modal--para__specification justify-content-center"
-                        >
-                          Black | 128GB
-                        </div>
-                        <div
-                          class="col-2 d-flex modal--para__quantity justify-content-center"
-                        >
-                          1 Qty
-                        </div>
-                        <div
-                          class="col-3 d-flex modal--para__price justify-content-center"
-                        >
-                          $499.00
-                        </div>
-                      </div>
-                      <div
-                        class="row modal--section__outline modal--section__customerNotEditable mt-3"
-                      >
-                        <div class="row text-wrap p-3">
-                          <div
-                            class="col-4 modal--section__showNameAndPhone ps-3"
-                          >
-                            <div
-                              class="row modal--para__showName"
-                              id="nameShow"
-                            >
-                              Shivaji
-                            </div>
-                            <div
-                              class="row modal--para__showPhone"
-                              id="phoneShow"
-                            >
-                              38843843q
-                            </div>
-                          </div>
-                          <div
-                            class="col-6 modal--para__showAddress"
-                            id="addressShow"
-                          >
-                            Address of the customer is shown here
-                          </div>
-                          <div class="col-2 modal--button__edit">Edit</div>
-                        </div>
-                      </div>
-                      <div
-                        class="row modal--section__outline modal--section__customerEditable mt-3"
-                      >
-                        <div class="row mt-2">
-                          <div class="col-4 modal--para__addAddress">
-                            ADD ADDRESS
-                          </div>
-                          <div class="col-4"></div>
-                          <div
-                            class="col-4 d-flex btn text-info btn-outline-none border-0 p-0 justify-content-end modal--para__saveAddress"
-                          >
-                            SAVE ADDRESS
-                          </div>
-                        </div>
-                        <div class="row mt-3">
-                          <!-- <div class="col-6">Name</div> -->
-                          <div class="form-group col-6">
-                            <label for="name" class="modal--label__name"
-                              >Name</label
-                            >
-                            <input
-                              type="text"
-                              class="form-control modal--input__name mt-1 p-2"
-                              id="name"
-                              placeholder="Amy Jackson"
-                            />
-                          </div>
-                          <div class="form-group col-6">
-                            <label
-                              for="phone"
-                              class="modal--label__contactNumber"
-                              >Contact Number</label
-                            >
-                            <div
-                              class="input-group flex-nowrap mt-1 align-middle"
-                            >
-                              <span
-                                class="input-group-text p-2"
-                                id="addon-wrapping"
-                                >+91</span
-                              >
-                              <input
-                                type="text"
-                                class="form-control modal--input__phone p-2 ps-5"
-                                id="phone"
-                                placeholder="9999 999 999"
-                                pattern="[0-9]{10}"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row mt-3">
-                          <div class="form-group col">
-                            <label for="address" class="modal--label__address"
-                              >Address</label
-                            >
-                            <input
-                              type="text"
-                              class="form-control mt-1 modal--input__address p-2"
-                              id="address"
-                              placeholder="Dubai main road, Dubai cross street"
-                            />
-                          </div>
-                        </div>
-                        <div class="row mt-3 mb-3">
-                          <div class="col-6">
-                            <label for="city" class="modal--label__city"
-                              >City</label
-                            >
-                            <div class="form-group dropdown mt-1">
-                              <a
-                                class="btn dropdown-toggle dropdown-menu-bottom modal--button__dropdown modal--input__city p-2"
-                                href="#"
-                                role="button"
-                                data-bs-toggle="dropdown"
-                                aria-expanded="false"
-                                id="selectedCity"
-                              >
-                                Select City
-                              </a>
-
-                              <ul class="dropdown-menu">
-                                <li>
-                                  <a
-                                    class="dropdown-item"
-                                    href="#"
-                                    onclick="updateSelectedCity('Chennai')"
-                                    >Chennai</a
-                                  >
-                                </li>
-                                <li>
-                                  <a
-                                    class="dropdown-item"
-                                    href="#"
-                                    onclick="updateSelectedCity('Madurai')"
-                                    >Madurai</a
-                                  >
-                                </li>
-                                <li>
-                                  <a
-                                    class="dropdown-item"
-                                    href="#"
-                                    onclick="updateSelectedCity('Kancheepuram')"
-                                    >Kancheepuram</a
-                                  >
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-
-                          <div class="col-6">
-                            <label for="Country" class="modal--label__country"
-                              >Country</label
-                            >
-                            <div class="form-group d-grid dropdown mt-1">
-                              <a
-                                class="btn dropdown-toggle dropdown-menu-bottom modal--button__dropdown modal--input__country p-2"
-                                href="#"
-                                role="button"
-                                data-bs-toggle="dropdown"
-                                aria-expanded="false"
-                                id="selectedCountry"
-                              >
-                                Select Country
-                              </a>
-
-                              <ul class="dropdown-menu">
-                                <li>
-                                  <a
-                                    class="dropdown-item"
-                                    href="#"
-                                    onclick="updateSelectedCountry('Kailasha')"
-                                    >Kailasha</a
-                                  >
-                                </li>
-                                <li>
-                                  <a
-                                    class="dropdown-item"
-                                    href="#"
-                                    onclick="updateSelectedCountry('India')"
-                                    >India</a
-                                  >
-                                </li>
-                                <li>
-                                  <a
-                                    class="dropdown-item"
-                                    href="#"
-                                    onclick="updateSelectedCountry('China')"
-                                    >China</a
-                                  >
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-4">
-                      <div
-                        class="modal--section__outline modal--section__summary p-2"
-                      >
-                        <div class="row py-2">
-                          <div class="col modal--para__summary">
-                            INVOICE SUMMARY
-                          </div>
-                        </div>
-                        <div class="row py-2">
-                          <div class="col-8 modal__summaryItems">
-                            Actual amount
-                          </div>
-                          <div
-                            class="col-4 d-flex justify-content-end modal__summaryItemsValue modal__summaryItemsActual"
-                          >
-                            $ 559.00
-                          </div>
-                        </div>
-                        <div class="row py-2">
-                          <div class="col-8 modal__summaryItems">Discount</div>
-                          <div
-                            class="col-4 d-flex justify-content-end modal__summaryItemsValue"
-                          >
-                            $ 60.00
-                          </div>
-                        </div>
-                        <div class="row py-2">
-                          <div class="col-8 modal__summaryItems">
-                            Billing amount
-                          </div>
-                          <div
-                            class="col-4 d-flex justify-content-end modal__summaryItemsValue modal__summaryItemsBilling"
-                          >
-                            $ 499.00
-                          </div>
-                        </div>
-                        <div class="row py-2">
-                          <div class="col-8 modal__summaryTotal">
-                            Total amount
-                          </div>
-                          <div
-                            class="col-4 d-flex justify-content-end modal__summaryTotalValue"
-                          >
-                            $ 499.00
-                          </div>
-                        </div>
-                        <div class="row p-2 py-2">
-                          <div
-                            class="col-12 btn btn-info modal--button__payNow py-2"
-                            data-bs-toggle="modal"
-                            data-bs-target="#purchasedSuccessful"
-                          >
-                            Pay $ 499.00
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- End of buy now modal -->
-
-        <!-- start of view product modal -->
-        <div
-          class="modal fade"
-          id="viewProductModal"
-          tabindex="-1"
-          aria-labelledby="viewProductModalLabel"
-          aria-hidden="true"
-        >
-          <div
-            class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
-          >
-            <div class="modal-content">
-              <div
-                class="modal-header viewProduct--modal__header border-0 d-block"
+        <div class="container px-5">
+          <h1 class="mt-5 createAccount--heading__welcome">
+            Welcome to Google Store!
+          </h1>
+          <h5 class="createAccount--heading__register">
+            Register your account
+          </h5>
+          <form id="createAccountForm" action="productListingPage.html">
+            <div class="mb-3 mt-4">
+              <label for="username" class="form-label createAccount--label"
+                >Username</label
               >
-                <!-- Title and Close Button -->
-                <div class="d-flex justify-content-between align-items-center">
-                  <h5
-                    class="modal-title modal--heading viewProduct--modal__title"
-                  >
-                    Pixel 5(dum)
-                  </h5>
-                  <img
-                    src="assets/Group 3739.png"
-                    type="button"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                    alt="moal--button__close"
-                  />
-                </div>
-
-                <!-- Carousel -->
-                <div
-                  id="carouselExample"
-                  class="carousel slide mt-3 mx-auto viewProductCarousel justify-content-center"
-                >
-                  <div
-                    class="carousel-inner carouselProductItem justify-content-center mx-auto"
-                  >
-                    <!-- Carousel Items -->
-                    <div class="carousel-item active">
-                      <img
-                        src="assets/pixel_5.jpeg"
-                        class="d-flex w-100 carousel--image"
-                        alt="Image 1"
-                      />
-                    </div>
-                    <div class="carousel-item">
-                      <img
-                        src="assets/pixel5_othercolor1.jpg"
-                        class="d-block w-100 carousel--image2"
-                        alt="Image 2"
-                      />
-                    </div>
-                  </div>
-                  <button
-                    class="carousel-control-prev"
-                    type="button"
-                    data-bs-target="#carouselExample"
-                    data-bs-slide="prev"
-                  >
-                    <img
-                      src="assets/Group 3741.png"
-                      alt="Carousel_Previous_Image"
-                    />
-                    <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span> -->
-                  </button>
-                  <button
-                    class="carousel-control-next"
-                    type="button"
-                    data-bs-target="#carouselExample"
-                    data-bs-slide="next"
-                  >
-                    <img
-                      src="assets/Group 3740.png"
-                      alt="Carousel_Next_Image"
-                    />
-                  </button>
-                </div>
-                <!-- Ending of carousel -->
-              </div>
-
-              <div class="modal-body viewProduct--modal__body">
-                <div class="container-fluid">
-                  <div class="row">
-                    <div class="col-12">
-                      <div class="row p-2 viewProduct--section__color">
-                        <div class="col-4 viewProduct--label__items">Color</div>
-                        <div class="col-2 viewProduct--para__items d-flex pe-0">
-                          <div class="black__dot align-middle"></div>
-                          <div class="ps-2">Black</div>
-                        </div>
-                        <div
-                          class="col-3 viewProduct--para__items d-flex ps-0 pe-0 justify-content-center"
-                        >
-                          <div class="white__dot align-middle"></div>
-                          <div class="ps-2">White</div>
-                        </div>
-                        <div
-                          class="col-3 viewProduct--para__items d-flex ps-0 pe-0"
-                        >
-                          <div class="blue__dot align-middle"></div>
-                          <div class="ps-2">Blue</div>
-                        </div>
-                        <!-- <div class="col-1"></div> -->
-                      </div>
-                      <div class="row p-2 py-2">
-                        <div class="col-4 viewProduct--label__items py-2">
-                          Display
-                        </div>
-                        <div class="col-8 viewProduct--para__items">
-                          <div class="row">
-                            <div class="col py-2">
-                              Full-screen 6.1-inch (156 mm)1 display, up to 60
-                              Hz
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col py-2">20:9 aspect ratio</div>
-                          </div>
-                          <div class="row">
-                            <div class="col py-2">
-                              FHD+ (1080 x 2400) OLED at 429 ppi
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col py-2">
-                              Corning® Gorilla® Glass 3™ cover glass
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col py-2">
-                              Always-on display with At a Glance and Now Playing
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row p-2 pe-2">
-                        <div class="col-4 viewProduct--label__items py-2">
-                          Dimension & Weight
-                        </div>
-                        <div class="col-8 viewProduct--para__items">
-                          <div class="row">
-                            <div class="col py-2">
-                              6.0 height x 2.8 width x 0.35 depth (in)
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col py-2">
-                              152.2 height x 71.8 width x 8.9 depth (mm)
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col py-2">6.3 oz</div>
-                          </div>
-                          <div class="row">
-                            <div class="col py-2">178 g</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row p-2 pe-2">
-                        <div class="col-4 viewProduct--label__items py-2">
-                          Battery & Charging
-                        </div>
-                        <div class="col-8 viewProduct--para__items">
-                          <div class="row">
-                            <div class="col py-2">
-                              Over 24-hour battery life3
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col py-2">
-                              Up to 72-our battery life with Extreme
-                              Battery-Saver
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col py-2">Typical 4410 mAh</div>
-                          </div>
-                          <div class="row">
-                            <div class="col py-2">Fast Charging</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row p-2 pe-2">
-                        <div class="col-4 viewProduct--label__items py-2">
-                          Memory
-                        </div>
-                        <div class="col-8 viewProduct--para__items">
-                          <div class="row">
-                            <div class="col py-2">6 GB LPDDR5 RAM</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row p-2 pe-2">
-                        <div class="col-4 viewProduct--label__items py-2">
-                          Storage
-                        </div>
-                        <div class="col-8 viewProduct--para__items">
-                          <div class="row">
-                            <div class="col py-2">
-                              128 GB storage UFS 3.1 storage
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row p-2 pe-2">
-                        <div class="col-4 viewProduct--label__items py-2">
-                          Processor
-                        </div>
-                        <div class="col-8 viewProduct--para__items">
-                          <div class="row">
-                            <div class="col py-2">
-                              Google Tensor Titan M2 security coprocessor
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="modal-footer viewProduct--modal__footer border-0">
-                <div>
-                  <div class="row">
-                    <div class="col">
-                      <div class="viewProduct--footer__price">$ 699</div>
-                    </div>
-                    <div class="row">
-                      <div class="col">
-                        <div class="viewProduct--footer__rating">
-                          ⭐⭐⭐⭐(1.2k)
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <button
-                  type="button"
-                  class="btn viewProduct--button__buyNow main--button__buyNow"
-                  data-bs-toggle="modal"
-                  data-bs-target="#exampleModal"
-                >
-                  Buy Now
-                </button>
-              </div>
+              <input
+                type="text"
+                class="form-control createAccount--input__username py-2"
+                id="username"
+                name="username"
+              />
+              <div class="helper-text"></div>
+              <div class="error-message"></div>
             </div>
-          </div>
-        </div>
-        <!-- End of view product modal -->
-
-        <!-- Start of pay 799 --payment successful modal -->
-        <div
-          class="modal fade"
-          id="purchasedSuccessful"
-          tabindex="-1"
-          aria-labelledby="purchasedSuccessfulModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-              <div class="modal-header border-0 justify-content-end">
-                <img
-                  src="assets/Group 3739.png"
-                  class="justify-content-end"
-                  type="button"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                  alt="moal--button__close"
-                />
-              </div>
-              <div class="modal-body">
-                <div class="container-fluid">
-                  <div class="row py-5">
-                    <div class="col-2"></div>
-                    <div class="col-8">
-                      <div class="row py-3">
-                        <div class="col">
-                          <div class="success--para__thanks">
-                            Thanks for the Order
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row py-3">
-                        <div class="col">
-                          <img
-                            src="assets/payment_successful.gif"
-                            alt="payment_successful"
-                            class="payment--image__successful"
-                          />
-                        </div>
-                      </div>
-                      <div class="row py-3">
-                        <div class="col">
-                          <div class="success--para__onTheWay">
-                            Your product is on the way
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-2"></div>
-                  </div>
-                </div>
-              </div>
+            <div class="mb-3">
+              <label for="email" class="form-label createAccount--label"
+                >Email Id</label
+              >
+              <input
+                type="email"
+                class="form-control createAccount--input__email py-2"
+                id="email"
+                name="email"
+              />
+              <div class="helper-text"></div>
+              <div class="error-message"></div>
             </div>
+            <div class="mb-3 createAccount--container__password">
+              <label for="password" class="form-label createAccount--label"
+                >Password</label
+              >
+              <input
+                type="password"
+                class="form-control createAccount--input__password py-2"
+                id="password"
+                name="password"
+              />
+              <img
+                src="assets/visibility@2x.png"
+                alt="visibility image"
+                class="input--image__visibility"
+              />
+
+              <div class="helper-text"></div>
+              <div class="error-message"></div>
+            </div>
+            <div class="mb-3 createAccount--container__password">
+              <label
+                for="retype-password"
+                class="form-label createAccount--label"
+                >Retype Password</label
+              >
+              <input
+                type="password"
+                class="form-control createAccount--input__password py-2"
+                id="retype-password"
+                name="retype-password"
+              />
+              <img
+                src="assets/visibility@2x.png"
+                alt="visibility image"
+                class="input--image__visibility"
+              />
+              <div class="helper-text"></div>
+              <div class="error-message"></div>
+            </div>
+            <button
+              type="submit"
+              class="btn createAccount--button form-control mt-3 text-light fw-bold py-2"
+            >
+              Create Account
+            </button>
+            <button
+              class="btn createAccount--button loginAccount--button form-control text-light mt-2 w-25 justify-content-center fw-bold py-2"
+            >
+              Login Account
+            </button>
+          </form>
+          <div id="successMessage" class="success-card">
+            <span class="success-text">Account created successfully!</span>
           </div>
         </div>
       </section>
     </section>
-
-    <!-- Footer section -->
-
-    <footer class="footer mt-5">
-      <hr class="header--line footer--line mx-auto text-center" />
-      <div class="footer--section">
-        <div class="footer--section__left ps-5">
-          <p class="footer--para__left ps-5">© 2007-2022 Google Inc</p>
-        </div>
-        <div class="footer--section__right pe-5">
-          <p class="footer--para__right pe-5">Terms & Conditions</p>
-          <p class="footer--para__right pe-5">Privacy</p>
-          <p class="footer--para__right pe-5">Career</p>
-        </div>
-      </div>
-    </footer>
-    <!-- End of footer section -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
-      integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
-      crossorigin="anonymous"
-    ></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
       integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
       crossorigin="anonymous"
     ></script>
-
-    <!-- <script src="js/createAccountscript.js" type="module"></script> -->
-    <script src="js/script.js" type="module"></script>
+    <script type="module" src="js/createAccountscript.js"></script>
   </body>
-  <!-- End of body section -->
 </html>

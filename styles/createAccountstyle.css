@@ -149,9 +149,10 @@
   margin-bottom: 0px !important;
 }
 .input--image__visibility {
-  position: relative;
+  position: absolute;
   width: 20px;
   cursor: pointer;
-  bottom: 32px;
+  top: 40px;
   left: 92%;
+  display: inline;
 }
