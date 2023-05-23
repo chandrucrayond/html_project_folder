@@ -1,0 +1,154 @@
+
+.createAccount--section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+  
+  .createAccount--section__subSection1 {
+    background-color: #f9fbfe;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .createAccount--image__iconImage {
+    z-index: 1;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    width: 30px;
+    height: 30px;
+  }
+  
+  .createAccount--image__teamImage {
+    position: relative;
+    top: -40px;
+    left: -50px;
+    height: 110vh;
+    width: 90%;
+    /* object-fit:cover; */
+    object-position: 20% -50%;
+    /* object-position: 0% ; */
+  }
+  
+.helper-text {
+  color: #888;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+  display: none;
+}
+
+
+.createAccount--input__username:hover,
+.createAccount--input__email:hover,
+.createAccount--input__password:hover {
+  background-color: #219ebc1a !important;
+  cursor: pointer !important;
+}
+
+.createAccount--input__username:active,
+.createAccount--input__username:focus,
+.createAccount--input__email:active,
+.createAccount--input__email:focus,
+.createAccount--input__password:active,
+.createAccount--input__password:focus {
+  border: 1px solid #219ebc !important;
+  box-shadow: none !important;
+  caret-color: #219ebc;
+  cursor: text !important;
+}
+
+.createAccount--button,
+.createAccount--button:link,
+.createAccount--button:active,
+.createAccount--button:focus,
+.createAccount--button:hover {
+  font: normal normal 700 14px/18px Montserrat !important;
+  letter-spacing: 0px;
+  color: #ffffff !important;
+  background: #219ebc 0% 0% no-repeat padding-box !important;
+  box-shadow: 0px 6px 10px #00000014 !important;
+  border-radius: 4px !important;
+}
+
+.createAccount--input__password {
+  font: normal normal 800 14px/18px Montserrat;
+  letter-spacing: 0px;
+  color: #091b29;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #e4e8ee;
+  border-radius: 4px;
+}
+
+.success-card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .success-text {
+    font: normal normal 800 18px/18px Montserrat;
+  }
+  
+  .show {
+    z-index: 1;
+    opacity: 1;
+  }
+
+  .createAccount--heading__welcome {
+    font: normal normal 800 24px/29px Montserrat !important;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.14px;
+    color: #091b29;
+  }
+  
+  .createAccount--heading__register {
+    font: normal normal 500 18px/22px Montserrat;
+    letter-spacing: 0.11px;
+    color: #bbbbbb;
+  }
+  
+  .createAccount--label {
+    font: normal normal 400 12px/15px Montserrat;
+    letter-spacing: 0px;
+    color: #98a0ac;
+  }
+  
+  .createAccount--input__username,
+  .createAccount--input__email {
+    font: normal normal 600 14px/18px Montserrat;
+    letter-spacing: 0px;
+    color: #091b29;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border: 1px solid #e4e8ee;
+    border-radius: 4px;
+  }
+  
+  .createAccount--container__password{
+    position: relative;
+  }
+  .input--image__visibility{
+    position: relative;
+    width: 20px;
+    height: auto;
+    cursor: pointer;
+    bottom: 32px;
+    left: 92%;
+  }
+  
+  

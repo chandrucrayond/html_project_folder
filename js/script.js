@@ -1,3 +1,22 @@
+import {
+  getNameInputValue,
+  getEmailInputValue,
+  getPasswordInputValue,
+  getConfirmPasswordInputValue
+} from './createAccountscript.js';
+
+document.addEventListener("DOMContentLoaded", function() {
+  const nameValue = getNameInputValue();
+  const emailValue = getEmailInputValue();
+  const passwordValue = getPasswordInputValue();
+  const confirmPasswordValue = getConfirmPasswordInputValue();
+
+  console.log(nameValue);
+  console.log(emailValue);
+  console.log(passwordValue);
+  console.log(confirmPasswordValue);
+});
+
 var jsonData = {
   pixel_5: {
     id: "pixel_5",
@@ -389,7 +408,9 @@ if (viewProductModal) {
     );
     carouselBuyNow.setAttribute("data-bs-model", recipient);
 
-    const rating = viewProductModal.querySelector(".viewProduct--footer__rating");
+    const rating = viewProductModal.querySelector(
+      ".viewProduct--footer__rating"
+    );
     const RatingInNo = parsedObject.ratingInNo;
     const fullStars = Math.floor(RatingInNo);
     const hasHalfStar = RatingInNo % 1 !== 0;
@@ -488,4 +509,3 @@ function removeHeaderSectionItems() {
     item.classList.remove("clicked");
   });
 }
-

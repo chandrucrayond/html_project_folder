@@ -11,7 +11,6 @@ for (let i = 0; i < visibilityImage.length; i++) {
     if (type === "password") {
       toggleVisibledText[i].setAttribute("type", "text");
       toggleVisibledText[i].style.fontWeight = 600;
-
       // togglePasswordVisibility.innerHTML = '<i class="fa fa-eye-slash" aria-hidden="true"></i>';
     } else {
       toggleVisibledText[i].setAttribute("type", "password");
@@ -27,52 +26,92 @@ const emailInput = document.getElementById("email");
 const passwordInput = document.getElementById("password");
 const confirmPasswordInput = document.getElementById("retype-password");
 
-myForm.addEventListener("submit", function (event) {
-  event.preventDefault();
+if (myForm) {
+  myForm.addEventListener("submit", function (event) {
+    event.preventDefault();
 
-  if (
-    validateName() &&
-    validateEmail() &&
-    validatePassword() &&
-    validateConfirmPassword()
-  ) {
-    myForm.submit(); // Submit the form if all inputs are valid
+    if (
+      validateName() &&
+      validateEmail() &&
+      validatePassword() &&
+      validateConfirmPassword()
+    ) {
+      console.log(nameInput.value);
+      console.log(emailInput.value);
+      console.log(passwordInput.value);
+      console.log(confirmPasswordInput.value);
+      setTimeout(function () {
+        var successMessage = document.getElementById("successMessage");
+        successMessage.classList.add("show");
+        setTimeout(function () {
+          window.location.href = myForm.action;
+        }, 2000);
+      }, 1000);
+    }
+  });
+}
+
+
+export function getNameInputValue() {
+  const element = document.getElementById("username");
+  if(element){
+  const value = element.value;
+  if(value!==null)
+  return value;
   }
+}
+
+export function getEmailInputValue() {
+  const element = document.getElementById("email");
+  if(element){
+  const value = element.value;
+  if(value!==null)
+  return value;
+  }
+}
+
+export function getPasswordInputValue() {
+  const element = document.getElementById("password");
+  if(element){
+  const value = element.value;
+  if(value!==null)
+  return value;
+  }
+}
+
+export function getConfirmPasswordInputValue() {
+  const element = document.getElementById("retype-password");
+  if(element){
+  const value = element.value;
+  if(value!==null)
+  return value;
+  }
+}
+
+if (nameInput) {
+nameInput.addEventListener("blur", function () {
+  validateName();
 });
+}
 
-// nameInput.addEventListener("blur", function () {
-//   validateName();
-// });
+if (emailInput) {
+emailInput.addEventListener("blur", function () {
+  validateEmail();
+});
+}
 
-// emailInput.addEventListener("blur", function () {
-//   validateEmail();
-// });
+if (passwordInput) {
+passwordInput.addEventListener("blur", function () {
+  validatePassword();
+  validateConfirmPassword();
+});
+}
 
-// passwordInput.addEventListener("blur", function () {
-//   validatePassword();
-//   validateConfirmPassword();
-// });
-
-// confirmPasswordInput.addEventListener("blur", function () {
-//   validateConfirmPassword();
-// });
-
-nameInput.addEventListener("input", function () {
-    validateName();
-  });
-  
-  emailInput.addEventListener("input", function () {
-    validateEmail();
-  });
-  
-  passwordInput.addEventListener("input", function () {
-    validatePassword();
-    validateConfirmPassword();
-  });
-  
-  confirmPasswordInput.addEventListener("input", function () {
-    validateConfirmPassword();
-  });
+if (confirmPasswordInput) {
+confirmPasswordInput.addEventListener("blur", function () {
+  validatePassword();
+});
+}
 
 function validateName() {
   const name = nameInput.value.trim();
@@ -114,44 +153,44 @@ function validateEmail() {
 }
 
 function isValidEmail(email) {
-  // Custom email validation logic
-  // Implement your own email validation logic here
-  // This is just a basic example
   const emailRegex = /\S+@\S+\.\S+/;
   return emailRegex.test(email);
 }
 
 function validatePassword() {
-    const password = passwordInput.value.trim();
-    const helperText = passwordInput.parentElement.querySelector('.helper-text');
-    const errorMessage = passwordInput.parentElement.querySelector('.error-message');
-  
-    if (password.length < 8) {
-      helperText.textContent = 'Password must be at least 8 characters long';
-      errorMessage.textContent = 'Password is too short';
-      errorMessage.style.display = 'block';
-      return false;
-    } else {
-      helperText.textContent = '';
-      errorMessage.style.display = 'none';
-      return true;
-    }
+  const password = passwordInput.value.trim();
+  const helperText = passwordInput.parentElement.querySelector(".helper-text");
+  const errorMessage =
+    passwordInput.parentElement.querySelector(".error-message");
+
+  if (password.length < 8) {
+    helperText.textContent = "Password must be at least 8 characters long";
+    errorMessage.textContent = "Password is too short";
+    errorMessage.style.display = "block";
+    return false;
+  } else {
+    helperText.textContent = "";
+    errorMessage.style.display = "none";
+    return true;
   }
-  
-  function validateConfirmPassword() {
-    const password = passwordInput.value.trim();
-    const confirmPassword = confirmPasswordInput.value.trim();
-    const helperText = confirmPasswordInput.parentElement.querySelector('.helper-text');
-    const errorMessage = confirmPasswordInput.parentElement.querySelector('.error-message');
-  
-    if (confirmPassword !== password) {
-      helperText.textContent = 'Please retype your password correctly';
-      errorMessage.textContent = 'Passwords do not match';
-      errorMessage.style.display = 'block';
-      return false;
-    } else {
-      helperText.textContent = '';
-      errorMessage.style.display = 'none';
-      return true;
-    }
+}
+
+function validateConfirmPassword() {
+  const password = passwordInput.value.trim();
+  const confirmPassword = confirmPasswordInput.value.trim();
+  const helperText =
+    confirmPasswordInput.parentElement.querySelector(".helper-text");
+  const errorMessage =
+    confirmPasswordInput.parentElement.querySelector(".error-message");
+
+  if (confirmPassword !== password) {
+    helperText.textContent = "Please retype your password correctly";
+    errorMessage.textContent = "Passwords do not match";
+    errorMessage.style.display = "block";
+    return false;
+  } else {
+    helperText.textContent = "";
+    errorMessage.style.display = "none";
+    return true;
   }
+}
