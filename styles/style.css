@@ -74,19 +74,56 @@
   position: relative;
   left: 70px;
   display: table-cell;
-  color: #219ebc;
+  background-color: #219ebc;
+  color:#fff;
   border: 1px solid #219ebc;
   opacity: 1;
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 15px;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   letter-spacing: 0px;
-  width: 130px;
-  height: 38px;
-  border-radius: 4px;
-  padding: auto;
+  border-radius: 50%;
 }
+
+.avatar-container {
+  position: relative;
+}
+
+.popover {
+  display: none;
+  position: absolute;
+  top: 0px;
+  background-color: rgba(241, 241, 241, 1);
+  background-color: wheat;
+  padding: 4px 20px;
+  border-radius: 4px;
+  z-index: -1;
+}
+
+.popover ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.popover li {
+  margin-bottom: 5px;
+}
+
+.popover li a {
+  color: #023047;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  
+}
+
+.avatar-container:hover .popover {
+  display: block;
+}
+
 .header--btn__accountCreate:hover,
 .header--btn__accountCreate:focus,
 .header--btn__accountCreate:active {

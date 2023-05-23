@@ -1,21 +1,31 @@
-import {
-  getNameInputValue,
-  getEmailInputValue,
-  getPasswordInputValue,
-  getConfirmPasswordInputValue,
-} from "./createAccountscript.js";
+console.log("h3llo script.js file is loaded....");
+
 
 document.addEventListener("DOMContentLoaded", function () {
-  const nameValue = getNameInputValue();
-  const emailValue = getEmailInputValue();
-  const passwordValue = getPasswordInputValue();
-  const confirmPasswordValue = getConfirmPasswordInputValue();
+  const username = localStorage.getItem("username");
+  const email = localStorage.getItem("email");
+  const password = localStorage.getItem("password");
+  const avatarButton = document.getElementById("avatar-button");
+  const popover = document.getElementById("popover");
 
-  console.log(nameValue);
-  console.log(emailValue);
-  console.log(passwordValue);
-  console.log(confirmPasswordValue);
+  console.log(username+" "+email+" "+password);  
+  if(username!==null){
+  const firstCharacter = username[0].toUpperCase();
+  document.getElementsByClassName("header--btn__accountCreate")[0].textContent = firstCharacter;
+  }
+
+  avatarButton.addEventListener("click", function() {
+    popover.style.display = popover.style.display === "block" ? "none" : "block";
+  });
+
+  document.addEventListener("click", function(event) {
+    if (!popover.contains(event.target) && event.target !== avatarButton) {
+      popover.style.display = "none";
+    }
+  });
 });
+
+
 
 var jsonData = {
   pixel_5: {

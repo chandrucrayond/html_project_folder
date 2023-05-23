@@ -77,7 +77,7 @@
 }
 
 .createAccount--input__password {
-  font: normal normal 800 14px/18px Montserrat;
+  font: normal normal 800 14px/18px Montserrat !important;
   letter-spacing: 0px;
   color: #091b29;
   background: #ffffff 0% 0% no-repeat padding-box;
@@ -85,6 +85,13 @@
   border-radius: 4px;
 }
 
+.loginAccount--button {
+  display: flex;
+  color: black !important;
+  background-color: transparent !important;
+  margin: auto auto 20px;
+  font: normal normal 800 14px/18px Montserrat !important;
+}
 .success-card {
   position: fixed;
   top: 50%;
@@ -95,7 +102,7 @@
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   opacity: 0;
-  z-index: -1;
+  z-index: -1 !important;
   transition: opacity 0.5s ease-in-out;
 }
 
@@ -104,7 +111,7 @@
 }
 
 .show {
-  z-index: 1;
+  z-index: 10 !important;
   opacity: 1;
 }
 
@@ -139,11 +146,11 @@
 
 .createAccount--container__password {
   position: relative;
+  margin-bottom: 0px !important;
 }
 .input--image__visibility {
   position: relative;
   width: 20px;
-  height: auto;
   cursor: pointer;
   bottom: 32px;
   left: 92%;

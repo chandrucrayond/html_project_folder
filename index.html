@@ -42,11 +42,18 @@
         <div class="header--section__items">About us</div>
       </section>
       <section>
-        <a
-          class="btn btn-outline-info header--btn__accountCreate text-center align-middle"
-          href="createAccount.html"
-          >Create Account</a
-        >
+        <div class="avatar-container">
+          <a
+            id="avatar-button"
+            class="btn btn-outline-info header--btn__accountCreate text-center align-middle"
+            >C</a
+          >
+          <div class="popover" id="popover">
+            <ul>
+              <li><a href="createAccount.html">Logout</a></li>
+            </ul>
+          </div> 
+        </div>
       </section>
     </header>
     <hr class="header--line mx-auto" />
@@ -764,7 +771,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="js/createAccountscript.js" type="module"></script>
+    <!-- <script src="js/createAccountscript.js" type="module"></script> -->
     <script src="js/script.js" type="module"></script>
   </body>
   <!-- End of body section -->
