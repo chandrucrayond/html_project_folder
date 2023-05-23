@@ -51,66 +51,61 @@ if (myForm) {
   });
 }
 
-
 export function getNameInputValue() {
   const element = document.getElementById("username");
-  if(element){
-  const value = element.value;
-  if(value!==null)
-  return value;
+  if (element) {
+    const value = element.value;
+    if (value !== null) return value;
   }
 }
 
 export function getEmailInputValue() {
   const element = document.getElementById("email");
-  if(element){
-  const value = element.value;
-  if(value!==null)
-  return value;
+  if (element) {
+    const value = element.value;
+    if (value !== null) return value;
   }
 }
 
 export function getPasswordInputValue() {
   const element = document.getElementById("password");
-  if(element){
-  const value = element.value;
-  if(value!==null)
-  return value;
+  if (element) {
+    const value = element.value;
+    if (value !== null) return value;
   }
 }
 
 export function getConfirmPasswordInputValue() {
   const element = document.getElementById("retype-password");
-  if(element){
-  const value = element.value;
-  if(value!==null)
-  return value;
+  if (element) {
+    const value = element.value;
+    if (value !== null) return value;
   }
 }
 
 if (nameInput) {
-nameInput.addEventListener("blur", function () {
-  validateName();
-});
+  nameInput.addEventListener("blur", function () {
+    validateName();
+  });
 }
 
 if (emailInput) {
-emailInput.addEventListener("blur", function () {
-  validateEmail();
-});
+  emailInput.addEventListener("blur", function () {
+    validateEmail();
+  });
 }
 
 if (passwordInput) {
-passwordInput.addEventListener("blur", function () {
-  validatePassword();
-  validateConfirmPassword();
-});
+  passwordInput.addEventListener("blur", function () {
+    validatePassword();
+    validateConfirmPassword();
+  });
 }
 
 if (confirmPasswordInput) {
-confirmPasswordInput.addEventListener("blur", function () {
-  validatePassword();
-});
+  confirmPasswordInput.addEventListener("blur", function () {
+    validateConfirmPassword();
+  });
 }
 
 function validateName() {

@@ -605,7 +605,7 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
   border-radius: 4px;
 }
 
-.modal--section__customerEditable{
+.modal--section__customerEditable {
   padding: 10px;
 }
 
@@ -716,15 +716,15 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
 
 /* Track */
 .viewProduct--modal__body::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 10px #b3c1c8; 
+  box-shadow: inset 0 0 10px #b3c1c8;
   height: 10px;
   /* border-radius: 10px; */
 }
- 
+
 /* Handle */
 .viewProduct--modal__body::-webkit-scrollbar-thumb {
-  background: #219ebc; 
-  
+  background: #219ebc;
+
   /* border-radius: 10px; */
 }
 
@@ -773,8 +773,6 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
   justify-content: space-between;
 }
 
-
-
 .modal--input__name:hover,
 .modal--input__phone:hover,
 .modal--input__address:hover {
@@ -793,8 +791,6 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
   caret-color: #219ebc;
   cursor: text !important;
 }
-
-
 
 .success--para__thanks {
   font: normal normal 700 25px/18px Montserrat !important;

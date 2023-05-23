@@ -2,10 +2,10 @@ import {
   getNameInputValue,
   getEmailInputValue,
   getPasswordInputValue,
-  getConfirmPasswordInputValue
-} from './createAccountscript.js';
+  getConfirmPasswordInputValue,
+} from "./createAccountscript.js";
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const nameValue = getNameInputValue();
   const emailValue = getEmailInputValue();
   const passwordValue = getPasswordInputValue();
@@ -191,7 +191,7 @@ for (let i = 0; i < 9; i++) {
   `;
 
   // Append the section to the container
-  container.appendChild(section);
+  if (container) container.appendChild(section);
 }
 const cardSection = document.getElementById("main--section__withFooter");
 const footer = document.createElement("footer");
@@ -205,7 +205,7 @@ footer.innerHTML = `
   <img src="assets/icons8-multiple-stars2.png" alt="star image 2" />
 </div>
 `;
-cardSection.appendChild(footer);
+if (cardSection) cardSection.appendChild(footer);
 
 var cardLists = document.getElementsByClassName("full_carde");
 
@@ -232,14 +232,15 @@ for (i = 0; i < 9; i++) {
   const image = document.getElementsByClassName("main--section__productImages")[
     i
   ];
-  image.setAttribute("src", ImageUrl);
-  image.style.backgroundColor = backgroundColor;
-
+  if (image) {
+    image.setAttribute("src", ImageUrl);
+    image.style.backgroundColor = backgroundColor;
+  }
   const title = document.getElementsByClassName("main--para__productTitle")[i];
-  title.textContent = Name;
+  if (title) title.textContent = Name;
 
   const price = document.getElementsByClassName("main--para__productPrice")[i];
-  price.textContent = Price;
+  if (price) price.textContent = Price;
 
   const rating = document.getElementsByClassName("main--para__productRating")[
     i
@@ -261,22 +262,23 @@ for (i = 0; i < 9; i++) {
       '<img src="assets/half star.png" alt="Half Star" class="half-rating-image">';
   }
   starsHTML += '<p class="rating--para__noOfReviews"> (1.2k) </p>';
-  rating.innerHTML = starsHTML;
+  if (rating) rating.innerHTML = starsHTML;
 
   const feature = document.getElementsByClassName("main--para__productFeature")[
     i
   ];
-  feature.textContent = Feature;
+  if (feature) feature.textContent = Feature;
 
   const button = document.getElementsByClassName("main--Button__buyNow")[i];
   const jsonString = JSON.stringify(pixel);
-  button.setAttribute("data-bs-model", jsonString);
+  if (button) button.setAttribute("data-bs-model", jsonString);
 
   const viewProduct = document.getElementsByClassName(
     "main--Button__productViewProduct"
   )[i];
   const jsonStringForViewing = JSON.stringify(pixel);
-  viewProduct.setAttribute("data-bs-model", jsonStringForViewing);
+  if (viewProduct)
+    viewProduct.setAttribute("data-bs-model", jsonStringForViewing);
 }
 
 for (var i = 0; i < cardLists.length; i++) {
@@ -312,8 +314,10 @@ for (var i = 0; i < cardLists.length; i++) {
       viewProductButton.classList.remove("hovered");
       buyNowSection.classList.add("hovered");
       featureSection.classList.remove("hidden");
-      productsGrid.removeChild(priceAndRatingSection);
-      productsGrid.appendChild(buyNowSection);
+      if (productsGrid) {
+        productsGrid.removeChild(priceAndRatingSection);
+        productsGrid.appendChild(buyNowSection);
+      }
     }
 
     function hoverRemoveFunction(i) {
