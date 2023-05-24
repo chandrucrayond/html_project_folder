@@ -1,11 +1,11 @@
 console.log("hello script.js file is loaded....");
 
-window.addEventListener('resize', function() {
+window.addEventListener("resize", function () {
   adjustSectionWidth(); // Call the function to adjust the section width
 });
 
 function adjustSectionWidth() {
-  var sections = document.getElementsByClassName('full_carde');
+  var sections = document.getElementsByClassName("full_carde");
   for (let i = 0; i < sections.length; i++) {
     var section = sections[i];
     var sectionWidth = section.offsetWidth;
@@ -13,23 +13,40 @@ function adjustSectionWidth() {
 
     // Check if the section is wider than the viewport width
     if (sectionWidth > window.innerWidth) {
-      section.style.width = '100% !important';
+      section.style.width = "100% !important";
     } else {
-      section.style.width = '90% !important'; 
-
+      section.style.width = "90% !important";
     }
 
     if (sectionHeight > window.innerHeight) {
-      section.style.minHeight = '100% !important';
+      section.style.minHeight = "100% !important";
     } else {
-      section.style.minHeight = '90% !important';
-      
+      section.style.minHeight = "90% !important";
     }
   }
 }
 
 // Call the adjustSectionWidth function initially
 adjustSectionWidth();
+
+const filter__icon = document.getElementsByClassName("filter--image__icon")[0];
+const filterLists = document.getElementsByClassName(
+  "main--section__subSection1"
+)[0];
+if (filter__icon) {
+  filter__icon.addEventListener("click", function () {
+    console.log("filter icon clicked");
+    filterLists.classList.toggle("visible");
+  });
+
+  document.addEventListener("click", function (event) {
+    // Check if the clicked element is not within the subSection1 section
+    if (!filterLists.contains(event.target) && event.target !== filter__icon ) {
+      // Close or hide the subSection1 sectio;n
+      filterLists.classList.toggle("visible");
+    }
+  });
+}
 
 document.addEventListener("DOMContentLoaded", function () {
   const username = localStorage.getItem("username");
@@ -38,24 +55,49 @@ document.addEventListener("DOMContentLoaded", function () {
   const avatarButton = document.getElementById("avatar-button");
   const popover = document.getElementById("popover");
 
-  console.log(username+" "+email+" "+password);  
-  if(username!==null){
-  const firstCharacter = username[0].toUpperCase();
-  document.getElementsByClassName("header--btn__accountCreate")[0].textContent = firstCharacter;
+  console.log(username + " " + email + " " + password);
+  if (username !== null) {
+    const firstCharacter = username[0].toUpperCase();
+    document.getElementsByClassName(
+      "header--btn__accountCreate"
+    )[0].textContent = firstCharacter;
   }
 
-  avatarButton.addEventListener("click", function() {
-    popover.style.display = popover.style.display === "block" ? "none" : "block";
+  avatarButton.addEventListener("click", function () {
+    popover.style.display =
+      popover.style.display === "block" ? "none" : "block";
   });
 
-  document.addEventListener("click", function(event) {
+  document.addEventListener("click", function (event) {
     if (!popover.contains(event.target) && event.target !== avatarButton) {
       popover.style.display = "none";
     }
   });
+
+  // const filterButton = document.querySelector(".filter--image__icon");
+  // const filterSection = document.querySelector(
+  //   ".filter--section__onlyForMobileAndTablet"
+  // );
+  // const subSection1 = document.querySelector(".main--section__subSection1");
+
+  // filterButton.addEventListener("click", function () {
+  //   subSection1.style.display =
+  //     subSection1.style.display === "block" ? "none" : "block";
+  // });
+  // // Add a click event listener to the document
+  // if (filterSection.style.display !== "none") {
+  //   document.addEventListener("click", function (event) {
+  //     // Check if the clicked element is not within the subSection1 section
+  //     if (
+  //       !subSection1.contains(event.target) &&
+  //       event.target !== filterButton
+  //     ) {
+  //       // Close or hide the subSection1 section
+  //       subSection1.style.display = "none";
+  //     }
+  //   });
+  // }
 });
-
-
 
 var jsonData = {
   pixel_5: {

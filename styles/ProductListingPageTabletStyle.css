@@ -1,30 +1,28 @@
 .header {
   display: grid;
-  justify-content: space-around;
-  grid-template-columns: auto auto auto;
+  justify-content: space-between;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-  align-items: center;
-  position: sticky;
+  /* align-items: center; */
+  /* position: sticky !important; */
 }
 
-.headerNavbarSection{
+.header--icon__background {
+  background-color: transparent !important;
+}
+
+.headerImage--section {
   display: none;
 }
-.header__icon {
-  position: relative;
-  left: -50px;
-  width: 30px;
-  height: 30px;
-}
-.filter--section__onlyForMobileAndTablet{
+
+.headerMenu--section {
   display: none;
 }
-.header--section {
+
+.headerMenuButton--section {
   display: flex;
-  flex-direction: row;
-  gap: 30px;
-  position: relative;
-  left: 50px;
+  align-self: flex-start;
 }
 
 .header--section__items {
@@ -55,6 +53,16 @@
   font-weight: 600;
 }
 
+.header--image__menuButton {
+  display: flex;
+  position: relative;
+  right: 40px;
+}
+
+.navbarAdjustingPadding{
+  padding-left: 10px;
+}
+
 .header--section__productItem::before {
   position: relative;
   top: 3px;
@@ -67,20 +75,20 @@
 
 .header--line {
   text-align: center;
-  width: 95%;
+  width: 85%;
   color: #9aacb5;
+  margin: auto;
 }
 
 .footer--line {
   width: 85%;
+  text-align: center;
+  margin: auto;
 }
 
 .header--btn__accountCreate {
-  position: relative;
-  left: 70px;
-  display: table-cell;
   background-color: #219ebc;
-  color:#fff;
+  color: #fff;
   border: 1px solid #219ebc;
   opacity: 1;
   font-size: 15px;
@@ -88,25 +96,30 @@
   font-weight: 600;
   letter-spacing: 0px;
   border-radius: 50%;
+  justify-content: end !important;
+  margin-bottom: 10px;
 }
 
-.headerMenuButton--section{
-  display :none;
+.headerAvatar--section {
+  display: contents;
 }
-
 .avatar-container {
-  position: relative;
+  display: grid;
+  padding-right: 20px;
+  justify-content: end;
+  align-self: end;
 }
 
 .popover {
-  display: none;
-  position: absolute;
-  top: 0px;
   background-color: rgba(241, 241, 241, 1);
   background-color: wheat;
   padding: 4px 20px;
   border-radius: 4px;
-  z-index: -1;
+  z-index: 3;
+  position: absolute;
+  right: 0px;
+  top: 70px;
+  display: block;
 }
 
 .popover ul {
@@ -126,7 +139,6 @@
   line-height: 18px;
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
-  
 }
 
 .avatar-container:hover .popover {
@@ -164,62 +176,97 @@ input[type="checkbox"]:checked {
   line-height: 18px;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 0px;
-  margin-left: 5px;
-  /* align-self: center !important; */
-}
-
-.checkbox--items__alignment{
-  display: grid !important;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto;
-  justify-content:left;
-  /* align-items: center !important; */
+  padding-left: 7px;
+  font-weight: 700;
+  color: #131718;
 }
 
 input[type="checkbox"]:checked + .main--checkbox__selected {
-  font-weight: 600;
+  font-weight: 800;
   color: #219ebc;
 }
 
 .main--section {
-  display: grid;
-  grid-template-columns: 25vw 3fr;
-  grid-template-rows: auto;
+  display: block;
+}
+.checkbox--items__alignment{
+  display: flex;
+  align-items: center;
+}
+.main--section__subSection1 {
+  visibility: hidden;
+  z-index: 100;
+  position: fixed;
+  right: 20px;
+  bottom: 70px;
+  transition: all 0.5s ease;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  background-color: #fff;
+  /* padding-right: 0 !important; */
+  border-radius: 6%;
 }
 
-.main--section__subSection1 {
-  position: sticky;
+#main--checkbox__filter {
+  display: none;
+}
+
+.main--section__subSection1:not(.visible) {
+  display: none;
+}
+
+.filter--section__onlyForMobileAndTablet {
+  z-index: 10;
+  background-color: #e6f6ff;
+  border-radius: 50%;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 50px;
+  height: 50px;
+}
+.filter--image__icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
 }
 
 #main--section__subSection2 {
-  padding-left: 20px;
-  padding-right: 60px;
+  padding: 20px;
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
   gap: 20px;
+  /* display: block; */
 }
 
 .full_carde {
   /* border: 1px solid black; */
   border-radius: 5px;
-  width: 270px;
-  height: 300px;
-  margin: 0 auto;
+  width: auto;
+  height: auto;
+  margin: auto;
   text-align: center;
   box-sizing: border-box;
   position: relative;
   z-index: 2;
+  transition: width 0.3s ease, height 0.3s ease;
 }
 
-.full_carde img {
+.main--section__productImages {
   width: 100%;
-  height: 220px;
+  height: auto;
+  max-height: 250px;
   padding: 45px 80px;
   background-color: antiquewhite;
+  background-clip: border-box;
   border-radius: 4px;
+  object-fit: contain;
 }
 
 .main--section__productDetailsGrid {
@@ -359,21 +406,15 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
   visibility: visible;
   opacity: 1;
 }
-#main--checkbox__phone{
-  align-self: center !important;
-}
+
 #main--checkbox__phone:checked + #main--checkbox__selected {
   color: #219ebc;
 }
-#main--checkbox__accessories{
-  align-self: center !important;
-}
+
 #main--checkbox__accessories:checked + .main--checkbox__selected {
   color: #219ebc;
 }
-#main--checkbox__headphones{
-  align-self: center !important;
-}
+
 #main--checkbox__headphones:checked + .main--checkbox__selected {
   color: #219ebc;
 }
@@ -414,10 +455,17 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
   align-items: center;
 }
 
-.modal--button__dropdown {
+.dropdown {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+}
+.dropdown__cityAndCountry {
+  display: contents;
+}
+.modal--button__dropdown {
+  /* display: flex;
+    justify-content: space-between; */
+  /* align-items: center; */
+  display: flex;
   border: 1px solid #e9ecef !important;
 }
 
@@ -563,6 +611,9 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
   font: normal normal 400 12px/15px Montserrat;
   letter-spacing: 0px;
   color: #b3c1c8 !important;
+  justify-content: space-between !important;
+  display: flex !important;
+  align-items: center !important;
 }
 
 .modal--input__country {
@@ -572,6 +623,10 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
   font: normal normal normal 12px/15px Montserrat;
   letter-spacing: 0px;
   color: #b3c1c8 !important;
+  /* overflow: hidden; */
+  justify-content: space-between !important;
+  display: flex !important;
+  align-items: center !important;
 }
 
 .dropdown-item {
@@ -588,9 +643,6 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
   background-color: transparent;
   height: fit-content;
   background: transparent 0% 0% no-repeat padding-box;
-  /* border: 1px solid #e9ecef;
-  border-right: none;
-  border-radius: 4px; */
   border: none;
   position: absolute;
   z-index: 100;
@@ -665,8 +717,68 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
   border-radius: 4px;
 }
 
+/* .row>*{
+   width: auto !important;
+   max-width: 100% !important;
+  } */
+
+.marginBeforeAddress {
+  margin-top: 0 !important;
+}
+
+.buyNow--section__allDesriptions {
+  display: grid !important;
+  width: auto !important;
+  max-width: none !important;
+}
+
+.productDescriptionAndAddress--section {
+  display: grid !important;
+  width: 100% !important;
+}
+
+.modalHeaderAlignment {
+  display: flow-root;
+  position: relative;
+  right: -20px;
+  top: 10px;
+}
+
+.widthHundred {
+  width: 100% !important;
+}
+
+.displayGrid {
+  display: grid !important;
+}
+
+.widthAuto {
+  width: auto !important;
+}
+
+.maxWidthNone {
+  max-width: none !important;
+}
+
+.displayNone {
+  display: none !important;
+}
+
+.justifyEvenlyMobile {
+  justify-content: space-evenly;
+}
+
+.summary--section__widthChangeable {
+  padding: 0;
+  padding-top: 20px;
+  width: 100%;
+}
+
 .modal--section__customerEditable {
+  /* padding: 10px; */
+  display: block;
   padding: 10px;
+  padding-bottom: 20px;
 }
 
 .modal--section__customerNotEditable {
@@ -674,7 +786,7 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
 }
 
 /* .modal--para__showName,
-.modal--para__showPhone, */
+    .modal--para__showPhone, */
 .modal--button__edit,
 .modal--section__showNameAndPhone,
 .modal--para__showAddress {
@@ -882,4 +994,14 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
   display: flex;
   justify-content: center;
   align-self: center;
+}
+
+.whiteSpaceNoWrap {
+  white-space: nowrap;
+}
+
+.filter--button__floating {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
 }

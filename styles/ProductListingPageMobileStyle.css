@@ -4,8 +4,6 @@
   width: 100%;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-  /* align-items: center; */
-  /* position: sticky !important; */
 }
 
 .header--icon__background {
@@ -67,6 +65,9 @@
   font-size: 2em; /* Adjust the font size as desired */
   line-height: 0.5; /*Adjust the line height as desired */
   margin-right: 3px;
+}
+.navbarAdjustingPadding{
+  padding-left: 10px;
 }
 
 .header--line {
@@ -173,24 +174,60 @@ input[type="checkbox"]:checked {
   font-family: "Montserrat", sans-serif;
   letter-spacing: 0px;
   padding-left: 7px;
-  padding-bottom: 7px;
+  font-weight: 700;
+  color: #131718;
 }
 
 input[type="checkbox"]:checked + .main--checkbox__selected {
-  font-weight: 600;
+  font-weight: 800;
   color: #219ebc;
 }
 
 .main--section {
-  /* display: grid;
-  grid-template-columns: 25vw 3fr;
-  grid-template-rows: auto; */
   display: block;
 }
-
+.checkbox--items__alignment{
+  display: flex;
+  align-items: center;
+}
 .main--section__subSection1 {
-  position: sticky;
+  visibility: hidden;
+  z-index: 100;
+  position: fixed;
+  right: 20px;
+  bottom: 70px;
+  transition: all 0.5s ease;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  background-color: #fff;
+  /* padding-right: 0 !important; */
+  border-radius: 6%;
+}
+
+#main--checkbox__filter {
   display: none;
+}
+
+.main--section__subSection1:not(.visible) {
+  display: none;
+}
+
+.filter--section__onlyForMobileAndTablet{
+  z-index: 10;
+  background-color: #e6f6ff;
+  border-radius: 50%;
+  position: fixed;
+  right: 10px;
+  bottom: 10px; 
+  width: 50px;
+  height: 50px;
+}
+.filter--image__icon {
+  position: fixed;
+  bottom: 20px; 
+  right: 20px;
+  width: 30px;
+  height: 30px;
 }
 
 #main--section__subSection2 {
@@ -198,9 +235,6 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
 }
 
 .grid-container {
-  /* display: grid;
-    grid-template-columns: repeat(3, 1fr); */
-  /* gap: 20px; */
   display: block;
 }
 
@@ -217,7 +251,7 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
   transition: width 0.3s ease, height 0.3s ease;
 }
 
-.main--section__productImages{
+.main--section__productImages {
   width: 100%;
   height: auto;
   max-height: 250px;
@@ -959,8 +993,8 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
   white-space: nowrap;
 }
 
-.filter--button__floating{
-  position : fixed;
-  bottom : 20px;
-  right : 20px;
+.filter--button__floating {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
 }
