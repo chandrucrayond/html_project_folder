@@ -8,6 +8,10 @@
   /* position: sticky !important; */
 }
 
+.header--icon__background {
+  background-color: transparent !important;
+}
+
 .headerImage--section {
   display: none;
 }
@@ -79,8 +83,6 @@
 }
 
 .header--btn__accountCreate {
-  /* position: relative; */
-  /* right: 150px; */
   background-color: #219ebc;
   color: #fff;
   border: 1px solid #219ebc;
@@ -94,21 +96,26 @@
   margin-bottom: 10px;
 }
 
+.headerAvatar--section {
+  display: contents;
+}
 .avatar-container {
-  display: flex;
-  justify-content: space-around;
-  padding-right: 30px;
+  display: grid;
+  padding-right: 20px;
+  justify-content: end;
+  align-self: end;
 }
 
 .popover {
-  display: none;
-  position: absolute;
-  top: 0px;
   background-color: rgba(241, 241, 241, 1);
   background-color: wheat;
   padding: 4px 20px;
   border-radius: 4px;
   z-index: 3;
+  position: absolute;
+  right: 0px;
+  top: 70px;
+  display: block;
 }
 
 .popover ul {
@@ -200,22 +207,25 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
 .full_carde {
   /* border: 1px solid black; */
   border-radius: 5px;
-  /* width: auto;
-  height: auto; */
+  width: auto;
+  height: auto;
   margin: auto;
   text-align: center;
   box-sizing: border-box;
   position: relative;
   z-index: 2;
-  transition: width, height 0.3s ease;
+  transition: width 0.3s ease, height 0.3s ease;
 }
 
-.full_carde img {
+.main--section__productImages{
   width: 100%;
-  height: 220px;
+  height: auto;
+  max-height: 250px;
   padding: 45px 80px;
   background-color: antiquewhite;
+  background-clip: border-box;
   border-radius: 4px;
+  object-fit: contain;
 }
 
 .main--section__productDetailsGrid {
@@ -560,6 +570,9 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
   font: normal normal 400 12px/15px Montserrat;
   letter-spacing: 0px;
   color: #b3c1c8 !important;
+  justify-content: space-between !important;
+  display: flex !important;
+  align-items: center !important;
 }
 
 .modal--input__country {
@@ -569,7 +582,10 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
   font: normal normal normal 12px/15px Montserrat;
   letter-spacing: 0px;
   color: #b3c1c8 !important;
-  overflow: hidden;
+  /* overflow: hidden; */
+  justify-content: space-between !important;
+  display: flex !important;
+  align-items: center !important;
 }
 
 .dropdown-item {
@@ -718,7 +734,10 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
 }
 
 .modal--section__customerEditable {
+  /* padding: 10px; */
+  display: block;
   padding: 10px;
+  padding-bottom: 20px;
 }
 
 .modal--section__customerNotEditable {
@@ -936,6 +955,12 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
   align-self: center;
 }
 
-.whiteSpaceNoWrap{
+.whiteSpaceNoWrap {
   white-space: nowrap;
+}
+
+.filter--button__floating{
+  position : fixed;
+  bottom : 20px;
+  right : 20px;
 }

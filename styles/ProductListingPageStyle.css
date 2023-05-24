@@ -7,6 +7,9 @@
   position: sticky;
 }
 
+.headerNavbarSection{
+  display: none;
+}
 .header__icon {
   position: relative;
   left: -50px;
