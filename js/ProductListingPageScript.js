@@ -9,12 +9,21 @@ function adjustSectionWidth() {
   for (let i = 0; i < sections.length; i++) {
     var section = sections[i];
     var sectionWidth = section.offsetWidth;
+    var sectionHeight = section.offsetHeight;
 
     // Check if the section is wider than the viewport width
     if (sectionWidth > window.innerWidth) {
       section.style.width = '100% !important';
     } else {
-      section.style.width = '90% !important'; // or any desired default width
+      section.style.width = '90% !important'; 
+
+    }
+
+    if (sectionHeight > window.innerHeight) {
+      section.style.minHeight = '100% !important';
+    } else {
+      section.style.minHeight = '90% !important';
+      
     }
   }
 }

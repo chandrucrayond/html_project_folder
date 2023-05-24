@@ -20,22 +20,22 @@
     />
     <link rel="stylesheet" href="styles/ProductListingPageStyle.css" />
     <link
-    rel="stylesheet"
-    href="styles/ProductListingPageMobileStyle.css"
-    media="(max-width: 767px)"
-  />
+      rel="stylesheet"
+      href="styles/ProductListingPageMobileStyle.css"
+      media="(max-width: 767px)"
+    />
 
-  <!-- <link
+    <!-- <link
     rel="stylesheet"
     href="styles/ProductListingPageTabletStyle.css"
     media="(min-width: 768px) and (max-width: 1023px)"
   /> -->
 
-  <link
-    rel="stylesheet"
-    href="styles/ProductListingPageStyle.css"
-    media="(min-width: 1024px)"
-  />
+    <link
+      rel="stylesheet"
+      href="styles/ProductListingPageStyle.css"
+      media="(min-width: 1024px)"
+    />
   </head>
   <!-- End of head section-->
 
@@ -43,6 +43,71 @@
   <body>
     <!-- Header section -->
     <header class="header mt-3">
+      <section class="headerNavbarSection">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <!--  <a class="navbar-brand" href="#"> </a>-->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Dropdown
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled">Disabled</a>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button class="btn btn-outline-success" type="submit">
+                  Search
+                </button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </section>
       <section class="header--section headerImage--section">
         <a href="#">
           <img
@@ -58,9 +123,15 @@
         <div class="header--section__items">Services</div>
         <div class="header--section__items">About us</div>
       </section>
-      <section class="header--section headerMenuButton--section">
-        <img src="assets/menu__button.png" class="header--image__menuButton" alt="menu_button" width="30" height="30">
-      </section>
+      <!-- <section class="header--section headerMenuButton--section">
+        <img
+          src="assets/menu__button.png"
+          class="header--image__menuButton"
+          alt="menu_button"
+          width="30"
+          height="30"
+        />
+      </section> -->
       <section class="headerAvatar--section">
         <div class="avatar-container">
           <a
@@ -69,12 +140,11 @@
             >C</a
           >
         </div>
-          <div class="popover" id="popover">
-            <ul>
-              <li><a href="index.html">Logout</a></li>
-            </ul>
-          </div> 
-        
+        <div class="popover" id="popover">
+          <ul>
+            <li><a href="index.html">Logout</a></li>
+          </ul>
+        </div>
       </section>
     </header>
     <hr class="header--line mx-auto" />
@@ -159,13 +229,13 @@
               </div>
               <div class="modal-body">
                 <div class="container-fluid">
-                  <div class="row">
+                  <div class="row buyNow--section__allDesriptions">
                     <div class="col-8 productDescriptionAndAddress--section">
                       <div
                         class="row modalCenterAligned modal--section__outline"
                       >
                         <div class="col-4">
-                          <div class="row">
+                          <div class="row modalHeaderAlignment">
                             <div class="col-4 d-flex pe-0">
                               <img
                                 class="modal--image"
@@ -232,20 +302,24 @@
                       <div
                         class="row modal--section__outline modal--section__customerEditable mt-3"
                       >
-                        <div class="row mt-2">
-                          <div class="col-4 modal--para__addAddress">
+                        <div
+                          class="row mt-2 widthAuto maxWidthNone justifyEvenlyMobile"
+                        >
+                          <div
+                            class="col-4 modal--para__addAddress widthAuto maxWidthNone"
+                          >
                             ADD ADDRESS
                           </div>
-                          <div class="col-4"></div>
+                          <!-- <div class="col-4"></div> -->
                           <div
-                            class="col-4 d-flex btn text-info btn-outline-none border-0 p-0 justify-content-end modal--para__saveAddress"
+                            class="modal--para__saveAddress col-4 d-flex btn text-info btn-outline-none border-0 p-0 justify-content-end widthAuto maxWidthNone"
                           >
                             SAVE ADDRESS
                           </div>
                         </div>
-                        <div class="row mt-3">
+                        <div class="row mt-3 buyNow--section__allDesriptions">
                           <!-- <div class="col-6">Name</div> -->
-                          <div class="form-group col-6">
+                          <div class="form-group col-6 widthHundred">
                             <label for="name" class="modal--label__name"
                               >Name</label
                             >
@@ -256,7 +330,7 @@
                               placeholder="Amy Jackson"
                             />
                           </div>
-                          <div class="form-group col-6">
+                          <div class="form-group col-6 widthHundred">
                             <label
                               for="phone"
                               class="modal--label__contactNumber"
@@ -280,25 +354,27 @@
                             </div>
                           </div>
                         </div>
-                        <div class="row mt-3">
-                          <div class="form-group col">
+                        <div
+                          class="row mt-3 marginBeforeAddress buyNow--section__allDesriptions"
+                        >
+                          <div class="form-group col widthHundred">
                             <label for="address" class="modal--label__address"
                               >Address</label
                             >
                             <input
                               type="text"
-                              class="form-control mt-1 modal--input__address p-2"
+                              class="form-control mt-1 modal--input__address p-2 displayGrid maxWidthNone"
                               id="address"
                               placeholder="Dubai main road, Dubai cross street"
                             />
                           </div>
                         </div>
                         <div class="row mt-3 mb-3 dropdown__cityAndCountry">
-                          <div class="col-6">
+                          <div class="col-6 widthHundred">
                             <label for="city" class="modal--label__city"
                               >City</label
                             >
-                            <div class="form-group dropdown mt-1">
+                            <div class="form-group dropdown mt-1 displayGrid">
                               <a
                                 class="btn dropdown-toggle dropdown-menu-bottom modal--button__dropdown modal--input__city p-2"
                                 href="#"
@@ -339,7 +415,7 @@
                             </div>
                           </div>
 
-                          <div class="col-6">
+                          <div class="col-6 widthHundred">
                             <label for="Country" class="modal--label__country"
                               >Country</label
                             >
@@ -731,7 +807,7 @@
                   <div class="row py-5">
                     <div class="col-2"></div>
                     <div class="col-8">
-                      <div class="row py-3">
+                      <div class="row py-3 whiteSpaceNoWrap">
                         <div class="col">
                           <div class="success--para__thanks">
                             Thanks for the Order
@@ -747,7 +823,7 @@
                           />
                         </div>
                       </div>
-                      <div class="row py-3">
+                      <div class="row py-3 whiteSpaceNoWrap">
                         <div class="col">
                           <div class="success--para__onTheWay">
                             Your product is on the way

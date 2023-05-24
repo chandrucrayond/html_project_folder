@@ -1,6 +1,6 @@
 .header {
   display: grid;
-  justify-content:space-between;
+  justify-content: space-between;
   width: 100%;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
@@ -8,7 +8,7 @@
   /* position: sticky !important; */
 }
 
-.headerImage--section{
+.headerImage--section {
   display: none;
 }
 
@@ -16,7 +16,7 @@
   display: none;
 }
 
-.headerMenuButton--section{
+.headerMenuButton--section {
   display: flex;
   align-self: flex-start;
 }
@@ -49,12 +49,11 @@
   font-weight: 600;
 }
 
-.header--image__menuButton{
+.header--image__menuButton {
   display: flex;
   position: relative;
   right: 40px;
 }
-
 
 .header--section__productItem::before {
   position: relative;
@@ -179,7 +178,7 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
   /* display: grid;
   grid-template-columns: 25vw 3fr;
   grid-template-rows: auto; */
-  display:block;
+  display: block;
 }
 
 .main--section__subSection1 {
@@ -201,14 +200,14 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
 .full_carde {
   /* border: 1px solid black; */
   border-radius: 5px;
-  width: auto;
-  height: auto;
+  /* width: auto;
+  height: auto; */
   margin: auto;
   text-align: center;
   box-sizing: border-box;
   position: relative;
   z-index: 2;
-  transition: width,height 0.3s ease;
+  transition: width, height 0.3s ease;
 }
 
 .full_carde img {
@@ -405,10 +404,10 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
   align-items: center;
 }
 
-.dropdown{
+.dropdown {
   display: flex;
 }
-.dropdown__cityAndCountry{
+.dropdown__cityAndCountry {
   display: contents;
 }
 .modal--button__dropdown {
@@ -500,14 +499,12 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
   font: normal normal 400 12px/15px Montserrat;
   letter-spacing: 0px;
   color: #4e6e7e;
-  
 }
 
 .modal--label__country {
   font: normal normal 400 12px/15px Montserrat;
   letter-spacing: 0px;
   color: #4e6e7e;
-  
 }
 
 .modal--input__name {
@@ -663,11 +660,58 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
   border-radius: 4px;
 }
 
-.productDescriptionAndAddress--section{
+/* .row>*{
+ width: auto !important;
+ max-width: 100% !important;
+} */
+
+.marginBeforeAddress {
+  margin-top: 0 !important;
+}
+
+.buyNow--section__allDesriptions {
+  display: grid !important;
+  width: auto !important;
+  max-width: none !important;
+}
+
+.productDescriptionAndAddress--section {
+  display: grid !important;
   width: 100% !important;
 }
 
-.summary--section__widthChangeable{
+.modalHeaderAlignment {
+  display: flow-root;
+  position: relative;
+  right: -20px;
+  top: 10px;
+}
+
+.widthHundred {
+  width: 100% !important;
+}
+
+.displayGrid {
+  display: grid !important;
+}
+
+.widthAuto {
+  width: auto !important;
+}
+
+.maxWidthNone {
+  max-width: none !important;
+}
+
+.displayNone {
+  display: none !important;
+}
+
+.justifyEvenlyMobile {
+  justify-content: space-evenly;
+}
+
+.summary--section__widthChangeable {
   padding: 0;
   padding-top: 20px;
   width: 100%;
@@ -890,4 +934,8 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
   display: flex;
   justify-content: center;
   align-self: center;
+}
+
+.whiteSpaceNoWrap{
+  white-space: nowrap;
 }
