@@ -1,5 +1,26 @@
-console.log("h3llo script.js file is loaded....");
+console.log("hello script.js file is loaded....");
 
+window.addEventListener('resize', function() {
+  adjustSectionWidth(); // Call the function to adjust the section width
+});
+
+function adjustSectionWidth() {
+  var sections = document.getElementsByClassName('full_carde');
+  for (let i = 0; i < sections.length; i++) {
+    var section = sections[i];
+    var sectionWidth = section.offsetWidth;
+
+    // Check if the section is wider than the viewport width
+    if (sectionWidth > window.innerWidth) {
+      section.style.width = '100% !important';
+    } else {
+      section.style.width = '90% !important'; // or any desired default width
+    }
+  }
+}
+
+// Call the adjustSectionWidth function initially
+adjustSectionWidth();
 
 document.addEventListener("DOMContentLoaded", function () {
   const username = localStorage.getItem("username");

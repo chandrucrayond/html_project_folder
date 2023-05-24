@@ -37,7 +37,7 @@ for (let i = 0; i < visibilityImage.length; i++) {
 
 
 if (myForm) {
-  myForm.addEventListener("submit", function (event) {
+  myForm.addEventListener("click", function (event) {
     event.preventDefault();
 
     if (
