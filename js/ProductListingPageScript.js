@@ -56,11 +56,20 @@ document.addEventListener("DOMContentLoaded", function () {
   const logOutButton = document.getElementsByClassName("logOut--button__InDesktop")[0];
 
   console.log(username + " " + email + " " + password);
+
   if (username !== null) {
     const firstCharacter = username[0].toUpperCase();
     document.getElementsByClassName(
       "header--btn__accountCreate"
     )[0].textContent = firstCharacter;
+
+    document.getElementsByClassName(
+      "welcome__name"
+    )[0].textContent = "Welcome "+username;
+
+    document.getElementsByClassName(
+      "welcome__name"
+    )[1].textContent = "Welcome "+username;
   }
 
   avatarButton.addEventListener("click", function () {
@@ -73,37 +82,24 @@ document.addEventListener("DOMContentLoaded", function () {
   logOutButton.addEventListener("click", function(){
     window.location.href = "index.html";
   });
- 
+  
+  // const navbars = document.querySelectorAll(".navbar");
 
-  // document.addEventListener("click", function (event) {
-  //   if (!popover.contains(event.target) && event.target !== avatarButton) {
-  //     popover.style.display = "none";
-  //   }
-  // });
+  // navbars.forEach(function(navbar) {
+  //   const toggler = navbar.querySelector(".navbar-toggler");
 
-  // const filterButton = document.querySelector(".filter--image__icon");
-  // const filterSection = document.querySelector(
-  //   ".filter--section__onlyForMobileAndTablet"
-  // );
-  // const subSection1 = document.querySelector(".main--section__subSection1");
-
-  // filterButton.addEventListener("click", function () {
-  //   subSection1.style.display =
-  //     subSection1.style.display === "block" ? "none" : "block";
-  // });
-  // // Add a click event listener to the document
-  // if (filterSection.style.display !== "none") {
-  //   document.addEventListener("click", function (event) {
-  //     // Check if the clicked element is not within the subSection1 section
-  //     if (
-  //       !subSection1.contains(event.target) &&
-  //       event.target !== filterButton
-  //     ) {
-  //       // Close or hide the subSection1 section
-  //       subSection1.style.display = "none";
-  //     }
+  //   toggler.addEventListener("click", function() {
+  //     // Close other navbars
+  //     navbars.forEach(function(otherNavbar) {
+  //       if (otherNavbar !== navbar) {
+  //         const otherToggler = otherNavbar.querySelector(".navbar-toggler");
+  //         if (!otherToggler.classList.contains("collapsed")) {
+  //           otherToggler.click();
+  //         }
+  //       }
+  //     });
   //   });
-  // }
+  // });
 });
 
 var jsonData = {

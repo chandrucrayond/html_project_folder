@@ -59,6 +59,7 @@
             >
               <span class="navbar-toggler-icon"></span>
             </button>
+
             <div
               class="collapse navbar-collapse navbarAdjustingPadding"
               id="navbarSupportedContent"
@@ -90,7 +91,50 @@
                     >About us</a
                   >
                 </li>
-                <li class="nav-item" id="popover">
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </section>
+
+      <section class="headerNavbarSection">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid navbarJustifyingEnd">
+            <!--  <a class="navbar-brand" href="#"> </a>-->
+
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent2"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <section class="headerAvatar--section">
+                <div class="avatar-container">
+                  <a
+                    id="avatar-button"
+                    class="btn btn-outline-info header--btn__accountCreate text-center align-middle"
+                    >C</a
+                  >
+                </div>
+              </section>
+            </button>
+            <div
+              class="collapse navbar-collapse rightNavbarAdjustingPadding"
+              id="navbarSupportedContent2"
+            >
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li
+                  class="nav-item d-flex justify-content-end align-items-start"
+                >
+                  <a class="nav-link welcome__name" href="#">Welcome, Crayon</a>
+                </li>
+                <li
+                  class="nav-item d-flex justify-content-end align-items-start"
+                  id="popover"
+                >
                   <a class="nav-link header--section__items" href="index.html"
                     >Logout</a
                   >
@@ -100,6 +144,7 @@
           </div>
         </nav>
       </section>
+
       <section class="header--section headerImage--section">
         <a href="#">
           <img
@@ -114,33 +159,114 @@
         <div class="header--section__items clicked">Products</div>
         <div class="header--section__items">Services</div>
         <div class="header--section__items">About us</div>
-        <!-- <li class="nav-item " id="popover">            -->
-        <div class="header--section__items logOut--button__InDesktop">
-          Logout
-        </div>
-        <!-- </li> href="index.html-->
       </section>
 
-      <section class="headerAvatar--section">
-        <div class="avatar-container">
-          <a
-            id="avatar-button"
-            class="btn btn-outline-info header--btn__accountCreate text-center align-middle"
-            >C</a
+      <!-- <section class="header--section headerMenu--section">
+        <section
+          class="headerAvatar--section headerAvatar--section__onlyForDesktop"
+        >
+          <nav
+            class="navbar bg-body-tertiary navbarDisabled__ForMobileAndTablet"
           >
-        </div>
+            <div class="container-fluid navbarJustifyingEnd">
+              <div
+                class="avatar-container"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent3"
+              >
+                <a
+                  id="avatar-button"
+                  class="btn btn-outline-info header--btn__accountCreate text-center align-middle"
+                  >C</a
+                >
+              </div>
+
+              <div
+                class="collapse navbar-collapse"
+                id="navbarSupportedContent3"
+              >
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link">Welcome crayon</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Logout </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </section>
+      </section> -->
+     
+      <section class="headerAvatar--section__onlyForDesktop">
+        <nav class="navbar">
+          <div class="container-fluid navbarJustifyingEnd">
+            <!--  <a class="navbar-brand" href="#"> </a>-->
+
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent3"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <section class="headerAvatar--section">
+                <div class="avatar-container">
+                  <a
+                    id="avatar-button"
+                    class="btn btn-outline-info header--btn__accountCreate "
+                    >C</a
+                  >
+                </div>
+              </section>
+            </button>
+            <div
+              class="collapse navbar-collapse rightNavbarAdjustingPadding"
+              id="navbarSupportedContent3"
+            >
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li
+                  class="nav-item d-flex justify-content-end align-items-start"
+                >
+                  <a class="nav-link welcome__name" href="#">Welcome, Crayon</a>
+                </li>
+                <li
+                  class="nav-item d-flex justify-content-end align-items-start"
+                  id="popover"
+                >
+                  <a class="nav-link header--section__items" href="index.html"
+                    >Logout</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
       </section>
+      
     </header>
     <hr class="header--line mx-auto" />
     <!-- End of header section -->
 
     <section class="main--section pt-3">
       <section class="filter--section__onlyForMobileAndTablet">
-        <img
-          src="assets/slider.png"
-          alt="filter icon"
-          class="filter--image__icon"
-        />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="black"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6 filter--image__icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75"
+          />
+        </svg>
       </section>
       <section
         class="main--section__subSection1 filter--section__closable pe-5 mx-auto"
@@ -166,7 +292,7 @@
           <div class="checkbox--items__alignment">
             <input
               type="checkbox"
-              id="main--checkbox__headphones"            
+              id="main--checkbox__headphones"
               value="Headphones"
             />
             <label
@@ -182,7 +308,6 @@
               type="checkbox"
               id="main--checkbox__accessories"
               value="Accessories"
-             
             />
             <label
               for="main--checkbox__accessories"
