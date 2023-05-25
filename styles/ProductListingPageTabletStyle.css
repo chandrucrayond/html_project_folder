@@ -1,3 +1,6 @@
+body{
+  overflow-x: hidden !important;
+}
 .header {
   display: grid;
   justify-content: space-between;
@@ -109,7 +112,7 @@
   justify-content: end;
   align-self: end;
 }
-
+/* 
 .popover {
   background-color: rgba(241, 241, 241, 1);
   background-color: wheat;
@@ -139,11 +142,11 @@
   line-height: 18px;
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
-}
+} */
 
-.avatar-container:hover .popover {
+/* .avatar-container:hover .popover {
   display: block;
-}
+} */
 
 .header--btn__accountCreate:hover,
 .header--btn__accountCreate:focus,
@@ -224,6 +227,7 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
   bottom: 10px;
   width: 50px;
   height: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .filter--image__icon {
   position: fixed;

@@ -108,39 +108,34 @@
 }
 
 .popover {
-  background-color: rgba(241, 241, 241, 1);
-  background-color: wheat;
-  padding: 4px 20px;
+  /* background-color: rgba(241, 241, 241, 1);
+  background-color: wheat; */
+  /* padding: 4px 20px;
   border-radius: 4px;
-  z-index: 3;
-  position: absolute;
-  right: 0px;
-  top: 70px;
-  display: block;
+  z-index: 3; */
+  /* position: absolute; */
+  /* right: 0px;
+  top: 70px; */
+  /* display: block; */
 }
 
-.popover ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
+/* 
 .popover li {
   margin-bottom: 5px;
-}
+} */
 
-.popover li a {
+/* .popover a {
   color: #023047;
   text-decoration: none;
   font-size: 13px;
   line-height: 18px;
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
-}
+} */
 
-.avatar-container:hover .popover {
+/* .avatar-container:hover .popover {
   display: block;
-}
+} */
 
 .header--btn__accountCreate:hover,
 .header--btn__accountCreate:focus,
@@ -221,6 +216,7 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
   bottom: 10px; 
   width: 50px;
   height: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .filter--image__icon {
   position: fixed;
@@ -419,14 +415,13 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
 }
 
 .footer--section {
-  display: flex;
+  display: grid;
   flex-wrap: wrap;
   font: normal normal 400 11px/15px Montserrat;
   letter-spacing: 0px;
   color: #b3c1c8;
   text-transform: capitalize;
-  justify-content: space-between;
-  opacity: 1;
+  /* justify-content: space-between; */
 }
 
 .footer--para__left {
@@ -997,4 +992,24 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
   position: fixed;
   bottom: 20px;
   right: 20px;
+}
+
+.footer--section__left{
+  padding-left: 0 !important;
+  display: flex !important;
+  justify-content: center;
+}
+
+.footer--para__left{
+  padding-left: 0 !important;
+}
+
+.footer--section__right{
+  padding-right: 0 !important;
+  display: flex !important;
+  justify-content: space-evenly;
+}
+
+.footer--para__right{
+  padding-right: 0 !important;
 }

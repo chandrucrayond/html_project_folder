@@ -43,7 +43,7 @@ if (filter__icon) {
     // Check if the clicked element is not within the subSection1 section
     if (!filterLists.contains(event.target) && event.target !== filter__icon ) {
       // Close or hide the subSection1 sectio;n
-      filterLists.classList.toggle("visible");
+      filterLists.classList.remove("visible");
     }
   });
 }
