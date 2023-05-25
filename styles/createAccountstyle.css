@@ -6,7 +6,6 @@
 
 .createAccount--section__subSection1 {
   background-color: #f9fbfe;
-  height: 100vh;
   overflow: hidden;
 }
 
@@ -18,6 +17,7 @@
   left: 50px;
   width: 30px;
   height: 30px;
+  object-fit: cover;
 }
 
 .createAccount--image__teamImage {

@@ -1,8 +1,8 @@
-  .createAccount--section__subSection1 {
-    background-color: #f9fbfe;
-    height: 100vh;
-    overflow: hidden;
-  }
+.createAccount--section__subSection1 {
+  background-color: #f9fbfe;
+  overflow: hidden;
+}
+
   
   .createAccount--image__iconImage {
     z-index: 1;
@@ -12,6 +12,7 @@
     left: 50px;
     width: 30px;
     height: 30px;
+    object-fit: cover;
   }
   
   .createAccount--image__teamImage {
