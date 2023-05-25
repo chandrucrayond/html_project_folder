@@ -94,6 +94,10 @@
   display :none;
 }
 
+.logOut--button__InDesktop{
+ display:none;
+}
+
 .avatar-container {
   position: relative;
 }

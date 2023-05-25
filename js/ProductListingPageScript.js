@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const email = localStorage.getItem("email");
   const password = localStorage.getItem("password");
   const avatarButton = document.getElementById("avatar-button");
-  const popover = document.getElementById("popover");
+  const logOutButton = document.getElementsByClassName("logOut--button__InDesktop")[0];
 
   console.log(username + " " + email + " " + password);
   if (username !== null) {
@@ -64,15 +64,22 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   avatarButton.addEventListener("click", function () {
-    popover.style.display =
-      popover.style.display === "block" ? "none" : "block";
+    logOutButton.style.display =
+    logOutButton.style.display === "block" ? "none" : "block";
+    removeHeaderSectionItems();
+    logOutButton.classList.add("clicked");
   });
 
-  document.addEventListener("click", function (event) {
-    if (!popover.contains(event.target) && event.target !== avatarButton) {
-      popover.style.display = "none";
-    }
+  logOutButton.addEventListener("click", function(){
+    window.location.href = "index.html";
   });
+ 
+
+  // document.addEventListener("click", function (event) {
+  //   if (!popover.contains(event.target) && event.target !== avatarButton) {
+  //     popover.style.display = "none";
+  //   }
+  // });
 
   // const filterButton = document.querySelector(".filter--image__icon");
   // const filterSection = document.querySelector(
