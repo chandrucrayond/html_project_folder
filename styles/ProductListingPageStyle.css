@@ -7,7 +7,7 @@
   position: sticky;
 }
 
-.headerNavbarSection{
+.headerNavbarSection {
   display: none;
 }
 .header__icon {
@@ -16,7 +16,7 @@
   width: 30px;
   height: 30px;
 }
-.filter--section__onlyForMobileAndTablet{
+.filter--section__onlyForMobileAndTablet {
   display: none;
 }
 .header--section {
@@ -80,7 +80,7 @@
   left: 70px;
   display: table-cell;
   background-color: #219ebc;
-  color:#fff;
+  color: #fff;
   border: 1px solid #219ebc;
   opacity: 1;
   font-size: 15px;
@@ -90,12 +90,12 @@
   border-radius: 50%;
 }
 
-.headerMenuButton--section{
-  display :none;
+.headerMenuButton--section {
+  display: none;
 }
 
-.logOut--button__InDesktop{
- display:none;
+.logOut--button__InDesktop {
+  display: none;
 }
 
 .avatar-container {
@@ -130,7 +130,6 @@
   line-height: 18px;
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
-  
 }
 
 .avatar-container:hover .popover {
@@ -172,12 +171,13 @@ input[type="checkbox"]:checked {
   /* align-self: center !important; */
 }
 
-.checkbox--items__alignment{
+.checkbox--items__alignment {
   display: grid !important;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto;
-  justify-content:left;
+  grid-template-columns: auto auto !important;
+  grid-template-rows: auto !important;
+  justify-content: left !important;
   /* align-items: center !important; */
+  align-content: center !important;
   align-items: center !important;
 }
 
@@ -364,21 +364,32 @@ input[type="checkbox"]:checked + .main--checkbox__selected {
   visibility: visible;
   opacity: 1;
 }
-#main--checkbox__phone{
-  align-self: center !important;
+#main--checkbox__phone {
+  display: flex;
+  position: relative;
+  top: 0.5px;
 }
+
+#main--checkbox__accessories {
+  display: flex;
+  position: relative;
+  top: 0.5px;
+}
+
+#main--checkbox__headphones {
+  display: flex;
+  position: relative;
+  top: 0.5px;
+}
+
 #main--checkbox__phone:checked + #main--checkbox__selected {
   color: #219ebc;
 }
-#main--checkbox__accessories{
-  align-self: center !important;
-}
+
 #main--checkbox__accessories:checked + .main--checkbox__selected {
   color: #219ebc;
 }
-#main--checkbox__headphones{
-  align-self: center !important;
-}
+
 #main--checkbox__headphones:checked + .main--checkbox__selected {
   color: #219ebc;
 }
